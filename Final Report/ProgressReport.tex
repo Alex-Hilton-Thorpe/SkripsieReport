@@ -760,7 +760,7 @@ With all of this in mind, inference in \acs{clg} networks becomes more complex d
 
 \acs{ep} operates by approximating the posterior distribution through iterative moment matching between 'cavity' distributions (approximations excluding one factor's influence, denoted \(q_{-i}(x)\)) and 'tilted' distributions (cavity multiplied by the excluded factor, \(q_{-i}(x) \cdot f_i(x)\)). This process minimizes the Kullback-Leibler divergence \parencite{minka2001expectation,heskes2006approximate}.
 
-\acs{ep} uses an iterative approach which in many cases is computationally infeasible. A special case of \acs{ep} is \acl{adf} (\acs{adf}) or commonly called Moment Matching. This method is done by initializing all the approximating factors except the first one to be uniform and then only allowing a single pass\parencite[510]{bishop2006prml}. This is necessary in the cases when data points arrive sequentially and the model must learn from each point and then discard the data before moving on to the next point \parencite[510]{bishop2006prml}.
+\acs{ep} uses an iterative approach which in many cases is computationally infeasible. A special case of \acs{ep} is \acl{adf} (\acs{adf}) or commonly called Moment Matching. This method is done by initializing all the approximating factors except the first one to be uniform and then only allowing a single pass \parencite[510]{bishop2006prml}. This is necessary in the cases when data points arrive sequentially and the model must learn from each point and then discard the data before moving on to the next point \parencite[510]{bishop2006prml}.
 
 Key steps for the \acs{adf} algorithm are as follows:
 
@@ -833,9 +833,8 @@ which maps positions into the unit square $[0,1]\times[0,1]$. The idea behind us
 \end{figure}
 
 \subsubsection{Candidate Algorithms}
-This subsection discusses and guides the design of the various candidate algorithms that can be considered for this project. The functions and operations of these algorithms are based on the OpenCV library, as discussed in Section 2.3.4. The aim of this subsection is to provide various combinations of operations that can be used to create different algorithms, which will then be tested and evaluated to determine the best performing algorithms for this project. The candidate algorithms are summarized in Table~\ref{tab:candidate_algorithms}.
+This subsection discusses and guides the design of the various candidate algorithms that can be considered for this project. The functions and operations of these algorithms are based on the OpenCV library, as discussed in Section 2.3.4. The aim of this subsection is to provide various combinations of operations that can be used to create different algorithms, which will then be tested and evaluated to determine the best performing algorithms for this project. The candidate algorithms are summarized in Table~\ref{tab:candidate_algorithms} and described further below the table.
 
-\footnotesize
 \begin{longtable}{@{} p{0.15\textwidth} p{0.4\textwidth} p{0.4\textwidth} @{}}
 \caption{Candidate Image Processing Algorithms}
 \label{tab:candidate_algorithms} \\
@@ -863,31 +862,32 @@ This subsection discusses and guides the design of the various candidate algorit
     
     Canny Edge and Hough Circles & Canny edge detection & Hough circle transform \\
     
-    Lucas-Kanade Optical Flow & NA & Optical flow computation and feature tracking \\
+    Lucas-Kanade Optical Flow & N/A & Optical flow computation and feature tracking \\
     
     Template Matching & Template correlation & Localization \\
-    \bottomrule
 \end{longtable}
 
 The descriptions for each algorithm are as follows:
 
 \begin{itemize}
-    \item \textbf{HSV Color Thresholding:} Reduces noise with median blur, enhances with morphological operations (dilate, erode), finds contours, filters for circular shapes based on shape analysis (aspect ratio, solidity, circularity) to detect the ball.
+    \item \textbf{HSV Color Thresholding:} This algorithm uses color-based segmentation by converting the frame to a HSV color space. It applies median blur to reduce noise while preserving edges, followed by morphological operations like erosion and dilation to refine the binary mask. Contours are then detected, and shape analysis filters for circular shapes based on metrics like circularity and aspect ratio, making it effective for detecting the ball against varying backgrounds, however it may potentially be sensitive to lighting changes affecting color perception.
     
-    \item \textbf{Shape-Aware Motion Tracker:} Computes frame differencing, thresholding, morphological operations, detects contours, fits ellipses, applies shape analysis to filter candidates.
+    \item \textbf{Shape-Aware Motion Tracker:} This algorithm focuses on motion detection. It computes frame differencing to highlight moving objects, applies thresholding to create a binary image, and uses morphological operations to clean up noise. It detects contours and fits ellipses to candidate shapes, then applies shape analysis to filter based on elongation and size, which is particularly useful for tracking fast-moving balls but may struggle with slow or stationary objects.
     
-    \item \textbf{Brightness Streak Detector:} Generates frame differencing, thresholding, dilation, finds contours, applies shape analysis (area, aspect ratio, solidity, circularity).
+    \item \textbf{Brightness Streak Detector:} This algorithm is designed to detect bright streaks caused by ball motion blur. It performs frame differencing to capture motion, thresholds the result, and applies dilation to connect fragmented streaks. Contour detection identifies potential ball paths, with shape analysis filtering for elongated shapes typical of motion-blurred balls, offering robustness to high-speed motion but potentially missing slow-moving or non-blurred balls.
+
+    \item \textbf{Motion Blur Hybrid:} This algorithm combines motion detection with shape analysis for blurred trajectories. It uses frame differencing and thresholding to isolate moving regions, applies morphological operations for refinement, detects contours, and analyzes shapes for elongated forms regardless of motion blur. This approach should excel when there is significant motion blur but may require tuning for different blur intensities.
+
+    \item \textbf{Background Subtraction Tracker:} This algorithm utilizes background modeling to separate foreground from background. It applies morphological operations to preprocess frames, uses MOG2 background subtraction to generate foreground masks, detects contours in the mask, and applies shape analysis to identify ball-like objects. It should be effective for static camera scenarios but may be affected by changing backgrounds or lighting variations.
     
-    \item \textbf{Motion Blur Hybrid:} Creates frame differencing, thresholding, morphological operations, detects contours, applies shape analysis for elongated shapes.
+    \item \textbf{Canny Edge + Hough Circles:} This algorithm detects edges using the Canny edge detector to identify object boundaries. It then applies the Hough circle transform to find circular shapes. It should be particularly suited for detecting the ball when it's well-defined and circular, offering geometric precision but potentially struggling with deformed or partially occluded balls.
     
-    \item \textbf{Background Subtraction Tracker:} Applies morphological operations, uses background subtraction (MOG2), detects contours, applies shape analysis (aspect ratio, solidity, circularity).
+    \item \textbf{Lucas-Kanade Optical Flow:} This algorithm implements sparse optical flow using the Lucas-Kanade method. It tracks feature points across frames to estimate motion trajectories. It should be ideal for following the ball's path over time, providing temporal continuity, but requires good feature initialization and may drift over long sequences.
     
-    \item \textbf{Canny Edge + Hough Circles:} Applies Canny edge detection, uses Hough circle transform to detect circles.
-    
-    \item \textbf{Lucas-Kanade Optical Flow:} Computes optical flow, applies feature tracking to estimate ball trajectory.
-    
-    \item \textbf{Template Matching:} Uses template correlation for localization of the ball.
+    \item \textbf{Template Matching:} This algorithm uses correlation-based template matching to locate the ball by comparing a reference template against the frame. It should be straightforward and effective when the ball appearance is consistent, but can be computationally intensive and sensitive to scale, rotation, or appearance changes.
 \end{itemize}
+
+These algorithms all have been designed and tested to ensure the algorithms meet the requirements outlined in Section 3.2.1. All of these algorithms use low-level vision to remove noise and make the algorithms more robust and free from distractions. The intermediate-level vision operations are utilized to accurately determine the center of the ball's position. Therefore based on Figure~\ref{fig:ipaflow} and the descriptions above, these algorithms meet all of the requirements set.
 
 \subsection{\acl{pgm}}
 The purpose of incorporating \acp{pgm} in this project is to combine the outputs of multiple image processing algorithms in a principled and probabilistic manner. These algorithms, while effective individually, are not always reliable, they may occasionally fail to detect the ball or produce inaccurate estimations due to occlusion, motion blur, illumination variation or other visual disturbances. 
@@ -897,62 +897,73 @@ A \acs{pgm} allows for a robust fusion of these imperfect outputs by modeling bo
 \subsubsection{Design Requirements}
 In order to effectively design and implement the \acs{pgm} for this project, a clear set of requirements must be defined. These requirements provide a foundation for understanding how the model should be structured, what functionality it must support, and how the final output should behave. In particular, the requirements address aspects such as uncertainty handling, output quality, and model scalability. Table~\ref{tab:pgm_requirements} outlines the key requirements that the proposed \acs{pgm} must satisfy.
 
-\begin{table}[H]
-	\centering
-	\caption{Requirements for the Probabilistic Graphical Model}
-	\label{tab:pgm_requirements}
-	\begin{tabularx}{\textwidth}{@{}l X@{}}
-		\toprule
-		\textbf{Requirement} & \textbf{Description} \\
-		\midrule
-		Handle uncertainty & The \acs{pgm} must account for noise or missing data in algorithm outputs by modeling them probabilistically. \\
-		
-		Fuse multiple image processing algorithms & Must combine several algorithm outputs at each frame into a multivariate normal distribution. \\
-		
-	    Temporal consistency & The model should account for the smooth, continuous nature of the ball's motion by modeling how its position evolves over time, ensuring that current estimates depend on previous positions.\\
-		
-		Scalable inference & The model must support efficient inference algorithms that remain computationally feasible as the video length increases or as additional tracking algorithms are integrated. \\
-		
-		Modular design & The structure should allow easy integration or removal of trackers without changing the core model. \\
-		
-		Factor structure & The relationships between variables must be clearly defined using Gaussian Distributions. \\[1ex]
-		\bottomrule
-	\end{tabularx}
-\end{table}
+\begin{longtable}{p{0.3\textwidth} p{0.65\textwidth}}
+\caption{Requirements for the Probabilistic Graphical Model} \label{tab:pgm_requirements} \\
+\hline
+\textbf{Requirement} & \textbf{Description} \\
+\hline
+\endfirsthead
+\hline
+\textbf{Requirement} & \textbf{Description} \\
+\hline
+\endhead
+\hline
+\endfoot
+\hline
+\endlastfoot
+Handle uncertainty & The \acs{pgm} must account for noise or missing data in algorithm outputs by modeling them probabilistically. \\
+
+Fuse multiple \acs{ipa}s & Must combine several algorithm outputs at each frame into a multivariate normal distribution. \\
+
+Temporal consistency & The model should account for the smooth, continuous nature of the ball's motion by modeling how its position evolves over time, ensuring that current estimates depend on previous positions.\\
+
+Scalable inference & The model must support efficient inference algorithms that remain computationally feasible as the video length increases or as additional tracking algorithms are integrated. \\
+
+Modular design & The structure should allow easy integration or removal of trackers without changing the core model. \\
+
+Factor structure & The relationships between variables must be clearly defined using Gaussian Distributions. \\
+\end{longtable}
 
 \subsubsection{Model Construction}
 A \acs{bn} was selected for this project as its strengths lie in its ability to explicitly model the dependencies between variables through the use of directed edges. This is \acs{bn}s strength when compared with \acs{mn} for this project, while both can represent complex dependencies and perform inference under uncertainty \parencite{koller2009pgm}, the causal reasoning of the \acs{bn} works well for this project as the image processing algorithms depend on the actual position of the ball.
 
 \textbf{Random Variables}
 
-There are 2 main \acs{rv} per time step, these are presented in Table~\ref{tab:rvs}. 
+There are 3 \acs{rv}s per time step, these are presented in Table~\ref{tab:rvs}. 
 
-\begin{table}[H]
-	\centering
-	\caption{Random Variables for the Probabilistic Graphical Model}
-	\label{tab:rvs}
-	\begin{tabularx}{\textwidth}{@{}l l X c@{}}
-		\toprule
-		\textbf{RV} & \textbf{Symbol} & \textbf{Description} & \textbf{Domain} \\
-		\midrule
+\begin{longtable}{p{0.15\textwidth} p{0.25\textwidth} p{0.3\textwidth} p{0.2\textwidth}}
+\caption{Random Variables for the Probabilistic Graphical Model} \label{tab:rvs} \\
+\hline
+\textbf{RV} & \textbf{Symbol} & \textbf{Description} & \textbf{Domain} \\
+\hline
+\endfirsthead
+\hline
+\textbf{RV} & \textbf{Symbol} & \textbf{Description} & \textbf{Domain} \\
+\hline
+\endhead
+\hline
+\endfoot
+\hline
+\endlastfoot
 		Ball position & $Pos_{x,y}$ & Actual position of the ball on the screen in normalized coordinates (x and y values) & $[0, 1] \times [0, 1]$ \\
 		Algorithm outputs & $Alg_n$ (for $n=1,...,N$) & Output from the $n$-th image processing algorithm & $[0, 1] \times [0, 1]$ \\
-		\bottomrule
-	\end{tabularx}
-\end{table}
+		Outlier Indicator & $a_n$ (for $n=1,...,N$) & Discrete \acs{rv} indicating if $Alg_n$ is an outlier & $\{0 = \text{outlier}; 1 = \text{inlier}\}$ \\
+\end{longtable}
 
-Since each image processing algorithm typically outputs a single (x, y) position estimate, this alone does not provide a probability distribution over possible ball locations. To meet the requirement of a multivariate normal distribution in the model, a Gaussian factor is applied to each algorithm’s output.
+Since each image processing algorithm typically outputs a single $(x, y)$ position estimate, this alone does not provide a continuous distribution over all possible ball locations. To meet the requirement of a multivariate normal distribution in the model, a Gaussian factor is applied to each algorithm’s output. This is done by taking the algorithm's output as the mean $\mu_n$ of a multivariate Gaussian distribution and associating it with a covariance matrix $\Sigma_n$ that captures the algorithm's expected positional uncertainty. The specific values for these covariance matrices, along with temporal motion parameters and outlier probability priors, will be determined through systematic empirical evaluation in Chapter 4.
 
-This transforms the single point estimate into a probabilistic relationship, centered around the algorithm's prediction with an associated covariance that represents its uncertainty. The resulting domain for each algorithm’s output becomes [0,1]×[0,1], with a continuous distribution that reflects the inherent error or noise in the algorithm's estimate.
+This transforms the single point estimate into a probabilistic relationship, centered around the algorithm's prediction with an associated covariance that represents its uncertainty. The resulting domain for each algorithm’s output becomes $[0,1]\times[0,1]$, with a continuous distribution that reflects the inherent error or noise in the algorithm's estimate.
+
+Sometimes the algorithms may produce irregular or wrong outputs, for example if the ball is occluded or there are distractions within the frame then one of the \acs{ipa} may output a position that is far from the actual ball position. To account for this the \acs{pgm} includes a discrete \acs{rv} called $a_n$ for each individual \acs{ipa}. This \acs{rv} indicates if the output is an outlier or inlier, this therefore produces a Hybrid network as there are now both discrete and continuous \acs{rv}s.
 
 \textbf{Relationships}
 
-Now that the \acs{rv}s have been defined, the next step is to define the relationships between them. It is evident that the output of each algorithm directly depends on the actual position of the ball. Therefore, there is a causal relationship between $Pos_{x,y}$ and $Alg_n$, as illustrated in Figure~\ref{fig:smallBN}. This implies that the algorithm outputs are conditionally dependent on the true ball position.
+Now that the \acs{rv}s have been defined, the next step is to define the relationships between them. It is evident that the output of each algorithm directly depends on the actual position of the ball as well as whether the output is an outlier. Therefore, there is a causal relationship between $Pos_{x,y}$ and $Alg_n$ and between $a_n$ and $Alg_n$, as illustrated in Figure~\ref{fig:smallBN}. This implies that the algorithm outputs are conditionally dependent on both the true ball position and the Outlier Indicator.
 
 \begin{figure}[H]
 	\centering
-	\includegraphics[width=0.25\textwidth]{smallBN.jpg}
-	\caption{Relationship between $Pos_{x,y}$ and $Alg_n$}
+	\includegraphics[width=0.5\textwidth]{smallBN.jpg}
+	\caption{Relationship between $Pos_{x,y}$, $Alg_n$ and $a_n$ for single algorithm and time step}
 	\label{fig:smallBN}
 \end{figure}
 
@@ -960,29 +971,81 @@ With this in mind, the full model can be defined as shown in Figure~\ref{fig:ful
 
 \begin{figure}[H]
 	\centering
-	\includegraphics[width=0.6\textwidth]{fullBN.jpg}
+	\includegraphics[width=0.75\textwidth]{fullBN.jpg}
 	\caption{\acl{bn} showing the relationships between $Pos_{x,y}$ and the various algorithms used}
 	\label{fig:fullBN}
 \end{figure}
 
-
 \textbf{Time-step connections}
 
-At this point in order for the ball to be tracked smoothly and efficiently the other frames need to be taken into account. This will be done with $Pos_{x,y}$ having a direct influence on the same \acs{rv} in the next time step. From here the use of $Pos_{x,y}1$, $Pos_{x,y}2$, ..., $Pos_{x,y}n$ will be used per time step. Figure~\ref{fig:fulltimeBN} shows the relationships between each time step. As you can see, $Pos_{x,y}1$ has direct influence on $Pos_{x,y}2$, this means that 
+At this point in order for the ball to be tracked smoothly and efficiently the other frames need to be taken into account. This will be done with $Pos_{x,y}$ having a direct influence on the same \acs{rv} in the next time step. From here the use of $Pos_{x,y}1$, $Pos_{x,y}2$, ..., $Pos_{x,y}n$ will be used per time step. Figure~\ref{fig:fulltimeBN} shows the relationships between each time step. As you can see, $Pos_{x,y}1$ has direct influence on $Pos_{x,y}2$, this means that the position of the ball in the next frame is dependent on the position of the ball in the current frame. This is important as it ensures that the ball's motion is modeled smoothly over time, reflecting its continuous trajectory across frames.
  
  \begin{figure}[H]
  	\centering
  	\includegraphics[width=1\textwidth]{BNwtime.jpg}
- 	\caption{\acl{bn} showing the relationships between $Pos_{x,y}$ and the various algorithms used at the different time steps}
+ 	\caption{\acl{bn} showing the relationships between $Pos_{x,y}$, the various \acs{ipa} used and the discrete Outlier Indicators at the different time steps}
  	\label{fig:fulltimeBN}
  \end{figure}
+
  
-\subsubsection{Implementing the Model}
-This subsection explains how the model will be implemented, detailing both its conceptual workings and the practical coding approach. It will first present the underlying mathematics from first principles, followed by a description of the implementation using the EMDW library developed at Stellenbosch University. (this still needs to be completed, will emphasize more on what was said in the opening paragraph)
+\textbf{Factor Definitions}
+
+The probabilistic relationships in the \acs{bn} are formalized through the following factor definitions:
+
+\begin{itemize}
+	\item Temporal dynamics factor modeling the ball's motion between consecutive frames
+	\begin{equation}P(Pos_{x,y}^t | Pos_{x,y}^{t-1})\end{equation}
+	\item Observation model factor relating algorithm outputs to true position and outlier status
+	\begin{equation}P(Alg_n | Pos_{x,y}, a_n)\end{equation}
+	\item Outlier prior factor representing the probability that algorithm $n$ produces an outlier
+	\begin{equation}P(a_n)\end{equation} 
+\end{itemize}
+
+These factors define the conditional dependencies within the hybrid network.
+
+\textbf{Mathematical Specification}
+
+These factor definitions now need to be formalized as Gaussian distributions. The mathematical specifications for the factors are as follows:
+
+\begin{itemize}
+	\item Temporal dynamics factor:
+	\begin{equation} P(Pos_{x,y}^t | Pos_{x,y}^{t-1}) = \mathcal{N}(Pos_{x,y}^t; Pos_{x,y}^{t-1}, \Sigma_{motion}) \end{equation}
+	\item Observation model:
+	\begin{equation}
+	P(Alg_n | Pos_{x,y}, a_n) = \begin{cases}
+	\mathcal{N}(Alg_n; Pos_{x,y}, \Sigma_n) & \text{if } a_n = 1 \text{ [inlier]} \\
+	\mathcal{N}(Alg_n; c, \Sigma_o) & \text{if } a_n = 0 \text{ [outlier]}
+	\end{cases}
+	\end{equation}
+	where:
+	\begin{itemize}
+		\item $c$: A constant mean.
+		\item $\Sigma_o$: A large covariance matrix representing high uncertainty for outliers.
+	\end{itemize}
+\end{itemize}
+
+ \subsubsection{\acs{pgm} Design}
+This subsection discusses the design flow of the \acs{pgm}, as shown in Figure~\ref{fig:pgmflow}. The model should begin by reading the \acs{ipa} outputs from their text files. For each time step (Frame), the model needs to set all of the initial means and covariance matrices. From there each the model should loop through each algorithm and perform \acs{ep} to update the belief about the ball's position based on each algorithm's output and its outlier status. \acs{ep} needs to be done here as this model is a Hybrid network and regular \acs{bp} will not work for this model. The beliefs or messages are then fused from the last algorithm via Moment Matching as the inference method used is \acs{ep} therefore there will be multiple difference guassians fusing messages together. Finally the outputs need to be converted to Mean-Covariance form and outputted to a text file that can be used for evaluation and to be overlayed with the original video footage to show the tracking.
+ 
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.75\textwidth]{pgmflowdesign.jpg}
+	\caption{Flow diagram showing the flow of logic the \acs{pgm} will follow}
+	\label{fig:pgmflow}
+\end{figure}
+
+ \newpage
+\section{Implementation}
+This chapter explains how the model will be implemented, detailing both its conceptual workings and the practical coding approach. It will first present the underlying mathematics from first principles, followed by a description of the implementation using the EMDW library developed at Stellenbosch University. (this still needs to be completed, will emphasize more on what was said in the opening paragraph).
 
 \newpage
-\section{Still needed to be done}
-What still needs to be done is finishing off the lit review, the PGM section and Working on the design of the image processing section. After those are done Testing of the model will be done and the section on testing will be created, this will lead to having to optimize the algorithms used and then finally concluding. Also adding section summaries need to be added per section. Also I need to improve the ECSA table to ensure that they all line up with the sections where I address each of them
+\section{Experimentation}
+This chapter outlines the experimental setup for evaluating the performance of the ball tracking system. It describes the datasets used, the evaluation metrics, and the experimental procedures. The goal is to systematically assess how well the integrated image processing algorithms and probabilistic graphical model work together to accurately track the ball's position in various sports video scenarios. (this still needs to be completed, will emphasize more on what was said in the opening paragraph).
+
+\newpage
+\section{Conclusion}
+This chapter summarizes the key findings from the project, reflecting on the effectiveness of the proposed ball tracking system. It discusses the strengths and limitations of the approach, as well as potential areas for future work and improvements. The conclusion aims to encapsulate the overall contributions of the project to the field of sports analytics and computer vision. (this still needs to be completed, will emphasize more on what was said in the opening paragraph).
+
 \newpage
 \printbibliography
 \end{document}
