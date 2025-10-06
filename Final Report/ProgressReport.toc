@@ -1,0 +1,39 @@
+\acswitchoff 
+\contentsline {section}{Plagiarism Declaration}{i}{}%
+\contentsline {section}{Executive Summary}{ii}{}%
+\contentsline {section}{Evaluation of ECSA Exit Level Outcomes}{iv}{}%
+\contentsline {section}{\numberline {1}Introduction}{1}{}%
+\contentsline {subsection}{\numberline {1.1}Motivation}{1}{}%
+\contentsline {subsection}{\numberline {1.2}Objectives}{2}{}%
+\contentsline {subsection}{\numberline {1.3}Report Overview}{3}{}%
+\contentsline {section}{\numberline {2}Background and Literature Review}{4}{}%
+\contentsline {subsection}{\numberline {2.1}Existing Commercial Tracking systems}{4}{}%
+\contentsline {subsection}{\numberline {2.2}Computer Vision techniques for tracking}{5}{}%
+\contentsline {subsubsection}{\numberline {2.2.1}Traditional Tracking and Detecting methods}{5}{}%
+\contentsline {subsubsection}{\numberline {2.2.2}Modern Deep Learning-Based Tracking}{6}{}%
+\contentsline {subsection}{\numberline {2.3}Image Processing Algorithms}{6}{}%
+\contentsline {subsubsection}{\numberline {2.3.1}Low-Level Vision}{7}{}%
+\contentsline {subsubsection}{\numberline {2.3.2}Intermediate Level Vision}{7}{}%
+\contentsline {subsubsection}{\numberline {2.3.3}OpenCV}{7}{}%
+\contentsline {subsubsection}{\numberline {2.3.4}OpenCV Functions for Low- and Intermediate-Level Vision}{8}{}%
+\contentsline {paragraph}{Low-Level Vision}{8}{}%
+\contentsline {paragraph}{Intermediate-Level Vision}{10}{}%
+\contentsline {subsection}{\numberline {2.4}\acl {pgm}s}{11}{}%
+\contentsline {subsubsection}{\numberline {2.4.1}Modeling}{12}{}%
+\contentsline {subsubsection}{\numberline {2.4.2}Inference}{13}{}%
+\contentsline {subsubsection}{\numberline {2.4.3}Gaussian Factors}{15}{}%
+\contentsline {subsubsection}{\numberline {2.4.4}Hybrid Factors}{16}{}%
+\contentsline {paragraph}{\acl {clg} (\acs {clg}) Networks}{17}{}%
+\contentsline {subsubsection}{\numberline {2.4.5}\acl {ep} (\acs {ep})}{18}{}%
+\contentsline {subsection}{\numberline {2.5}Gaps}{19}{}%
+\contentsline {section}{\numberline {3}Model Design}{20}{}%
+\contentsline {subsection}{\numberline {3.1}Video Footage Description}{20}{}%
+\contentsline {subsection}{\numberline {3.2}\acl {ipa}}{21}{}%
+\contentsline {subsubsection}{\numberline {3.2.1}Requirements}{21}{}%
+\contentsline {subsubsection}{\numberline {3.2.2}Algorithm Design}{22}{}%
+\contentsline {subsubsection}{\numberline {3.2.3}Candidate Algorithms}{23}{}%
+\contentsline {subsection}{\numberline {3.3}\acl {pgm}}{25}{}%
+\contentsline {subsubsection}{\numberline {3.3.1}Design Requirements}{25}{}%
+\contentsline {subsubsection}{\numberline {3.3.2}Model Construction}{27}{}%
+\contentsline {subsubsection}{\numberline {3.3.3}Implementing the Model}{28}{}%
+\contentsline {section}{\numberline {4}Still needed to be done}{30}{}%

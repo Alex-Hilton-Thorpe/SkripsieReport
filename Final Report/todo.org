@@ -1,0 +1,449 @@
+* Bugfixes
+
+** Die een convert na int ipv float
+gLinear: int * Matrix<float> gee Matrix<int>
+soek fout in omgewing van gMatrixOpers.tcc lyn 416
+
+** Die eerste een push nie reg nie. Verstaan dit nie.
+    for (unsigned i = 0; i < dim; i++) {
+      gLinear::gColVector<double> tmp;
+      tmp = L.col(i);
+      spts1.push_back(tmp); wgts1.push_back(1.0);
+      spts1.push_back(-tmp); wgts1.push_back(1.0);
+      tmp = sqrt(2.0*dim-1)*L.col(i);
+      spts1.push_back(tmp); wgts1.push_back(1.0);
+      spts1.push_back(-tmp); wgts1.push_back(1.0);
+    } // for
+
+
+* CHECK
+
+** As ek marginaliseer oor 'n cluster met net 1 veranderlike is ek per
+default klaar, hoef nie enige werk te doen nie.
+
+** Topologie van clustergraph met 'n prior wat na orals verbind. Die
+sepset vir die prior moet as 'n ster verbind wees. Indien wel sal dit
+goed wees (alhoewel nie essensieel nie) as die prior in die kern van
+die ster ge-absorbeer kan word.
+
+** Kyk weer mooi na die skakel tussen gLinear en lapack. Indien
+moontlik wil ons nie matrikse oorpak tussen strukture nie.
+
+** gLinear matriks*matriks gMatrixOpers.tcc lyn 303 maak nie gebruik van iterators nie
+
+** Vraag: Hoe lyk p(z) met z = xy met x en y Gaussian vektore.
+
+
+* New features
+
+** A graph linking junction trees
+
+Ek vermoed mens kan beter konvergensie eienskappe kry as mens die
+grafiekstruktuur so bietjie aanpas.
+
+*** Cluster eers al die faktore/nodi in 'n aantal clusters.
+
+1. Begin eers deur 'n clustergraph soos tans op te stel. Vir elke node op
+die grafiek, bepaal die som van die kardinaliteite van die sepsets wat
+na hom toe verbind. As mens na die grafiekstruktuur in hierdie terme
+kyk, kan jy die nodi met die grootste lokale kardinaliteitsom
+(m.a.w. alle nodi wat aan hom verbind is het 'n laer kardinaliteitsom)
+as clusterkerne gebruik. Al die ander nodi word konsentries toegeken
+aan die naaste kern. Kry eers al die nodi wat aan net een cluster
+gekoppel is, en kan hom toe aan daardie cluster. Indien hy aan meer as
+een cluster gekoppel is, ken hom toe aan die naaste een volgens een of
+ander metriek. Herhaal dit in konsentriese sirkels rondom die clusters
+totdat alle nodi aan 'n cluster toegeken is.
+
+2. Dikwels gaan die grafiek te "plat" wees om sukses uit 1 te kry. Wat
+   van die PageRank algoritme met die sepset grootte as die link
+   strength?
+
+
+*** Bou 'n Junction Tree vir elkeen van hierdie clusters.
+
+Indien dit nie doenbaar is nie, los die cluster in sy loopy vorm, of
+subverdeel hom.
+
+As die eliminasie volgorde begin met die veranderlikes op die
+buiterand van die cluster, sal die JT natuurlikerwys op sy blare
+verbind met die omringende JTs (sien hieronder).
+
+*** Hanteer nou elke JT as 'n supernodus en koppel hulle aan mekaar via LTRIP.
+Probeer om op die blare van die JT's te las waar moontlik.
+
+
+** GaussCanonical
+==============
+
+DONE Voer die INFFORM ook in. Wanneer beide CANFORM en COVFORM gestel is,
+moet INFFORM ook gestel wees. Die distance funksie stel net CANFORM
+(dws nie COVFORM ook soos tans nie) en bereken die mean mbv solve om
+sodoende 'n INFFORM te skep.
+
+** UKF
+===
+
+Implementeer. Lyk my dit is maar net nog 'n constructor baie soos die
+linear gaussian constructor. Hierdie een bevat egter 'n funksie (ipv
+'n matriks) wat dan die nie-lineere transformasie van vektor x na
+vektor y implementeer. Dan moet daar nog meetruis (soos in die lineere
+geval) ook bykom. Lyk my ons hoef op die stadium nie die SP1FORM
+eksplisiet te implementeer nie, is net nodig binne in die
+constructor. Klink baie doenbaar, en dan ry die hele ding op die rug
+van GaussCanonical wat dan sommer terselfdertyd ook Linear Gaussians
+en UKF's implementeer. Dink 'n toepassing (los van die GMM werk
+hieronder) hiervoor uit en implementeer - vra vir Ben waarvoor hulle
+UKF's gebruik het.
+
+As ek die proses veralgemeen vanaf dit wat met die linear Gaussians gebeur
+lyk dit so:
+
+1) Kry X se 2D+1 sigma punte. Choleski op kovariansie-matriks hiervoor nodig.
+2) Beeld elkeen van hulle af op 'n ooreenstemmende Y deur van die transformasie
+   gebruik te maak.
+3) NEE, sien 5. Vorm nou nuwe uitgebreide sigma punte deur die ooreenstemmende X'e en Y'e kop
+   aan get te las as [X' Y']';
+4) Nee, sien 5. Skat die gemiddeld en kovariansie af mbv hierdie 2D+1 uitgebreide vektore.
+5) Die resultaat kan dalk singulier wees as Y se dimensie te hoog is. Skat dus eerder die
+   uitgebreide kovariansie matriks vanaf subblokke, eerder as om die volle ding vanaf die
+   uitgebreide sigma punte te skat:
+   a) Cxx en mx ken ons.
+   b) Cyy + Cnn, sowel as my,  hoort ok te wees om te skat mbv die geprojekteerde sigma punte.
+      (tensy Y se dimensie dubbeld die van X is)
+   c) Dan bly net Cxy oor om verder te skat, lei 'n vergelyking hiervoor af en doen apart. As
+      ek ekstrapoleer vanaf die lin-gauss geval (vgl 10.1.1) lyk dit of die meetruis nie in
+      die kruis-kovariansie betrokke is nie. Lyk redelik maklik, veral met mx en my reeds
+      bekend.
+6) Voila! (En skryf die proses ordentlik op.)
+
+*** Toegepas op projeksies:
+-----------------------
+
+y = Ax met y (d by 1), A (d by D) en x (D by 1) Veronderstel dat z =
+(A,x) reeds mbv 'n Gaussiese verdeling beskryf is, wat o.a. dan ook
+enige korrelasie tussen hulle sal bevat. M.a.w. z = ( d(D+1) by 1 )
+Kry die 2d(D+1)+1 sigma-punte van z. Elke sigma-punt verteenwoordig 'n
+potensie"ele x,A kombinasie.  Vir elkeen van hierdie sigma-punte,
+projekteer die ooreenstemmende x gedeelte op die A gedeelte om
+sodoende 'n y monster te kry. Uit die vooraf inligting oor die
+verspreiding van z, sowel as die (zi,yi) sigma-punt afbeeldings, skat
+die gesamentlike Gaussian vir z,y af.
+
+*** VRAAG: Kan mens nou waarnemings van y maak om sodoende z te bepaal?
+Dit moet tog dubbelsinnig bly as A en x onafhanklik en onbekend is,
+iewers sal mens ook iets bykomends van A of x moet weet? ANTW: As mens
+genoeg y waardes kan waarneem, sal die enigste dubbelsinnigheid wat
+oorbly die afstand van x na y wees - op die lyn tussen x en y
+projekteer alle punt oor na dieselfde y toe. Ons moet dus hierdie
+afstand as 'n ekstra TV bybring en ons hoort te sien dat alles oplos
+behalwe die afstand (maw die oplossing is een dimensioneel en nie 'n
+punt nie - ons weet op watter lyn x is). Ons kan wel 'n prior op die
+afstand sit wat ons iets vertel van die fokus-vlak en diepte van veld,
+dan het ons ook 'n verspreiding in diepte, maar ons bly steeds op 'n
+lyn. As ons nou egter ooreenstemmende wereldpunte se projeksie op meer
+as een beeldvlak kan waarneem, behoort hierdie dubbelsinnigheid ook
+nou opgelos te wees, en hoort ons uniek al die parameters te kan
+afskat.
+
+*** VRAAG: Maar hier is tog steeds nog niks wat ons keuse op die
+oorspronklike wereld-assestelsel beperk nie? Bv: in watter rigting wys
+elkeen van die asse? ANTW: Dit is tog implisiet die
+eenheids-assestelsel -- dis tog wat dit beteken as ons [X1,X2,X3]
+neerskryf?
+
+** Square-root form Gaussians
+==========================
+
+1) Add LaPack dtrtri.f to gLinear.
+2) Duplicate GaussCanonical to a SRGaussCanonical.
+3) Add sigma point representation
+4) scaled sigma point?
+
+** Sparse-covariance Gaussians
+===========================
+
+Is dit die moeite werd? Wanneer ons na GMMs toe gaan meen ek is
+diagonaal gaussians 'n beter opsie. Maar vir gewone Gaussian werk kan
+ons seker heelwat spaar deur sparse te gaan? Aan die ander kant, wat
+wil ons sparse he^, die kovariansie of dalk eerder die presiesie? en
+is dit dan nie beter om dit eerder as 'n PGM netwerk te hanteer nie?
+
+** Conditional Gaussian ***
+====================
+
+Implementeer. Vir eers moet beide die demping en die marginalisation
+moet die gmms wat ontstaan met 'n enkel Gaussian benader: Weak
+marginalisation.
+
+Bou dan Bayesiese Gaussiese klassifiseerder wat aanvaar
+dat die kovariansie bekend is, maar die mean met 'n gaussiese
+verspreiding modelleer.
+
+** Damping
+=======
+
+DONE Implementeer hom as 'n factor operator sodat ons verskillende
+benaderings kan kies. Vir die skoon Gaussiese goed, implementeer iets
+wat basies geen damping doen nie, of dit alternatief via weak damping
+benader. DONE
+
+** Gauss-Wishart prior
+===================
+
+Implementeer. Vir eers moet beide die demping en die marginalisation
+moet die gmms wat ontstaan met 'n enkel Gauss-Wishart benader.
+
+Bou dan 'n vol Bayesiese Gaussiese klassifiseerder.
+
+** GMMs
+====
+
+Is daar 'n effektiewe manier om 'n groter GMM te benader met 'n
+kleiner GMM? As mens aanvanklik net afstande tussen die gaussians kan
+bepaal, kan mens vir 'n begin dalk net die naaste gaussians bymekaar
+gooi? Lyk na 'n vinnige 'n direkte benadering (sal ons probeer?), maar
+ons hoort te kan beter doen as ons al die Gaussians kan aanpas. Hoe -
+dalk KL optimering - dalk EM? EM met monomials as waarnemings?  EM met
+GMMs as waarnemings? Dalk kers opsteek by partikel metodes?  Mmm, lyk
+my rudolph se sigma-point particle filters kan dalk die antwoord
+bevat.
+
+Wat gaan ons doen met GMM deling? Of moet ons dit probeer vermy deur
+(effektief) loopy propagation te doen (i.e. regtig loopy prop, of
+alternatiewelik loopy update met factor sets, en deling voor die
+benadering). Weereens lyk dit vir my of die sigma point voorstelling
+die antwoord kan gee.
+
+Lyk my jy moet ook oorweeg om eksplisiet 'n diagonale GMM beskikbaar
+te he^, vir 'n algemene situasie sal dit waarskynlik die vinnigste
+bang for your buck gee.
+
+** Dirichlet prior
+===============
+
+Implementeer
+
+** oracleInput
+===========
+
+DONE Herskryf om eerder reducing observe te gebruik, non-reducing is nie
+beskikbaar vir Gaussians nie.
+
+Oorweeg om ontslae te raak van die non-reducing observes. Lyk of hulle
+in elk geval net in die start-up 'n rol speel, en hulle is nie
+algemeen nie. Dit veroorsaak te veel kode-clutter.
+
+** Belief-update algoritme
+=======================
+
+1) DONE beliefupdate sal baie vinniger queries as beliefprop gee, aangesien
+   die faktor marginals/beliefs reeds uitgewerk is. Aangesien queries
+   tans na die stadigste komponent lyk, vermoed ek hierdie sal nuttig
+   wees.
+2) DONE Verder lyk dit of ons net helfte van die messages hoef te stoor,
+   net die nuutste een oor die link ipv een in elke rigting.
+3) DONE Ook die message uitstuur lyk vinniger, ons absorbeer al die
+   inkomende boodskappe net een keer, en dan is daar 'n enkele deling
+   wanneer ons 'n boodskap oor 'n link wil uitstuur.
+4) DONE Verder kan ons die deling na die marginalisering doen, weereens
+   vinniger.
+5) Wanneer ons benaderde boodskappe wil uitstuur (EP) werk dit ook
+   beter, doen die benadering op die belief self ipv op die message.
+6) As ons met subgrafieke wil werk is dit ook nice, ons hoef nie buite
+   die clusters waarin ons belangstel te kyk nie. Ons kan dalk selfs
+   'n 2 pass BU doen op die subgrafiek.
+
+** Message Passing  volgorde
+=========================
+
+Op die oomblik gebruik ons slegs die hoeveelheid wat die nuwe
+message van die vorige verskil, as aanduider. Maar ons kan seker ook
+by elke cluster 'n count hou van hoeveel van sy intree's nog 'n
+message kort (aanvanklik gestel op die volle aantal). Mens kan dit
+update soos wat jy die boodskap stuur, en as 'n cluster net nog een
+kort, kan mens hom dalk sommer direk daar aanwys as die volgende
+cluster om boodskap uit te stuur op daardie link wat nog oop is. dit
+hoort sommer outomaties ons lbp na bp te verander as ons met 'n boom
+werk (of nie?). Maar wat van lbu?
+
+DONE (en dit was meer ingewikkeld as hier gestel) verder: op die
+oomblik hou ons een delta per cluster. maar ek dink dis wat veroorsaak
+dat ek nie 'n priority queue kan gebruik nie en dus daai persentiel
+seleksie moet doen. Ek vermoed ek moet eerder 'n delta per message
+hou, en dan wel in 'n priority queue. dan pop ek net elke keer die
+boonste een af en propagate hom na die "ander kante" van die cluster
+waaraan hy vas is.
+
+** Log-faktore
+===========
+
+Moet seker.
+
+** Factor-set
+==========
+
+Hierdie een lyk fassinerend. 'n Faktor wat intern bestaan uit die
+produk van faktore (wat ons met 'n sub-PGM kan voorstel. Hierdie
+faktore kan die resultaat wees van bv goed wat bymekaar gegooi word
+tydens 'n JT konstruksie. Dit voel vir my ons kan dan die onmoontlike
+groot tabelle van bv kragtige LDPC JT's vermy. Maar natuurlik sal die
+sub-PGM lusse bevat, so die loopy issues kom dan terug, hopenlik op 'n
+kleiner skaal. En dan gebruik mens queries om die inligting wat die
+factor-set aanstuur na ander faktore, te bepaal. Mens sal dus seker
+maar moet oorskuif na belief-update, en ook multi-subfaktor queries
+kan doen.
+
+Die plek waar ek dit oorspronklik raakgeloop het is in Koller afdeling
+11.4. Daar word dit gebruik as 'n benaderde faktorisering vir een of
+ander te komplekse faktorfunksie. Mens sou dit selfs kon kies om nie
+loopy te wees nie, dan kan ons eksakte inferensie op 'n nie eksakte
+faktor doen. :-) Maw EP.
+
+Lyk my ook mens sal met Belief-Update dan die boodskappe in beide
+rigtings wil stoor. Maak dit maklik om die boodskap kansellasie te
+doen.
+
+** Gaussiese potensiaalfunksies
+============================
+
+Die volgende byvoeging tot die pgmbox sal waarskynlik gaussiese
+potensiaalfunksie wees. DONE
+
+a) As eerste toepassing kan mens sommer kyk na die oplos van 'n
+stelsel van lineere vergelykings (Nee, dit kort BVG) DONE (nie die BVG
+weergawe nie)
+
+b) Ek sal dit eers graag wil gebruik in 'n 2-klas vol bayesiese
+klassifiseerder. Die normaliseringsterm in 'n logistiese regressie lyk
+egter of dit moeilikheid gaan maak met die boodskappe, ek sal
+versigtig daarna moet kyk. Maar ek wonder of mens nie eerder die hele
+grafiese model moet cast as 'n log-likelihood-ratio stelsel nie, dit
+sal sommer ook ontslae raak van die normaliseringsterm. As mens die
+idee uitbrei na 'n multi-klas klassifiseerder raak dinge egter weer
+kompleks in die noemer van die likelihood ratio. Sal later daaroor
+worry, genoeg probleme reeds om die 2-klas ding aan die gang te kry.
+
+** Belief-propagation mbv FFT's
+============================
+
+Murphy bl 775 se^ 'n eintlik baie opwindende ding - belief-propagation
+is eintlik net konvolusie. En daarom kan mens FFT's gebruik om dit op
+'n massiewe skaal, baie effektief te doen. Lyk na iets wat ons beslis
+verder sal moet ondersoek.
+
+** Junction Tree
+=============
+
+Ons kan sekerlik 'n JT algoritme byskryf, minstens vir
+toetsgevalle. Eintlik breek dit op in twee, 1) hoe om die JT te bou en
+2 2-pass inference. Lg kan ons vir ander goed ook gebruik.
+
+Maar vir meeste praktiese werk sal die clusters te groot wees. Miskien
+kan mens 'n variant uitdink wat steeds loopy is, maar binne in groot
+subgedeeltes 'n boom is. M.a.w. 'n klomp groterige bome wat in loops
+verbind is. Kyk na Weiss and Freeman [Janto 58] "Single Loops and
+Trees (SLT) neighbourhood within which the result of a loopy belief
+propagation algorithm is optimal."
+
+Ek wonder hoe die grafiek sal uitdraai as mens iets soortgelyks
+aan JT doen, maar jy plaas 'n beperking op hoe groot die maksimale
+cluster mag wees (indien nie groter as die oorspronklike maksimale
+cluster nie, rig mens min skade aan die verwerkings-vereistes
+aan). Met 'n bietjie geluk eindig mens met yl loopy strukture op (maw
+groterige stukke wat intern soos 'n boom lyk, en op sy buite-randte op
+'n loopy wyse met soortgelyke strukture verbind. Ek vermoed hierdie
+tipe van struktuur sal beter konvergensie-eienskappe as 'n dig
+verbinde struktuur he^.
+
+** Region Graphs
+=============
+
+Ek krap nog kop oor of ons hulle wil gebruik of nie.
+
+** Beam Search
+===========
+
+Sal moet kyk na tegnieke om net die belangrikste boodskappe te
+gebruik. Of gebruik te maak daarvan dat daar 'n vloer op die messages
+is, of so iets.
+
+** Absorb volgorde
+===============
+
+a) DONE Tjek in SparseTable of die volgorde waarin 'n groter en kleiner faktor
+met mekaar vermenigvuldig word, spoed implikasies het.  b) Indien so, kyk
+in loopyBelief of ons dit reg om doen.
+Antw a): Regs substel van links word spesiaal effektief hanteer.
+
+
+* Applications
+
+** Edge Detection
+==============
+
+1) Vir die haaie is die basiese potensiaal-clusters bloot 2x2 pixel
+toevalsveranderlikes (biner: water vs haai) met nog 4 verdere
+toevalsveranderlikes vir die grense tussen daardie pixels (ook biner:
+grens vs nie). Dus 8 toevalsveranderlikes, maar soos ek dit gebruik
+kan jy net 4 onafhanklik verander (daar is net 'n edge tussen twee
+pixels as die twee pixels in verskillende kategoriee is), dus maksimum
+16 inskrywings in die potensiaal-funksie tabel. Van hulle gebruik ek
+14 inskrywings, ek laat die stelsel nie toe om 1001 of 0110 patrone te
+aanvaar nie (links na regs bo na onder).  Omdat hierdie clusters een
+pixel op 'n slag aanskuif, forseer dit die stelsel om kontinue gebiede
+wat met 'n rand omkring is (die buitelyn van die beeld tel ook as 'n
+rand) te identifiseer, nogals oulik as mens dink dat jou basiese
+potensiaal-funksie dek net 4 pixels. (Die sleutel om dit te verstaan
+is om te besef dat enige spesifieke pixel in 8 verskillende
+potensiaal-clusters verskyn, en dat die toekenning van daardie pixel
+se tipe konsekwent oor al die clusters moet wees. Soortgelyk verskyn
+enige spesifieke tussen-pixel edge in 2 clusters, en weereens moet
+beide konsekwent wees met hulle opinie oor daai edge. Met al hierdie
+verskuiwings mag slegs die gespesifiseerde 14 kombinasies voorkom, die
+ander het nul-waarskynlikheid. Dit forseer die gewenste kontinuiteit
+op die stelsel af. )
+
+a) As mens die 4 pixel TVs na triner verander kan mens beelde in 3
+verskillende segment tipes opbreek. Bg 2x2 formaat het dan maksimaal
+81 inskrywings. Kan dalk bv nuttig wees in daardie laaste haai foto
+waar die huidige PGM die wit reg teen die water-rand forseer om of by
+die water, of by die haai ingesluit te word (sien bv heel bo-aan
+GWS003_2011_040403c_cr_edge.jpg). Of natuurlik beelde wat uit 3
+aaneenlopende kategoriee bestaan.
+
+b) En as mens vir kwatrer (of wat ookal mens dit sou noem) pixel TV's
+gaan, kan mens die beeld in 4 kategoriee opbreek.  256 inskrywings in
+die tabel (en ons hoort selfs onder hulle ook te kan sif), dalk nog
+doenbaar as ons die beelde nie te groot maak nie. Wat dit interessant
+maak is dat dit volgens die four color map theorem voldoende hoort te
+wees om abitrere beelde in aaneenlopende segmente op te
+breek. Moontlik het ons iets hier wat die begin van 'n algemene objek
+segmentasie algoritme kan wees...
+
+2) Mens sou ook kon kyk na groter faktore as die 2x2 pixels. Hulle kan
+meer beperkings beskryf, maar ek vermoed die ekstra funksionaliteit
+sal beperk wees. (Ek gee telkens die max tabel grootte aan, in
+werklikheid hoort dit heelwat kleiner te wees na ons ongewenste
+konfigurasies verwyder het.)
+
+a) Bv 2x2 pixels wat die grense regs en onder insluit het 8
+onafhanklike TVs (max 256 probs). Vergelyk met 3x3 met net interne
+grense wat 9 onafhanklike TVs (max 512 probs) het. Dis soos die 3x3
+sonder die hoekpixel regs onder.
+
+b) Of 2x2 pixels wat ook die grense reg rondom insluit, het effektief
+12 onafhanklike TVs. Vergelyk met 4x4 met interne grense gee 16
+onafhanklike TVs (max 65536 probs). Dis soos die 4x4 sonder die 4
+hoekpixels (max 4096 probs).
+
+3) Twee uncanny sanity checks:
+
+a) Wat gebeur as ons nie die vloer waardes by uncanny insit nie.
+Antw: kan werk, maar stelsel sukkel om edges in te sit waar daar niks
+was nie. Sien GWS002_2010_022602g_cr_flipped_down2.jpg rondom (490,80)
+
+b) Moet ons nie dalk eerder die ewexonewe rigtingsfilters gebruik
+en dan geen thinning doen nie, dit oorlaat aan die PGM?
+
+4) Speedup met haaie

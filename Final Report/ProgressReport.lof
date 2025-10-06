@@ -1,0 +1,9 @@
+\acswitchoff 
+\contentsline {figure}{\numberline {1}{\ignorespaces Examples of graphical models}}{12}{}%
+\contentsline {figure}{\numberline {2}{\ignorespaces Conversion of \acl {bn} to \acl {mn}}}{14}{}%
+\contentsline {figure}{\numberline {3}{\ignorespaces Example of a \acl {clg} network showing discrete \acs {rv} $X$ and continuous \acs {rv}s $Y$ and $Z$}}{17}{}%
+\contentsline {figure}{\numberline {4}{\ignorespaces Overview of the model design}}{20}{}%
+\contentsline {figure}{\numberline {5}{\ignorespaces Flow diagram showing the flow of logic each of the \acs {ipa} will follow}}{23}{}%
+\contentsline {figure}{\numberline {6}{\ignorespaces Relationship between $Pos_{x,y}$ and $Alg_n$}}{28}{}%
+\contentsline {figure}{\numberline {7}{\ignorespaces \acl {bn} showing the relationships between $Pos_{x,y}$ and the various algorithms used}}{28}{}%
+\contentsline {figure}{\numberline {8}{\ignorespaces \acl {bn} showing the relationships between $Pos_{x,y}$ and the various algorithms used at the different time steps}}{28}{}%

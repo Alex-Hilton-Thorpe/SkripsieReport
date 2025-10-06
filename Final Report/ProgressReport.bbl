@@ -1,0 +1,1968 @@
+% $ biblatex auxiliary file $
+% $ biblatex bbl format version 3.2 $
+% Do not modify the above lines!
+%
+% This is an auxiliary file used by the 'biblatex' package.
+% This file may safely be deleted. It will be recreated by
+% biber as required.
+%
+\begingroup
+\makeatletter
+\@ifundefined{ver@biblatex.sty}
+  {\@latex@error
+     {Missing 'biblatex' package}
+     {The bibliography requires the 'biblatex' package.}
+      \aftergroup\endinput}
+  {}
+\endgroup
+
+
+\refsection{0}
+  \datalist[entry]{nyt/global//global/global}
+    \entry{youtube_ZverevDjokovic}{online}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=2c2f57429b10aa3794777fe8240115b9}{%
+           family={Apilado},
+           familyi={A\bibinitperiod},
+           given={COURT\bibnamedelimb LEVEL\bibnamedelimb TENNIS\bibnamedelimb -\bibnamedelima Liam},
+           giveni={C\bibinitperiod\bibinitdelim L\bibinitperiod\bibinitdelim T\bibinitperiod\bibinitdelim \bibinithyphendelim \bibinitperiod\bibinitdelim L\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{2c2f57429b10aa3794777fe8240115b9}
+      \strng{fullhash}{2c2f57429b10aa3794777fe8240115b9}
+      \strng{bibnamehash}{2c2f57429b10aa3794777fe8240115b9}
+      \strng{authorbibnamehash}{2c2f57429b10aa3794777fe8240115b9}
+      \strng{authornamehash}{2c2f57429b10aa3794777fe8240115b9}
+      \strng{authorfullhash}{2c2f57429b10aa3794777fe8240115b9}
+      \field{sortinit}{A}
+      \field{sortinithash}{2f401846e2029bad6b3ecc16d50031e2}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{note}{Accessed: 2025-08-02}
+      \field{title}{Djokovic and Zverev Full Court Level Practice | Points, Split-Screen, Groundstrokes etc. 2024 4K 60FPS}
+      \field{year}{2024}
+      \verb{urlraw}
+      \verb https://www.youtube.com/watch?v=n4TTjRjkB8I
+      \endverb
+      \verb{url}
+      \verb https://www.youtube.com/watch?v=n4TTjRjkB8I
+      \endverb
+    \endentry
+    \entry{bishop2006prml}{book}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=9dfd0135a5e80aa6d81cea2c10fb7f73}{%
+           family={Bishop},
+           familyi={B\bibinitperiod},
+           given={Christopher\bibnamedelima M.},
+           giveni={C\bibinitperiod\bibinitdelim M\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{publisher}{1}{%
+        {Springer}%
+      }
+      \strng{namehash}{9dfd0135a5e80aa6d81cea2c10fb7f73}
+      \strng{fullhash}{9dfd0135a5e80aa6d81cea2c10fb7f73}
+      \strng{bibnamehash}{9dfd0135a5e80aa6d81cea2c10fb7f73}
+      \strng{authorbibnamehash}{9dfd0135a5e80aa6d81cea2c10fb7f73}
+      \strng{authornamehash}{9dfd0135a5e80aa6d81cea2c10fb7f73}
+      \strng{authorfullhash}{9dfd0135a5e80aa6d81cea2c10fb7f73}
+      \field{sortinit}{B}
+      \field{sortinithash}{d7095fff47cda75ca2589920aae98399}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{isbn}{978-0387310732}
+      \field{note}{Accessed: 2025-09-29}
+      \field{title}{Pattern Recognition and Machine Learning}
+      \field{year}{2006}
+    \endentry
+    \entry{challa2011fundamentals}{book}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=583e626b909640480145f480156dfdb6}{%
+           family={Challa},
+           familyi={C\bibinitperiod},
+           given={Subhash},
+           giveni={S\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{location}{1}{%
+        {Cambridge}%
+      }
+      \list{publisher}{1}{%
+        {Cambridge University Press}%
+      }
+      \strng{namehash}{583e626b909640480145f480156dfdb6}
+      \strng{fullhash}{583e626b909640480145f480156dfdb6}
+      \strng{bibnamehash}{583e626b909640480145f480156dfdb6}
+      \strng{authorbibnamehash}{583e626b909640480145f480156dfdb6}
+      \strng{authornamehash}{583e626b909640480145f480156dfdb6}
+      \strng{authorfullhash}{583e626b909640480145f480156dfdb6}
+      \field{sortinit}{C}
+      \field{sortinithash}{4d103a86280481745c9c897c925753c0}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{isbn}{9780521192475}
+      \field{title}{Fundamentals of Object Tracking}
+      \field{year}{2011}
+    \endentry
+    \entry{culjak2012opencv}{inproceedings}{}
+      \name{author}{5}{}{%
+        {{un=0,uniquepart=base,hash=671c441f8420e0440f212cfb50841e8c}{%
+           family={Culjak},
+           familyi={C\bibinitperiod},
+           given={Ivana},
+           giveni={I\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=6f2c58fe7311ada86b9a8b10b9891611}{%
+           family={Abram},
+           familyi={A\bibinitperiod},
+           given={David},
+           giveni={D\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=db42afd54d11740cfbc1809f793b7733}{%
+           family={Pribanic},
+           familyi={P\bibinitperiod},
+           given={Tomislav},
+           giveni={T\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=c49bc26343ffd39a8beb244f63b67bac}{%
+           family={Dzapo},
+           familyi={D\bibinitperiod},
+           given={Hrvoje},
+           giveni={H\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=e5d0e5896609d6204524762c8365dea7}{%
+           family={Cifrek},
+           familyi={C\bibinitperiod},
+           given={Mario},
+           giveni={M\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{publisher}{1}{%
+        {IEEE}%
+      }
+      \strng{namehash}{7fd12b307b628ecdd51c1c12e5ec6731}
+      \strng{fullhash}{ad53014d4e21b9bfd47bb8bea36bffe9}
+      \strng{bibnamehash}{7fd12b307b628ecdd51c1c12e5ec6731}
+      \strng{authorbibnamehash}{7fd12b307b628ecdd51c1c12e5ec6731}
+      \strng{authornamehash}{7fd12b307b628ecdd51c1c12e5ec6731}
+      \strng{authorfullhash}{ad53014d4e21b9bfd47bb8bea36bffe9}
+      \field{sortinit}{C}
+      \field{sortinithash}{4d103a86280481745c9c897c925753c0}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{2012 Proceedings of the 35th International Convention MIPRO}
+      \field{month}{5}
+      \field{title}{A brief introduction to OpenCV}
+      \field{year}{2012}
+      \field{pages}{1725\bibrangedash 1730}
+      \range{pages}{6}
+    \endentry
+    \entry{ref_officiating_error}{online}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=54bf8daf2eb415cbf88662f90d9760d8}{%
+           family={{Daily News}},
+           familyi={D\bibinitperiod}}}%
+      }
+      \strng{namehash}{54bf8daf2eb415cbf88662f90d9760d8}
+      \strng{fullhash}{54bf8daf2eb415cbf88662f90d9760d8}
+      \strng{bibnamehash}{54bf8daf2eb415cbf88662f90d9760d8}
+      \strng{authorbibnamehash}{54bf8daf2eb415cbf88662f90d9760d8}
+      \strng{authornamehash}{54bf8daf2eb415cbf88662f90d9760d8}
+      \strng{authorfullhash}{54bf8daf2eb415cbf88662f90d9760d8}
+      \field{sortinit}{D}
+      \field{sortinithash}{6f385f66841fb5e82009dc833c761848}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{note}{Accessed: 2025-07-15}
+      \field{title}{Referee accuracy: VAR still debatable}
+      \field{year}{2023}
+      \verb{urlraw}
+      \verb https://dailynews.co.tz/referee-accuracy-var-still-debatable/
+      \endverb
+      \verb{url}
+      \verb https://dailynews.co.tz/referee-accuracy-var-still-debatable/
+      \endverb
+    \endentry
+    \entry{dong2014infrared}{article}{}
+      \name{author}{5}{}{%
+        {{un=0,uniquepart=base,hash=b58bb612bdb318c3e4e5e948c6927eaf}{%
+           family={Dong},
+           familyi={D\bibinitperiod},
+           given={Xiaofei},
+           giveni={X\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=7ff1d21e3184f525b582b31f2ce6651b}{%
+           family={Huang},
+           familyi={H\bibinitperiod},
+           given={Xin},
+           giveni={X\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=277b56c17d052c5379de47847ebb23a9}{%
+           family={Zheng},
+           familyi={Z\bibinitperiod},
+           given={Yujie},
+           giveni={Y\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=f5e7809bc04d1af16999d9e6bcf85043}{%
+           family={Shen},
+           familyi={S\bibinitperiod},
+           given={Liang},
+           giveni={L\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=de39e54231188adabfbc9450df130b19}{%
+           family={Bai},
+           familyi={B\bibinitperiod},
+           given={Shengguang},
+           giveni={S\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{publisher}{1}{%
+        {Elsevier}%
+      }
+      \strng{namehash}{81c7052291e9d1df2ca8ed490ea004d6}
+      \strng{fullhash}{9ed9eb581c2e8c40dd2d5f78447654ef}
+      \strng{bibnamehash}{81c7052291e9d1df2ca8ed490ea004d6}
+      \strng{authorbibnamehash}{81c7052291e9d1df2ca8ed490ea004d6}
+      \strng{authornamehash}{81c7052291e9d1df2ca8ed490ea004d6}
+      \strng{authorfullhash}{9ed9eb581c2e8c40dd2d5f78447654ef}
+      \field{sortinit}{D}
+      \field{sortinithash}{6f385f66841fb5e82009dc833c761848}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Infrared Physics \& Technology}
+      \field{title}{Infrared Dim and Small Target Detecting and Tracking Method Inspired by Human Visual System}
+      \field{volume}{62}
+      \field{year}{2014}
+      \field{pages}{100\bibrangedash 109}
+      \range{pages}{10}
+      \verb{doi}
+      \verb 10.1016/j.infrared.2013.10.010
+      \endverb
+    \endentry
+    \entry{hawkeye2024}{online}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=e3144cb7a5ff2779f5b111da4c11c7fe}{%
+           family={{Hawk-Eye Innovations}},
+           familyi={H\bibinitperiod}}}%
+      }
+      \strng{namehash}{e3144cb7a5ff2779f5b111da4c11c7fe}
+      \strng{fullhash}{e3144cb7a5ff2779f5b111da4c11c7fe}
+      \strng{bibnamehash}{e3144cb7a5ff2779f5b111da4c11c7fe}
+      \strng{authorbibnamehash}{e3144cb7a5ff2779f5b111da4c11c7fe}
+      \strng{authornamehash}{e3144cb7a5ff2779f5b111da4c11c7fe}
+      \strng{authorfullhash}{e3144cb7a5ff2779f5b111da4c11c7fe}
+      \field{sortinit}{H}
+      \field{sortinithash}{23a3aa7c24e56cfa16945d55545109b5}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{note}{Accessed: 2025-07-13}
+      \field{title}{Our Technology}
+      \field{year}{2024}
+      \verb{urlraw}
+      \verb https://www.hawkeyeinnovations.com/technology
+      \endverb
+      \verb{url}
+      \verb https://www.hawkeyeinnovations.com/technology
+      \endverb
+    \endentry
+    \entry{heskes2006approximate}{article}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=c7359565df9fe46e9d4d21e47b35aad7}{%
+           family={Heskes},
+           familyi={H\bibinitperiod},
+           given={Tom},
+           giveni={T\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{publisher}{1}{%
+        {Springer}%
+      }
+      \strng{namehash}{c7359565df9fe46e9d4d21e47b35aad7}
+      \strng{fullhash}{c7359565df9fe46e9d4d21e47b35aad7}
+      \strng{bibnamehash}{c7359565df9fe46e9d4d21e47b35aad7}
+      \strng{authorbibnamehash}{c7359565df9fe46e9d4d21e47b35aad7}
+      \strng{authornamehash}{c7359565df9fe46e9d4d21e47b35aad7}
+      \strng{authorfullhash}{c7359565df9fe46e9d4d21e47b35aad7}
+      \field{sortinit}{H}
+      \field{sortinithash}{23a3aa7c24e56cfa16945d55545109b5}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Probabilistic graphical models}
+      \field{title}{Approximate inference: EP and loopy belief propagation}
+      \field{year}{2006}
+      \field{pages}{205\bibrangedash 210}
+      \range{pages}{6}
+    \endentry
+    \entry{ji2013_3dvision_intro}{misc}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=f2825e3c1e08515c8a535d9517c5879f}{%
+           family={Ji},
+           familyi={J\bibinitperiod},
+           given={Qiang},
+           giveni={Q\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{f2825e3c1e08515c8a535d9517c5879f}
+      \strng{fullhash}{f2825e3c1e08515c8a535d9517c5879f}
+      \strng{bibnamehash}{f2825e3c1e08515c8a535d9517c5879f}
+      \strng{authorbibnamehash}{f2825e3c1e08515c8a535d9517c5879f}
+      \strng{authornamehash}{f2825e3c1e08515c8a535d9517c5879f}
+      \strng{authorfullhash}{f2825e3c1e08515c8a535d9517c5879f}
+      \field{sortinit}{J}
+      \field{sortinithash}{b2f54a9081ace9966a7cb9413811edb4}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{note}{Accessed: 2025-09-29}
+      \field{title}{Introduction to 3D Vision}
+      \field{year}{2013}
+      \verb{urlraw}
+      \verb https://sites.ecse.rpi.edu/~qji/CV/3dvision_introx.pdf
+      \endverb
+      \verb{url}
+      \verb https://sites.ecse.rpi.edu/~qji/CV/3dvision_introx.pdf
+      \endverb
+    \endentry
+    \entry{kamble2019ball}{article}{}
+      \name{author}{3}{}{%
+        {{un=0,uniquepart=base,hash=a24e5b791fcb0bf0610d6cc52ca317cc}{%
+           family={Kamble},
+           familyi={K\bibinitperiod},
+           given={Pravin\bibnamedelima R.},
+           giveni={P\bibinitperiod\bibinitdelim R\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=cfa7a136f93d24b0402e7886ca342988}{%
+           family={Keskar},
+           familyi={K\bibinitperiod},
+           given={Avinash\bibnamedelima G.},
+           giveni={A\bibinitperiod\bibinitdelim G\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=f02c3b42162ccf5e2e82ef2de7be022b}{%
+           family={Bhurchandi},
+           familyi={B\bibinitperiod},
+           given={Kishor\bibnamedelima M.},
+           giveni={K\bibinitperiod\bibinitdelim M\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{publisher}{1}{%
+        {Springer}%
+      }
+      \strng{namehash}{e08f3cfbb10a113f7663ca9e05ffa628}
+      \strng{fullhash}{e08f3cfbb10a113f7663ca9e05ffa628}
+      \strng{bibnamehash}{e08f3cfbb10a113f7663ca9e05ffa628}
+      \strng{authorbibnamehash}{e08f3cfbb10a113f7663ca9e05ffa628}
+      \strng{authornamehash}{e08f3cfbb10a113f7663ca9e05ffa628}
+      \strng{authorfullhash}{e08f3cfbb10a113f7663ca9e05ffa628}
+      \field{sortinit}{K}
+      \field{sortinithash}{c02bf6bff1c488450c352b40f5d853ab}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Artificial Intelligence Review}
+      \field{number}{3}
+      \field{title}{Ball Tracking in Sports: A Survey}
+      \field{volume}{52}
+      \field{year}{2019}
+      \field{pages}{1655\bibrangedash 1705}
+      \range{pages}{51}
+      \verb{doi}
+      \verb 10.1007/s10462-018-9629-5
+      \endverb
+    \endentry
+    \entry{koller2009pgm}{book}{}
+      \name{author}{2}{}{%
+        {{un=0,uniquepart=base,hash=9c785bcf6b8a0b99e44695299a6aecb2}{%
+           family={Koller},
+           familyi={K\bibinitperiod},
+           given={Daphne},
+           giveni={D\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=987ee418ae32e261a8a5385e14cda479}{%
+           family={Friedman},
+           familyi={F\bibinitperiod},
+           given={Nir},
+           giveni={N\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{publisher}{1}{%
+        {MIT Press}%
+      }
+      \strng{namehash}{644f618617c37fd03b6bc0248cd308d5}
+      \strng{fullhash}{644f618617c37fd03b6bc0248cd308d5}
+      \strng{bibnamehash}{644f618617c37fd03b6bc0248cd308d5}
+      \strng{authorbibnamehash}{644f618617c37fd03b6bc0248cd308d5}
+      \strng{authornamehash}{644f618617c37fd03b6bc0248cd308d5}
+      \strng{authorfullhash}{644f618617c37fd03b6bc0248cd308d5}
+      \field{sortinit}{K}
+      \field{sortinithash}{c02bf6bff1c488450c352b40f5d853ab}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{isbn}{9780262013192}
+      \field{title}{Probabilistic Graphical Models: Principles and Techniques}
+      \field{year}{2009}
+    \endentry
+    \entry{kollerVideoGen2}{misc}{}
+      \name{author}{2}{}{%
+        {{un=0,uniquepart=base,hash=9c785bcf6b8a0b99e44695299a6aecb2}{%
+           family={Koller},
+           familyi={K\bibinitperiod},
+           given={Daphne},
+           giveni={D\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=0046da532e97df5d50acb77312260cfd}{%
+           family={Stanford},
+           familyi={S\bibinitperiod},
+           given={University},
+           giveni={U\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{c77e110f49db055428e097ba887d418b}
+      \strng{fullhash}{c77e110f49db055428e097ba887d418b}
+      \strng{bibnamehash}{c77e110f49db055428e097ba887d418b}
+      \strng{authorbibnamehash}{c77e110f49db055428e097ba887d418b}
+      \strng{authornamehash}{c77e110f49db055428e097ba887d418b}
+      \strng{authorfullhash}{c77e110f49db055428e097ba887d418b}
+      \field{extraname}{1}
+      \field{sortinit}{K}
+      \field{sortinithash}{c02bf6bff1c488450c352b40f5d853ab}
+      \field{extradate}{1}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{howpublished}{Coursera}
+      \field{note}{Accessed: 2025-09-29}
+      \field{title}{Probabilistic Graphical Models 2: Inference}
+      \field{year}{2025}
+      \verb{urlraw}
+      \verb https://www.coursera.org/learn/probabilistic-graphical-models-2-inference/home/module/1
+      \endverb
+      \verb{url}
+      \verb https://www.coursera.org/learn/probabilistic-graphical-models-2-inference/home/module/1
+      \endverb
+    \endentry
+    \entry{kollerVideoGen1}{misc}{}
+      \name{author}{2}{}{%
+        {{un=0,uniquepart=base,hash=9c785bcf6b8a0b99e44695299a6aecb2}{%
+           family={Koller},
+           familyi={K\bibinitperiod},
+           given={Daphne},
+           giveni={D\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=0046da532e97df5d50acb77312260cfd}{%
+           family={Stanford},
+           familyi={S\bibinitperiod},
+           given={University},
+           giveni={U\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{c77e110f49db055428e097ba887d418b}
+      \strng{fullhash}{c77e110f49db055428e097ba887d418b}
+      \strng{bibnamehash}{c77e110f49db055428e097ba887d418b}
+      \strng{authorbibnamehash}{c77e110f49db055428e097ba887d418b}
+      \strng{authornamehash}{c77e110f49db055428e097ba887d418b}
+      \strng{authorfullhash}{c77e110f49db055428e097ba887d418b}
+      \field{extraname}{2}
+      \field{sortinit}{K}
+      \field{sortinithash}{c02bf6bff1c488450c352b40f5d853ab}
+      \field{extradate}{2}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{howpublished}{Coursera}
+      \field{note}{Accessed: 2025-09-29}
+      \field{title}{Probabilistic Graphical Models: Representation}
+      \field{year}{2025}
+      \verb{urlraw}
+      \verb https://www.coursera.org/learn/probabilistic-graphical-models/home/module/1
+      \endverb
+      \verb{url}
+      \verb https://www.coursera.org/learn/probabilistic-graphical-models/home/module/1
+      \endverb
+    \endentry
+    \entry{labayen2014accurate}{article}{}
+      \name{author}{4}{}{%
+        {{un=0,uniquepart=base,hash=18e8d81b60b603a1b84fe630f81b2532}{%
+           family={Labayen},
+           familyi={L\bibinitperiod},
+           given={Mikel},
+           giveni={M\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=a227f93914feec07f6c988c5d4fcbdcd}{%
+           family={Olaizola},
+           familyi={O\bibinitperiod},
+           given={Igor\bibnamedelima G.},
+           giveni={I\bibinitperiod\bibinitdelim G\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=076faa86e7a9d2adfa636a1c6cf11094}{%
+           family={Aginako},
+           familyi={A\bibinitperiod},
+           given={Nestor},
+           giveni={N\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=1c55a1f6273bf7ac864ab08aec8cfbcf}{%
+           family={Florez},
+           familyi={F\bibinitperiod},
+           given={Jon},
+           giveni={J\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{publisher}{1}{%
+        {Springer}%
+      }
+      \strng{namehash}{0bc168ec00809346c99f5a7caed1dd05}
+      \strng{fullhash}{d4b419f10fb8e6ce7e23b5aa6334844e}
+      \strng{bibnamehash}{0bc168ec00809346c99f5a7caed1dd05}
+      \strng{authorbibnamehash}{0bc168ec00809346c99f5a7caed1dd05}
+      \strng{authornamehash}{0bc168ec00809346c99f5a7caed1dd05}
+      \strng{authorfullhash}{d4b419f10fb8e6ce7e23b5aa6334844e}
+      \field{sortinit}{L}
+      \field{sortinithash}{7c47d417cecb1f4bd38d1825c427a61a}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Multimedia Tools and Applications}
+      \field{number}{3}
+      \field{title}{Accurate Ball Trajectory Tracking and 3D Visualization for Computer-Assisted Sports Broadcast}
+      \field{volume}{73}
+      \field{year}{2014}
+      \field{pages}{1819\bibrangedash 1842}
+      \range{pages}{24}
+      \verb{doi}
+      \verb 10.1007/s11042-013-1667-7
+      \endverb
+    \endentry
+    \entry{li2018deep}{article}{}
+      \name{author}{4}{}{%
+        {{un=0,uniquepart=base,hash=5badf9817ea8d2004d016c48a98be495}{%
+           family={Li},
+           familyi={L\bibinitperiod},
+           given={Peixia},
+           giveni={P\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=4695c12fc5e5638d83abfb67ab9d459c}{%
+           family={Wang},
+           familyi={W\bibinitperiod},
+           given={Dong},
+           giveni={D\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=cce05cab2c437e9c128f853684ee3137}{%
+           family={Wang},
+           familyi={W\bibinitperiod},
+           given={Liang},
+           giveni={L\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=15ccd9c47146b2cdcaa35ef973f920fa}{%
+           family={Lu},
+           familyi={L\bibinitperiod},
+           given={Huchuan},
+           giveni={H\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{publisher}{1}{%
+        {Elsevier}%
+      }
+      \strng{namehash}{d250afa8d1e50fb1f0d29186de8145a9}
+      \strng{fullhash}{712eb15c6bbfb002d2021c6770e88490}
+      \strng{bibnamehash}{d250afa8d1e50fb1f0d29186de8145a9}
+      \strng{authorbibnamehash}{d250afa8d1e50fb1f0d29186de8145a9}
+      \strng{authornamehash}{d250afa8d1e50fb1f0d29186de8145a9}
+      \strng{authorfullhash}{712eb15c6bbfb002d2021c6770e88490}
+      \field{sortinit}{L}
+      \field{sortinithash}{7c47d417cecb1f4bd38d1825c427a61a}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Pattern Recognition}
+      \field{title}{Deep Visual Tracking: Review and Experimental Comparison}
+      \field{volume}{76}
+      \field{year}{2018}
+      \field{pages}{323\bibrangedash 338}
+      \range{pages}{16}
+      \verb{doi}
+      \verb 10.1016/j.patcog.2017.11.024
+      \endverb
+    \endentry
+    \entry{marengoni2011opencv}{inproceedings}{}
+      \name{author}{2}{}{%
+        {{un=0,uniquepart=base,hash=340dcd1d6b0ca0559d104bc3ff25eeb4}{%
+           family={Marengoni},
+           familyi={M\bibinitperiod},
+           given={M.},
+           giveni={M\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=3ce115fc69a9417687df41887a2fb130}{%
+           family={Stringhini},
+           familyi={S\bibinitperiod},
+           given={D.},
+           giveni={D\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{publisher}{1}{%
+        {IEEE}%
+      }
+      \strng{namehash}{3b06e483ce7735a1222221cebda5c0ef}
+      \strng{fullhash}{3b06e483ce7735a1222221cebda5c0ef}
+      \strng{bibnamehash}{3b06e483ce7735a1222221cebda5c0ef}
+      \strng{authorbibnamehash}{3b06e483ce7735a1222221cebda5c0ef}
+      \strng{authornamehash}{3b06e483ce7735a1222221cebda5c0ef}
+      \strng{authorfullhash}{3b06e483ce7735a1222221cebda5c0ef}
+      \field{sortinit}{M}
+      \field{sortinithash}{4625c616857f13d17ce56f7d4f97d451}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{2011 24th SIBGRAPI Conference on Graphics, Patterns, and Images Tutorials}
+      \field{month}{8}
+      \field{title}{High level computer vision using OpenCV}
+      \field{year}{2011}
+      \field{pages}{11\bibrangedash 24}
+      \range{pages}{14}
+    \endentry
+    \entry{metaeye}{online}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=9d47633ed601f6a4ccb5c03efe09dbef}{%
+           family={{MetaEye}},
+           familyi={M\bibinitperiod}}}%
+      }
+      \strng{namehash}{9d47633ed601f6a4ccb5c03efe09dbef}
+      \strng{fullhash}{9d47633ed601f6a4ccb5c03efe09dbef}
+      \strng{bibnamehash}{9d47633ed601f6a4ccb5c03efe09dbef}
+      \strng{authorbibnamehash}{9d47633ed601f6a4ccb5c03efe09dbef}
+      \strng{authornamehash}{9d47633ed601f6a4ccb5c03efe09dbef}
+      \strng{authorfullhash}{9d47633ed601f6a4ccb5c03efe09dbef}
+      \field{sortinit}{M}
+      \field{sortinithash}{4625c616857f13d17ce56f7d4f97d451}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{note}{Accessed: 2025-09-29}
+      \field{title}{Three Levels of Computer Vision}
+      \field{year}{2025}
+      \verb{urlraw}
+      \verb https://www.metaeye.co.uk/three-levels-of-computer-vision?utm_source=chatgpt.com
+      \endverb
+      \verb{url}
+      \verb https://www.metaeye.co.uk/three-levels-of-computer-vision?utm_source=chatgpt.com
+      \endverb
+    \endentry
+    \entry{minka2013ep}{article}{}
+      \name{author}{1}{}{%
+        {{un=2,uniquepart=given,hash=8614f10f3ca615dda653b5466d1d054d}{%
+           family={Minka},
+           familyi={M\bibinitperiod},
+           given={T.\bibnamedelimi P.},
+           giveni={T\bibinitperiod\bibinitdelim P\bibinitperiod},
+           givenun=2}}%
+      }
+      \strng{namehash}{8614f10f3ca615dda653b5466d1d054d}
+      \strng{fullhash}{8614f10f3ca615dda653b5466d1d054d}
+      \strng{bibnamehash}{8614f10f3ca615dda653b5466d1d054d}
+      \strng{authorbibnamehash}{8614f10f3ca615dda653b5466d1d054d}
+      \strng{authornamehash}{8614f10f3ca615dda653b5466d1d054d}
+      \strng{authorfullhash}{8614f10f3ca615dda653b5466d1d054d}
+      \field{sortinit}{M}
+      \field{sortinithash}{4625c616857f13d17ce56f7d4f97d451}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{arXiv preprint arXiv:1301.2294}
+      \field{note}{Accessed: 2025-09-29}
+      \field{title}{Expectation propagation for approximate Bayesian inference}
+      \field{year}{2013}
+      \verb{urlraw}
+      \verb https://arxiv.org/abs/1301.2294
+      \endverb
+      \verb{url}
+      \verb https://arxiv.org/abs/1301.2294
+      \endverb
+    \endentry
+    \entry{minka2001expectation}{inproceedings}{}
+      \name{author}{1}{}{%
+        {{un=2,uniquepart=given,hash=9076037ea01f5720a220ce315554e70a}{%
+           family={Minka},
+           familyi={M\bibinitperiod},
+           given={Thomas\bibnamedelima P},
+           giveni={T\bibinitperiod\bibinitdelim P\bibinitperiod},
+           givenun=2}}%
+      }
+      \list{organization}{1}{%
+        {Morgan Kaufmann}%
+      }
+      \strng{namehash}{9076037ea01f5720a220ce315554e70a}
+      \strng{fullhash}{9076037ea01f5720a220ce315554e70a}
+      \strng{bibnamehash}{9076037ea01f5720a220ce315554e70a}
+      \strng{authorbibnamehash}{9076037ea01f5720a220ce315554e70a}
+      \strng{authornamehash}{9076037ea01f5720a220ce315554e70a}
+      \strng{authorfullhash}{9076037ea01f5720a220ce315554e70a}
+      \field{sortinit}{M}
+      \field{sortinithash}{4625c616857f13d17ce56f7d4f97d451}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{Proceedings of the Seventeenth conference on Uncertainty in artificial intelligence}
+      \field{title}{Expectation propagation for approximate Bayesian inference}
+      \field{year}{2001}
+      \field{pages}{362\bibrangedash 369}
+      \range{pages}{8}
+    \endentry
+    \entry{Mirzaei2016}{article}{}
+      \name{author}{4}{}{%
+        {{un=0,uniquepart=base,hash=12a5221d50943de873eb5d12f655f610}{%
+           family={Mirzaei},
+           familyi={M\bibinitperiod},
+           given={Behzad},
+           giveni={B\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=2b3864946d7719c6db41624574f903a7}{%
+           family={Nezamabadi-pour},
+           familyi={N\bibinithyphendelim p\bibinitperiod},
+           given={Hossein},
+           giveni={H\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=4c9e27c5d11eaf2ee300427ad6dcd44b}{%
+           family={Raoof},
+           familyi={R\bibinitperiod},
+           given={Amir},
+           giveni={A\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=7ff9680ae85fe531d44386a19613d915}{%
+           family={Derakhshani},
+           familyi={D\bibinitperiod},
+           given={Reza},
+           giveni={R\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{695a8fa9a2df82e311e7d1e5050a53f3}
+      \strng{fullhash}{38348f6574d57e7cae99bfbc44497341}
+      \strng{bibnamehash}{695a8fa9a2df82e311e7d1e5050a53f3}
+      \strng{authorbibnamehash}{695a8fa9a2df82e311e7d1e5050a53f3}
+      \strng{authornamehash}{695a8fa9a2df82e311e7d1e5050a53f3}
+      \strng{authorfullhash}{38348f6574d57e7cae99bfbc44497341}
+      \field{sortinit}{M}
+      \field{sortinithash}{4625c616857f13d17ce56f7d4f97d451}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{Object detection and tracking are vital in computer vision and visual surveillance, allowing for the detection, recognition, and subsequent tracking of objects within images or video sequences. These tasks underpin surveillance systems, facilitating automatic video annotation, identification of significant events, and detection of abnormal activities. However, detecting and tracking small objects introduce significant challenges within computer vision due to their subtle appearance and limited distinguishing features, which results in a scarcity of crucial information. This deficit complicates the tracking process, often leading to diminished efficiency and accuracy. To shed light on the intricacies of small object detection and tracking, we undertook a comprehensive review of the existing methods in this area, categorizing them from various perspectives. We also presented an overview of available datasets specifically curated for small object detection and tracking, aiming to inform and benefit future research in this domain. We further delineated the most widely used evaluation metrics for assessing the performance of small object detection and tracking techniques. Finally, we examined the present challenges within this field and discussed prospective future trends. By tackling these issues and leveraging upcoming trends, we aim to push forward the boundaries in small object detection and tracking, thereby augmenting the functionality of surveillance systems and broadening their real-world applicability.}
+      \field{issn}{1424-8220}
+      \field{journaltitle}{Sensors}
+      \field{number}{15}
+      \field{title}{Small Object Detection and Tracking: A Comprehensive Review}
+      \field{volume}{23}
+      \field{year}{2023}
+      \verb{doi}
+      \verb 10.3390/s23156887
+      \endverb
+      \verb{urlraw}
+      \verb https://www.mdpi.com/1424-8220/23/15/6887
+      \endverb
+      \verb{url}
+      \verb https://www.mdpi.com/1424-8220/23/15/6887
+      \endverb
+    \endentry
+    \entry{mohamad2015opencv}{article}{}
+      \name{author}{4}{}{%
+        {{un=0,uniquepart=base,hash=dd86d171665ebf0b1dcfb241b47061f7}{%
+           family={Mohamad},
+           familyi={M\bibinitperiod},
+           given={Mohd},
+           giveni={M\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=ae97b72226d501de494b6ec476ebb47d}{%
+           family={Saman},
+           familyi={S\bibinitperiod},
+           given={Mohd\bibnamedelimb Y.\bibnamedelimi M.},
+           giveni={M\bibinitperiod\bibinitdelim Y\bibinitperiod\bibinitdelim M\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=73d7a4924e38ac828d349841fad04725}{%
+           family={Hitam},
+           familyi={H\bibinitperiod},
+           given={Mohd\bibnamedelima S.},
+           giveni={M\bibinitperiod\bibinitdelim S\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=db899607ef905d01665ac7efc87ed07b}{%
+           family={Telipot},
+           familyi={T\bibinitperiod},
+           given={Mohd},
+           giveni={M\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{location}{1}{%
+        {Terengganu}%
+      }
+      \strng{namehash}{10a0de0859335122be6b90999d143fe7}
+      \strng{fullhash}{e108765e0e4a54d9f49b3cb58c4d77a9}
+      \strng{bibnamehash}{10a0de0859335122be6b90999d143fe7}
+      \strng{authorbibnamehash}{10a0de0859335122be6b90999d143fe7}
+      \strng{authornamehash}{10a0de0859335122be6b90999d143fe7}
+      \strng{authorfullhash}{e108765e0e4a54d9f49b3cb58c4d77a9}
+      \field{sortinit}{M}
+      \field{sortinithash}{4625c616857f13d17ce56f7d4f97d451}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Universitas Malaysia Terengganu}
+      \field{title}{A review on OpenCV}
+      \field{volume}{3}
+      \field{year}{2015}
+      \field{pages}{1}
+      \range{pages}{1}
+    \endentry
+    \entry{tracking_training_benefits}{online}{}
+      \true{moreauthor}
+      \true{morelabelname}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=d6a32a4621ad1a7bc211af0eeaa8c098}{%
+           family={Oliva-Lozano},
+           familyi={O\bibinithyphendelim L\bibinitperiod},
+           given={José\bibnamedelima María},
+           giveni={J\bibinitperiod\bibinitdelim M\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{publisher}{1}{%
+        {ISSPF}%
+      }
+      \strng{namehash}{5b52974f2f1dd79812ae8cb91d776a9e}
+      \strng{fullhash}{5b52974f2f1dd79812ae8cb91d776a9e}
+      \strng{bibnamehash}{5b52974f2f1dd79812ae8cb91d776a9e}
+      \strng{authorbibnamehash}{5b52974f2f1dd79812ae8cb91d776a9e}
+      \strng{authornamehash}{5b52974f2f1dd79812ae8cb91d776a9e}
+      \strng{authorfullhash}{5b52974f2f1dd79812ae8cb91d776a9e}
+      \field{sortinit}{O}
+      \field{sortinithash}{2cd7140a07aea5341f9e2771efe90aae}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{note}{Accessed: 2025-07-15}
+      \field{title}{Performance Tracking in Professional Football}
+      \field{year}{2022}
+      \verb{urlraw}
+      \verb https://www.isspf.com/articles/performance-tracking-in-professional-football/
+      \endverb
+      \verb{url}
+      \verb https://www.isspf.com/articles/performance-tracking-in-professional-football/
+      \endverb
+    \endentry
+    \entry{opencv_bgsub}{online}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=5bd3dfdc302c8d0660444d98cf3baa60}{%
+           family={{OpenCV Team}},
+           familyi={O\bibinitperiod}}}%
+      }
+      \strng{namehash}{5bd3dfdc302c8d0660444d98cf3baa60}
+      \strng{fullhash}{5bd3dfdc302c8d0660444d98cf3baa60}
+      \strng{bibnamehash}{5bd3dfdc302c8d0660444d98cf3baa60}
+      \strng{authorbibnamehash}{5bd3dfdc302c8d0660444d98cf3baa60}
+      \strng{authornamehash}{5bd3dfdc302c8d0660444d98cf3baa60}
+      \strng{authorfullhash}{5bd3dfdc302c8d0660444d98cf3baa60}
+      \field{extraname}{1}
+      \field{sortinit}{O}
+      \field{sortinithash}{2cd7140a07aea5341f9e2771efe90aae}
+      \field{extradate}{1}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{note}{Accessed: 2025-10-04}
+      \field{title}{Background Subtraction}
+      \field{year}{2023}
+      \verb{urlraw}
+      \verb https://docs.opencv.org/4.x/d1/dc5/tutorial_background_subtraction.html
+      \endverb
+      \verb{url}
+      \verb https://docs.opencv.org/4.x/d1/dc5/tutorial_background_subtraction.html
+      \endverb
+    \endentry
+    \entry{opencv_canny}{online}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=5bd3dfdc302c8d0660444d98cf3baa60}{%
+           family={{OpenCV Team}},
+           familyi={O\bibinitperiod}}}%
+      }
+      \strng{namehash}{5bd3dfdc302c8d0660444d98cf3baa60}
+      \strng{fullhash}{5bd3dfdc302c8d0660444d98cf3baa60}
+      \strng{bibnamehash}{5bd3dfdc302c8d0660444d98cf3baa60}
+      \strng{authorbibnamehash}{5bd3dfdc302c8d0660444d98cf3baa60}
+      \strng{authornamehash}{5bd3dfdc302c8d0660444d98cf3baa60}
+      \strng{authorfullhash}{5bd3dfdc302c8d0660444d98cf3baa60}
+      \field{extraname}{2}
+      \field{sortinit}{O}
+      \field{sortinithash}{2cd7140a07aea5341f9e2771efe90aae}
+      \field{extradate}{2}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{note}{Accessed: 2025-10-04}
+      \field{title}{Canny Edge Detection}
+      \field{year}{2023}
+      \verb{urlraw}
+      \verb https://docs.opencv.org/4.x/da/d22/tutorial_py_canny.html
+      \endverb
+      \verb{url}
+      \verb https://docs.opencv.org/4.x/da/d22/tutorial_py_canny.html
+      \endverb
+    \endentry
+    \entry{opencv_sobel}{online}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=5bd3dfdc302c8d0660444d98cf3baa60}{%
+           family={{OpenCV Team}},
+           familyi={O\bibinitperiod}}}%
+      }
+      \strng{namehash}{5bd3dfdc302c8d0660444d98cf3baa60}
+      \strng{fullhash}{5bd3dfdc302c8d0660444d98cf3baa60}
+      \strng{bibnamehash}{5bd3dfdc302c8d0660444d98cf3baa60}
+      \strng{authorbibnamehash}{5bd3dfdc302c8d0660444d98cf3baa60}
+      \strng{authornamehash}{5bd3dfdc302c8d0660444d98cf3baa60}
+      \strng{authorfullhash}{5bd3dfdc302c8d0660444d98cf3baa60}
+      \field{extraname}{3}
+      \field{sortinit}{O}
+      \field{sortinithash}{2cd7140a07aea5341f9e2771efe90aae}
+      \field{extradate}{3}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{note}{Accessed: 2025-10-04}
+      \field{title}{Canny Edge Detection}
+      \field{year}{2023}
+      \verb{urlraw}
+      \verb https://docs.opencv.org/4.x/da/d22/tutorial_py_canny.html
+      \endverb
+      \verb{url}
+      \verb https://docs.opencv.org/4.x/da/d22/tutorial_py_canny.html
+      \endverb
+    \endentry
+    \entry{opencv_color}{online}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=5bd3dfdc302c8d0660444d98cf3baa60}{%
+           family={{OpenCV Team}},
+           familyi={O\bibinitperiod}}}%
+      }
+      \strng{namehash}{5bd3dfdc302c8d0660444d98cf3baa60}
+      \strng{fullhash}{5bd3dfdc302c8d0660444d98cf3baa60}
+      \strng{bibnamehash}{5bd3dfdc302c8d0660444d98cf3baa60}
+      \strng{authorbibnamehash}{5bd3dfdc302c8d0660444d98cf3baa60}
+      \strng{authornamehash}{5bd3dfdc302c8d0660444d98cf3baa60}
+      \strng{authorfullhash}{5bd3dfdc302c8d0660444d98cf3baa60}
+      \field{extraname}{4}
+      \field{sortinit}{O}
+      \field{sortinithash}{2cd7140a07aea5341f9e2771efe90aae}
+      \field{extradate}{4}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{note}{Accessed: 2025-10-04}
+      \field{title}{Changing Colorspaces}
+      \field{year}{2023}
+      \verb{urlraw}
+      \verb https://docs.opencv.org/4.x/df/d9d/tutorial_py_colorspaces.html
+      \endverb
+      \verb{url}
+      \verb https://docs.opencv.org/4.x/df/d9d/tutorial_py_colorspaces.html
+      \endverb
+    \endentry
+    \entry{opencv_connected}{online}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=5bd3dfdc302c8d0660444d98cf3baa60}{%
+           family={{OpenCV Team}},
+           familyi={O\bibinitperiod}}}%
+      }
+      \strng{namehash}{5bd3dfdc302c8d0660444d98cf3baa60}
+      \strng{fullhash}{5bd3dfdc302c8d0660444d98cf3baa60}
+      \strng{bibnamehash}{5bd3dfdc302c8d0660444d98cf3baa60}
+      \strng{authorbibnamehash}{5bd3dfdc302c8d0660444d98cf3baa60}
+      \strng{authornamehash}{5bd3dfdc302c8d0660444d98cf3baa60}
+      \strng{authorfullhash}{5bd3dfdc302c8d0660444d98cf3baa60}
+      \field{extraname}{5}
+      \field{sortinit}{O}
+      \field{sortinithash}{2cd7140a07aea5341f9e2771efe90aae}
+      \field{extradate}{5}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{note}{Accessed: 2025-10-04}
+      \field{title}{Connected Components}
+      \field{year}{2023}
+      \verb{urlraw}
+      \verb https://docs.opencv.org/4.x/d4/d73/tutorial_py_contours_begin.html
+      \endverb
+      \verb{url}
+      \verb https://docs.opencv.org/4.x/d4/d73/tutorial_py_contours_begin.html
+      \endverb
+    \endentry
+    \entry{opencv_convex}{online}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=5bd3dfdc302c8d0660444d98cf3baa60}{%
+           family={{OpenCV Team}},
+           familyi={O\bibinitperiod}}}%
+      }
+      \strng{namehash}{5bd3dfdc302c8d0660444d98cf3baa60}
+      \strng{fullhash}{5bd3dfdc302c8d0660444d98cf3baa60}
+      \strng{bibnamehash}{5bd3dfdc302c8d0660444d98cf3baa60}
+      \strng{authorbibnamehash}{5bd3dfdc302c8d0660444d98cf3baa60}
+      \strng{authornamehash}{5bd3dfdc302c8d0660444d98cf3baa60}
+      \strng{authorfullhash}{5bd3dfdc302c8d0660444d98cf3baa60}
+      \field{extraname}{6}
+      \field{sortinit}{O}
+      \field{sortinithash}{2cd7140a07aea5341f9e2771efe90aae}
+      \field{extradate}{6}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{note}{Accessed: 2025-10-04}
+      \field{title}{Contour Features}
+      \field{year}{2023}
+      \verb{urlraw}
+      \verb https://docs.opencv.org/4.x/dd/d49/tutorial_py_contour_features.html
+      \endverb
+      \verb{url}
+      \verb https://docs.opencv.org/4.x/dd/d49/tutorial_py_contour_features.html
+      \endverb
+    \endentry
+    \entry{opencv_arclength}{online}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=5bd3dfdc302c8d0660444d98cf3baa60}{%
+           family={{OpenCV Team}},
+           familyi={O\bibinitperiod}}}%
+      }
+      \strng{namehash}{5bd3dfdc302c8d0660444d98cf3baa60}
+      \strng{fullhash}{5bd3dfdc302c8d0660444d98cf3baa60}
+      \strng{bibnamehash}{5bd3dfdc302c8d0660444d98cf3baa60}
+      \strng{authorbibnamehash}{5bd3dfdc302c8d0660444d98cf3baa60}
+      \strng{authornamehash}{5bd3dfdc302c8d0660444d98cf3baa60}
+      \strng{authorfullhash}{5bd3dfdc302c8d0660444d98cf3baa60}
+      \field{extraname}{7}
+      \field{sortinit}{O}
+      \field{sortinithash}{2cd7140a07aea5341f9e2771efe90aae}
+      \field{extradate}{7}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{note}{Accessed: 2025-10-04}
+      \field{title}{Contour Features}
+      \field{year}{2023}
+      \verb{urlraw}
+      \verb https://docs.opencv.org/4.x/dd/d49/tutorial_py_contour_features.html
+      \endverb
+      \verb{url}
+      \verb https://docs.opencv.org/4.x/dd/d49/tutorial_py_contour_features.html
+      \endverb
+    \endentry
+    \entry{opencv_contours}{online}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=5bd3dfdc302c8d0660444d98cf3baa60}{%
+           family={{OpenCV Team}},
+           familyi={O\bibinitperiod}}}%
+      }
+      \strng{namehash}{5bd3dfdc302c8d0660444d98cf3baa60}
+      \strng{fullhash}{5bd3dfdc302c8d0660444d98cf3baa60}
+      \strng{bibnamehash}{5bd3dfdc302c8d0660444d98cf3baa60}
+      \strng{authorbibnamehash}{5bd3dfdc302c8d0660444d98cf3baa60}
+      \strng{authornamehash}{5bd3dfdc302c8d0660444d98cf3baa60}
+      \strng{authorfullhash}{5bd3dfdc302c8d0660444d98cf3baa60}
+      \field{extraname}{8}
+      \field{sortinit}{O}
+      \field{sortinithash}{2cd7140a07aea5341f9e2771efe90aae}
+      \field{extradate}{8}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{note}{Accessed: 2025-10-04}
+      \field{title}{Contours: Getting Started}
+      \field{year}{2023}
+      \verb{urlraw}
+      \verb https://docs.opencv.org/4.x/d4/d73/tutorial_py_contours_begin.html
+      \endverb
+      \verb{url}
+      \verb https://docs.opencv.org/4.x/d4/d73/tutorial_py_contours_begin.html
+      \endverb
+    \endentry
+    \entry{opencv_hough}{online}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=5bd3dfdc302c8d0660444d98cf3baa60}{%
+           family={{OpenCV Team}},
+           familyi={O\bibinitperiod}}}%
+      }
+      \strng{namehash}{5bd3dfdc302c8d0660444d98cf3baa60}
+      \strng{fullhash}{5bd3dfdc302c8d0660444d98cf3baa60}
+      \strng{bibnamehash}{5bd3dfdc302c8d0660444d98cf3baa60}
+      \strng{authorbibnamehash}{5bd3dfdc302c8d0660444d98cf3baa60}
+      \strng{authornamehash}{5bd3dfdc302c8d0660444d98cf3baa60}
+      \strng{authorfullhash}{5bd3dfdc302c8d0660444d98cf3baa60}
+      \field{extraname}{9}
+      \field{sortinit}{O}
+      \field{sortinithash}{2cd7140a07aea5341f9e2771efe90aae}
+      \field{extradate}{9}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{note}{Accessed: 2025-10-04}
+      \field{title}{Hough Circle Transform}
+      \field{year}{2023}
+      \verb{urlraw}
+      \verb https://docs.opencv.org/4.x/da/d53/tutorial_py_houghcircles.html
+      \endverb
+      \verb{url}
+      \verb https://docs.opencv.org/4.x/da/d53/tutorial_py_houghcircles.html
+      \endverb
+    \endentry
+    \entry{opencv_threshold}{online}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=5bd3dfdc302c8d0660444d98cf3baa60}{%
+           family={{OpenCV Team}},
+           familyi={O\bibinitperiod}}}%
+      }
+      \strng{namehash}{5bd3dfdc302c8d0660444d98cf3baa60}
+      \strng{fullhash}{5bd3dfdc302c8d0660444d98cf3baa60}
+      \strng{bibnamehash}{5bd3dfdc302c8d0660444d98cf3baa60}
+      \strng{authorbibnamehash}{5bd3dfdc302c8d0660444d98cf3baa60}
+      \strng{authornamehash}{5bd3dfdc302c8d0660444d98cf3baa60}
+      \strng{authorfullhash}{5bd3dfdc302c8d0660444d98cf3baa60}
+      \field{extraname}{10}
+      \field{sortinit}{O}
+      \field{sortinithash}{2cd7140a07aea5341f9e2771efe90aae}
+      \field{extradate}{10}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{note}{Accessed: 2025-10-04}
+      \field{title}{Image Thresholding}
+      \field{year}{2023}
+      \verb{urlraw}
+      \verb https://docs.opencv.org/4.x/d7/d4d/tutorial_py_thresholding.html
+      \endverb
+      \verb{url}
+      \verb https://docs.opencv.org/4.x/d7/d4d/tutorial_py_thresholding.html
+      \endverb
+    \endentry
+    \entry{opencv_inrange}{online}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=5bd3dfdc302c8d0660444d98cf3baa60}{%
+           family={{OpenCV Team}},
+           familyi={O\bibinitperiod}}}%
+      }
+      \strng{namehash}{5bd3dfdc302c8d0660444d98cf3baa60}
+      \strng{fullhash}{5bd3dfdc302c8d0660444d98cf3baa60}
+      \strng{bibnamehash}{5bd3dfdc302c8d0660444d98cf3baa60}
+      \strng{authorbibnamehash}{5bd3dfdc302c8d0660444d98cf3baa60}
+      \strng{authornamehash}{5bd3dfdc302c8d0660444d98cf3baa60}
+      \strng{authorfullhash}{5bd3dfdc302c8d0660444d98cf3baa60}
+      \field{extraname}{11}
+      \field{sortinit}{O}
+      \field{sortinithash}{2cd7140a07aea5341f9e2771efe90aae}
+      \field{extradate}{11}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{note}{Accessed: 2025-10-04}
+      \field{title}{Image Thresholding}
+      \field{year}{2023}
+      \verb{urlraw}
+      \verb https://docs.opencv.org/4.x/d7/d4d/tutorial_py_thresholding.html
+      \endverb
+      \verb{url}
+      \verb https://docs.opencv.org/4.x/d7/d4d/tutorial_py_thresholding.html
+      \endverb
+    \endentry
+    \entry{opencv_dilate}{online}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=5bd3dfdc302c8d0660444d98cf3baa60}{%
+           family={{OpenCV Team}},
+           familyi={O\bibinitperiod}}}%
+      }
+      \strng{namehash}{5bd3dfdc302c8d0660444d98cf3baa60}
+      \strng{fullhash}{5bd3dfdc302c8d0660444d98cf3baa60}
+      \strng{bibnamehash}{5bd3dfdc302c8d0660444d98cf3baa60}
+      \strng{authorbibnamehash}{5bd3dfdc302c8d0660444d98cf3baa60}
+      \strng{authornamehash}{5bd3dfdc302c8d0660444d98cf3baa60}
+      \strng{authorfullhash}{5bd3dfdc302c8d0660444d98cf3baa60}
+      \field{extraname}{12}
+      \field{sortinit}{O}
+      \field{sortinithash}{2cd7140a07aea5341f9e2771efe90aae}
+      \field{extradate}{12}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{note}{Accessed: 2025-10-04}
+      \field{title}{Morphological Transformations}
+      \field{year}{2023}
+      \verb{urlraw}
+      \verb https://docs.opencv.org/4.x/d9/d61/tutorial_py_morphological_ops.html
+      \endverb
+      \verb{url}
+      \verb https://docs.opencv.org/4.x/d9/d61/tutorial_py_morphological_ops.html
+      \endverb
+    \endentry
+    \entry{opencv_erode}{online}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=5bd3dfdc302c8d0660444d98cf3baa60}{%
+           family={{OpenCV Team}},
+           familyi={O\bibinitperiod}}}%
+      }
+      \strng{namehash}{5bd3dfdc302c8d0660444d98cf3baa60}
+      \strng{fullhash}{5bd3dfdc302c8d0660444d98cf3baa60}
+      \strng{bibnamehash}{5bd3dfdc302c8d0660444d98cf3baa60}
+      \strng{authorbibnamehash}{5bd3dfdc302c8d0660444d98cf3baa60}
+      \strng{authornamehash}{5bd3dfdc302c8d0660444d98cf3baa60}
+      \strng{authorfullhash}{5bd3dfdc302c8d0660444d98cf3baa60}
+      \field{extraname}{13}
+      \field{sortinit}{O}
+      \field{sortinithash}{2cd7140a07aea5341f9e2771efe90aae}
+      \field{extradate}{13}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{note}{Accessed: 2025-10-04}
+      \field{title}{Morphological Transformations}
+      \field{year}{2023}
+      \verb{urlraw}
+      \verb https://docs.opencv.org/4.x/d9/d61/tutorial_py_morphological_ops.html
+      \endverb
+      \verb{url}
+      \verb https://docs.opencv.org/4.x/d9/d61/tutorial_py_morphological_ops.html
+      \endverb
+    \endentry
+    \entry{opencv_morphologyex}{online}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=5bd3dfdc302c8d0660444d98cf3baa60}{%
+           family={{OpenCV Team}},
+           familyi={O\bibinitperiod}}}%
+      }
+      \strng{namehash}{5bd3dfdc302c8d0660444d98cf3baa60}
+      \strng{fullhash}{5bd3dfdc302c8d0660444d98cf3baa60}
+      \strng{bibnamehash}{5bd3dfdc302c8d0660444d98cf3baa60}
+      \strng{authorbibnamehash}{5bd3dfdc302c8d0660444d98cf3baa60}
+      \strng{authornamehash}{5bd3dfdc302c8d0660444d98cf3baa60}
+      \strng{authorfullhash}{5bd3dfdc302c8d0660444d98cf3baa60}
+      \field{extraname}{14}
+      \field{sortinit}{O}
+      \field{sortinithash}{2cd7140a07aea5341f9e2771efe90aae}
+      \field{extradate}{14}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{note}{Accessed: 2025-10-04}
+      \field{title}{Morphological Transformations}
+      \field{year}{2023}
+      \verb{urlraw}
+      \verb https://docs.opencv.org/4.x/d9/d61/tutorial_py_morphological_ops.html
+      \endverb
+      \verb{url}
+      \verb https://docs.opencv.org/4.x/d9/d61/tutorial_py_morphological_ops.html
+      \endverb
+    \endentry
+    \entry{opencv_farneback}{online}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=5bd3dfdc302c8d0660444d98cf3baa60}{%
+           family={{OpenCV Team}},
+           familyi={O\bibinitperiod}}}%
+      }
+      \strng{namehash}{5bd3dfdc302c8d0660444d98cf3baa60}
+      \strng{fullhash}{5bd3dfdc302c8d0660444d98cf3baa60}
+      \strng{bibnamehash}{5bd3dfdc302c8d0660444d98cf3baa60}
+      \strng{authorbibnamehash}{5bd3dfdc302c8d0660444d98cf3baa60}
+      \strng{authornamehash}{5bd3dfdc302c8d0660444d98cf3baa60}
+      \strng{authorfullhash}{5bd3dfdc302c8d0660444d98cf3baa60}
+      \field{extraname}{15}
+      \field{sortinit}{O}
+      \field{sortinithash}{2cd7140a07aea5341f9e2771efe90aae}
+      \field{extradate}{15}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{note}{Accessed: 2025-10-04}
+      \field{title}{Optical Flow}
+      \field{year}{2023}
+      \verb{urlraw}
+      \verb https://docs.opencv.org/4.x/d4/dee/tutorial_optical_flow.html
+      \endverb
+      \verb{url}
+      \verb https://docs.opencv.org/4.x/d4/dee/tutorial_optical_flow.html
+      \endverb
+    \endentry
+    \entry{opencv_pylk}{online}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=5bd3dfdc302c8d0660444d98cf3baa60}{%
+           family={{OpenCV Team}},
+           familyi={O\bibinitperiod}}}%
+      }
+      \strng{namehash}{5bd3dfdc302c8d0660444d98cf3baa60}
+      \strng{fullhash}{5bd3dfdc302c8d0660444d98cf3baa60}
+      \strng{bibnamehash}{5bd3dfdc302c8d0660444d98cf3baa60}
+      \strng{authorbibnamehash}{5bd3dfdc302c8d0660444d98cf3baa60}
+      \strng{authornamehash}{5bd3dfdc302c8d0660444d98cf3baa60}
+      \strng{authorfullhash}{5bd3dfdc302c8d0660444d98cf3baa60}
+      \field{extraname}{16}
+      \field{sortinit}{O}
+      \field{sortinithash}{2cd7140a07aea5341f9e2771efe90aae}
+      \field{extradate}{16}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{note}{Accessed: 2025-10-04}
+      \field{title}{Optical Flow}
+      \field{year}{2023}
+      \verb{urlraw}
+      \verb https://docs.opencv.org/4.x/d4/dee/tutorial_optical_flow.html
+      \endverb
+      \verb{url}
+      \verb https://docs.opencv.org/4.x/d4/dee/tutorial_optical_flow.html
+      \endverb
+    \endentry
+    \entry{opencv_median}{online}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=5bd3dfdc302c8d0660444d98cf3baa60}{%
+           family={{OpenCV Team}},
+           familyi={O\bibinitperiod}}}%
+      }
+      \strng{namehash}{5bd3dfdc302c8d0660444d98cf3baa60}
+      \strng{fullhash}{5bd3dfdc302c8d0660444d98cf3baa60}
+      \strng{bibnamehash}{5bd3dfdc302c8d0660444d98cf3baa60}
+      \strng{authorbibnamehash}{5bd3dfdc302c8d0660444d98cf3baa60}
+      \strng{authornamehash}{5bd3dfdc302c8d0660444d98cf3baa60}
+      \strng{authorfullhash}{5bd3dfdc302c8d0660444d98cf3baa60}
+      \field{extraname}{17}
+      \field{sortinit}{O}
+      \field{sortinithash}{2cd7140a07aea5341f9e2771efe90aae}
+      \field{extradate}{17}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{note}{Accessed: 2025-10-04}
+      \field{title}{Smoothing Images}
+      \field{year}{2023}
+      \verb{urlraw}
+      \verb https://docs.opencv.org/4.x/dc/dd3/tutorial_py_filtering.html
+      \endverb
+      \verb{url}
+      \verb https://docs.opencv.org/4.x/dc/dd3/tutorial_py_filtering.html
+      \endverb
+    \endentry
+    \entry{opencv_gaussian}{online}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=5bd3dfdc302c8d0660444d98cf3baa60}{%
+           family={{OpenCV Team}},
+           familyi={O\bibinitperiod}}}%
+      }
+      \strng{namehash}{5bd3dfdc302c8d0660444d98cf3baa60}
+      \strng{fullhash}{5bd3dfdc302c8d0660444d98cf3baa60}
+      \strng{bibnamehash}{5bd3dfdc302c8d0660444d98cf3baa60}
+      \strng{authorbibnamehash}{5bd3dfdc302c8d0660444d98cf3baa60}
+      \strng{authornamehash}{5bd3dfdc302c8d0660444d98cf3baa60}
+      \strng{authorfullhash}{5bd3dfdc302c8d0660444d98cf3baa60}
+      \field{extraname}{18}
+      \field{sortinit}{O}
+      \field{sortinithash}{2cd7140a07aea5341f9e2771efe90aae}
+      \field{extradate}{18}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{note}{Accessed: 2025-10-04}
+      \field{title}{Smoothing Images}
+      \field{year}{2023}
+      \verb{urlraw}
+      \verb https://docs.opencv.org/4.x/dc/dd3/tutorial_py_filtering.html
+      \endverb
+      \verb{url}
+      \verb https://docs.opencv.org/4.x/dc/dd3/tutorial_py_filtering.html
+      \endverb
+    \endentry
+    \entry{pal2021deep}{article}{}
+      \name{author}{4}{}{%
+        {{un=0,uniquepart=base,hash=893f30267b801dd6711f314c4ff3ae59}{%
+           family={Pal},
+           familyi={P\bibinitperiod},
+           given={Subhadip\bibnamedelima Kumar},
+           giveni={S\bibinitperiod\bibinitdelim K\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=d54058315b4b4658af832cb1f15d2887}{%
+           family={Pramanik},
+           familyi={P\bibinitperiod},
+           given={Anirban},
+           giveni={A\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=9ca43399b33bc4071a9d80807f1eba11}{%
+           family={Maiti},
+           familyi={M\bibinitperiod},
+           given={Jhareswar},
+           giveni={J\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=1a26745171df1cf94516e4087d2bfc3e}{%
+           family={Mitra},
+           familyi={M\bibinitperiod},
+           given={Pabitra},
+           giveni={P\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{publisher}{1}{%
+        {Springer}%
+      }
+      \strng{namehash}{b601dd0c20a8eb14cf26a90253a9ec0d}
+      \strng{fullhash}{0f0762c0b6faafc30a5e2e4a21023a3a}
+      \strng{bibnamehash}{b601dd0c20a8eb14cf26a90253a9ec0d}
+      \strng{authorbibnamehash}{b601dd0c20a8eb14cf26a90253a9ec0d}
+      \strng{authornamehash}{b601dd0c20a8eb14cf26a90253a9ec0d}
+      \strng{authorfullhash}{0f0762c0b6faafc30a5e2e4a21023a3a}
+      \field{sortinit}{P}
+      \field{sortinithash}{ff3bcf24f47321b42cb156c2cc8a8422}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Applied Intelligence}
+      \field{number}{9}
+      \field{title}{Deep Learning in Multi-object Detection and Tracking: State of the Art}
+      \field{volume}{51}
+      \field{year}{2021}
+      \field{pages}{6400\bibrangedash 6429}
+      \range{pages}{30}
+      \verb{doi}
+      \verb 10.1007/s10489-021-02283-1
+      \endverb
+    \endentry
+    \entry{pitas2000}{book}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=c0a2a1c60a7c0db868778a21931c190b}{%
+           family={Pitas},
+           familyi={P\bibinitperiod},
+           given={Ioannis},
+           giveni={I\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{publisher}{1}{%
+        {John Wiley \& Sons}%
+      }
+      \strng{namehash}{c0a2a1c60a7c0db868778a21931c190b}
+      \strng{fullhash}{c0a2a1c60a7c0db868778a21931c190b}
+      \strng{bibnamehash}{c0a2a1c60a7c0db868778a21931c190b}
+      \strng{authorbibnamehash}{c0a2a1c60a7c0db868778a21931c190b}
+      \strng{authornamehash}{c0a2a1c60a7c0db868778a21931c190b}
+      \strng{authorfullhash}{c0a2a1c60a7c0db868778a21931c190b}
+      \field{sortinit}{P}
+      \field{sortinithash}{ff3bcf24f47321b42cb156c2cc8a8422}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{isbn}{978-0471377391}
+      \field{title}{Digital Image Processing Algorithms and Applications}
+      \field{year}{2000}
+    \endentry
+    \entry{premier_league_offside}{online}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=225602381bd61b1619ef2e61888dcbae}{%
+           family={{Premier League}},
+           familyi={P\bibinitperiod}}}%
+      }
+      \strng{namehash}{225602381bd61b1619ef2e61888dcbae}
+      \strng{fullhash}{225602381bd61b1619ef2e61888dcbae}
+      \strng{bibnamehash}{225602381bd61b1619ef2e61888dcbae}
+      \strng{authorbibnamehash}{225602381bd61b1619ef2e61888dcbae}
+      \strng{authornamehash}{225602381bd61b1619ef2e61888dcbae}
+      \strng{authorfullhash}{225602381bd61b1619ef2e61888dcbae}
+      \field{sortinit}{P}
+      \field{sortinithash}{ff3bcf24f47321b42cb156c2cc8a8422}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{note}{Accessed: 2025-07-15}
+      \field{title}{How offsides are determined by VAR}
+      \field{year}{2020}
+      \verb{urlraw}
+      \verb https://www.premierleague.com/en/news/1488423
+      \endverb
+      \verb{url}
+      \verb https://www.premierleague.com/en/news/1488423
+      \endverb
+    \endentry
+    \entry{sapkota2025rf}{misc}{}
+      \name{author}{4}{}{%
+        {{un=0,uniquepart=base,hash=e9d89868d53a4bb8a572760fdd5bb513}{%
+           family={Sapkota},
+           familyi={S\bibinitperiod},
+           given={Rachana},
+           giveni={R\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=00f5386e6c481a93077776a50f99c2db}{%
+           family={Cheppally},
+           familyi={C\bibinitperiod},
+           given={Raghuram\bibnamedelima H.},
+           giveni={R\bibinitperiod\bibinitdelim H\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=c53636af7583e03127d4f818ec8a8d22}{%
+           family={Sharda},
+           familyi={S\bibinitperiod},
+           given={Anish},
+           giveni={A\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=4ef3aa207009f406733c9ce63357fb3a}{%
+           family={Karkee},
+           familyi={K\bibinitperiod},
+           given={Manoj},
+           giveni={M\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{871b65b14850797cec9a450c114a4c02}
+      \strng{fullhash}{42f82eed05aa8a9ee20b025a667444c3}
+      \strng{bibnamehash}{871b65b14850797cec9a450c114a4c02}
+      \strng{authorbibnamehash}{871b65b14850797cec9a450c114a4c02}
+      \strng{authornamehash}{871b65b14850797cec9a450c114a4c02}
+      \strng{authorfullhash}{42f82eed05aa8a9ee20b025a667444c3}
+      \field{sortinit}{S}
+      \field{sortinithash}{b164b07b29984b41daf1e85279fbc5ab}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{eprintclass}{cs.CV}
+      \field{eprinttype}{arXiv}
+      \field{note}{arXiv preprint}
+      \field{title}{RF-DETR Object Detection vs YOLOv12: A Study of Transformer-based and CNN-based Architectures for Single-Class and Multi-Class Greenfruit Detection in Complex Orchard Environments Under Label Ambiguity}
+      \field{year}{2025}
+      \verb{eprint}
+      \verb 2504.13099
+      \endverb
+      \verb{urlraw}
+      \verb https://arxiv.org/abs/2504.13099
+      \endverb
+      \verb{url}
+      \verb https://arxiv.org/abs/2504.13099
+      \endverb
+    \endentry
+    \entry{soleimanitaleb2019object}{inproceedings}{}
+      \name{author}{3}{}{%
+        {{un=0,uniquepart=base,hash=e4bcf539ed286bdf41957d90daea0e41}{%
+           family={Soleimanitaleb},
+           familyi={S\bibinitperiod},
+           given={Zahra},
+           giveni={Z\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=65f53b199fe700bd8c7de458332f1e22}{%
+           family={Keyvanrad},
+           familyi={K\bibinitperiod},
+           given={Mohammad\bibnamedelima Amin},
+           giveni={M\bibinitperiod\bibinitdelim A\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=914d7006e876759832516ff877a9e1bb}{%
+           family={Jafari},
+           familyi={J\bibinitperiod},
+           given={Amir},
+           giveni={A\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{publisher}{1}{%
+        {IEEE}%
+      }
+      \strng{namehash}{f987bd696e416e96b89207a2ac770506}
+      \strng{fullhash}{f987bd696e416e96b89207a2ac770506}
+      \strng{bibnamehash}{f987bd696e416e96b89207a2ac770506}
+      \strng{authorbibnamehash}{f987bd696e416e96b89207a2ac770506}
+      \strng{authornamehash}{f987bd696e416e96b89207a2ac770506}
+      \strng{authorfullhash}{f987bd696e416e96b89207a2ac770506}
+      \field{sortinit}{S}
+      \field{sortinithash}{b164b07b29984b41daf1e85279fbc5ab}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{2019 9th International Conference on Computer and Knowledge Engineering (ICCKE)}
+      \field{month}{10}
+      \field{title}{Object Tracking Methods: A Review}
+      \field{year}{2019}
+      \field{pages}{282\bibrangedash 288}
+      \range{pages}{7}
+      \verb{doi}
+      \verb 10.1109/ICCKE48569.2019.8964846
+      \endverb
+    \endentry
+    \entry{stockmanComputerVision}{book}{}
+      \name{author}{2}{}{%
+        {{un=0,uniquepart=base,hash=d30b39808715fbf248985d39d99da6d6}{%
+           family={Stockman},
+           familyi={S\bibinitperiod},
+           given={George},
+           giveni={G\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=ca7fc3d42366c890d5dd7fe4690380ef}{%
+           family={Shapiro},
+           familyi={S\bibinitperiod},
+           given={Linda\bibnamedelima G.},
+           giveni={L\bibinitperiod\bibinitdelim G\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{location}{1}{%
+        {USA}%
+      }
+      \list{publisher}{1}{%
+        {Prentice Hall PTR}%
+      }
+      \strng{namehash}{6119903f7c7487669c48c4f1ae945c63}
+      \strng{fullhash}{6119903f7c7487669c48c4f1ae945c63}
+      \strng{bibnamehash}{6119903f7c7487669c48c4f1ae945c63}
+      \strng{authorbibnamehash}{6119903f7c7487669c48c4f1ae945c63}
+      \strng{authornamehash}{6119903f7c7487669c48c4f1ae945c63}
+      \strng{authorfullhash}{6119903f7c7487669c48c4f1ae945c63}
+      \field{sortinit}{S}
+      \field{sortinithash}{b164b07b29984b41daf1e85279fbc5ab}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{From the Publisher: Computer Vision presents the necessary theory and techniques for students and practitioners who will work in fields where significant information must be extracted automatically from images. It will be a useful resource automatically from images. It will be a useful resource book for professionals and a core text for both undergraduate and beginning graduate computer vision and imaging courses. Features Topics include image databases an virtual and augmented reality in addition to classical topics. Offers a complete view of two real-world systems that use computer vision. Contains applications from industry, medicine, land use, multimedia, and computer graphics. Includes over 250 exercises and programming projects, 48 separately defined algorithms, and 360 figures. The companion website features include image archive, sample}
+      \field{edition}{1st}
+      \field{isbn}{0130307963}
+      \field{title}{Computer Vision}
+      \field{year}{2001}
+    \endentry
+    \entry{szeliski2010computer}{book}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=f2e556c93256e7d70895d67702e14f1a}{%
+           family={Szeliski},
+           familyi={S\bibinitperiod},
+           given={Richard},
+           giveni={R\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{publisher}{1}{%
+        {Springer Science \& Business Media}%
+      }
+      \strng{namehash}{f2e556c93256e7d70895d67702e14f1a}
+      \strng{fullhash}{f2e556c93256e7d70895d67702e14f1a}
+      \strng{bibnamehash}{f2e556c93256e7d70895d67702e14f1a}
+      \strng{authorbibnamehash}{f2e556c93256e7d70895d67702e14f1a}
+      \strng{authornamehash}{f2e556c93256e7d70895d67702e14f1a}
+      \strng{authorfullhash}{f2e556c93256e7d70895d67702e14f1a}
+      \field{sortinit}{S}
+      \field{sortinithash}{b164b07b29984b41daf1e85279fbc5ab}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Computer vision: algorithms and applications}
+      \field{year}{2010}
+    \endentry
+    \entry{tennisnerd2024hawk-eye}{online}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=cfacd3c4eb2323ce95f3fd659cb76448}{%
+           family={{TennisNerd}},
+           familyi={T\bibinitperiod}}}%
+      }
+      \strng{namehash}{cfacd3c4eb2323ce95f3fd659cb76448}
+      \strng{fullhash}{cfacd3c4eb2323ce95f3fd659cb76448}
+      \strng{bibnamehash}{cfacd3c4eb2323ce95f3fd659cb76448}
+      \strng{authorbibnamehash}{cfacd3c4eb2323ce95f3fd659cb76448}
+      \strng{authornamehash}{cfacd3c4eb2323ce95f3fd659cb76448}
+      \strng{authorfullhash}{cfacd3c4eb2323ce95f3fd659cb76448}
+      \field{sortinit}{T}
+      \field{sortinithash}{9af77f0292593c26bde9a56e688eaee9}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{howpublished}{Online article}
+      \field{month}{8}
+      \field{note}{Accessed 2025‑07‑15}
+      \field{title}{Electronic Line Calling: Hawk‑Eye Technology Explained}
+      \field{year}{2024}
+      \verb{urlraw}
+      \verb https://www.tennisnerd.net/articles/electronic-line-calling-hawk-eye-technology-explained/39915
+      \endverb
+      \verb{url}
+      \verb https://www.tennisnerd.net/articles/electronic-line-calling-hawk-eye-technology-explained/39915
+      \endverb
+    \endentry
+    \entry{hawk_eye_system}{online}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=bb37988fad9dca601e518c39c6b6dbc1}{%
+           family={{The Guardian}},
+           familyi={T\bibinitperiod}}}%
+      }
+      \strng{namehash}{bb37988fad9dca601e518c39c6b6dbc1}
+      \strng{fullhash}{bb37988fad9dca601e518c39c6b6dbc1}
+      \strng{bibnamehash}{bb37988fad9dca601e518c39c6b6dbc1}
+      \strng{authorbibnamehash}{bb37988fad9dca601e518c39c6b6dbc1}
+      \strng{authornamehash}{bb37988fad9dca601e518c39c6b6dbc1}
+      \strng{authorfullhash}{bb37988fad9dca601e518c39c6b6dbc1}
+      \field{sortinit}{T}
+      \field{sortinithash}{9af77f0292593c26bde9a56e688eaee9}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{note}{Accessed: 2025-07-15}
+      \field{title}{Rise of the machines: amid AI outrage, technology can be a force for good in sport}
+      \field{year}{2025}
+      \verb{urlraw}
+      \verb https://www.theguardian.com/sport/2025/jul/15/rise-of-the-machines-ai-outrage-technology-tennis-sport
+      \endverb
+      \verb{url}
+      \verb https://www.theguardian.com/sport/2025/jul/15/rise-of-the-machines-ai-outrage-technology-tennis-sport
+      \endverb
+    \endentry
+    \entry{tracab2024}{online}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=eb949a664125859c8780d15f8935ea3b}{%
+           family={{Tracab}},
+           familyi={T\bibinitperiod}}}%
+      }
+      \strng{namehash}{eb949a664125859c8780d15f8935ea3b}
+      \strng{fullhash}{eb949a664125859c8780d15f8935ea3b}
+      \strng{bibnamehash}{eb949a664125859c8780d15f8935ea3b}
+      \strng{authorbibnamehash}{eb949a664125859c8780d15f8935ea3b}
+      \strng{authornamehash}{eb949a664125859c8780d15f8935ea3b}
+      \strng{authorfullhash}{eb949a664125859c8780d15f8935ea3b}
+      \field{sortinit}{T}
+      \field{sortinithash}{9af77f0292593c26bde9a56e688eaee9}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{note}{Accessed: 2025-07-13}
+      \field{title}{TRACAB: The Worlds Leading Sports Tracking System}
+      \field{year}{2024}
+      \verb{urlraw}
+      \verb https://tracab.com
+      \endverb
+      \verb{url}
+      \verb https://tracab.com
+      \endverb
+    \endentry
+    \entry{wiebe2013mls}{online}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=42fbfe872855f54b94313ba5ca28db30}{%
+           family={Wiebe},
+           familyi={W\bibinitperiod},
+           given={Andrew},
+           giveni={A\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{42fbfe872855f54b94313ba5ca28db30}
+      \strng{fullhash}{42fbfe872855f54b94313ba5ca28db30}
+      \strng{bibnamehash}{42fbfe872855f54b94313ba5ca28db30}
+      \strng{authorbibnamehash}{42fbfe872855f54b94313ba5ca28db30}
+      \strng{authornamehash}{42fbfe872855f54b94313ba5ca28db30}
+      \strng{authorfullhash}{42fbfe872855f54b94313ba5ca28db30}
+      \field{sortinit}{W}
+      \field{sortinithash}{4315d78024d0cea9b57a0c6f0e35ed0d}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{howpublished}{Online news article}
+      \field{month}{4}
+      \field{note}{Archived via the Wayback Machine; accessed 2025‑07‑15}
+      \field{title}{MLS Commissioner Don Garber says league won’t adopt goal‑line technology by 2014}
+      \field{year}{2013}
+      \verb{urlraw}
+      \verb https://web.archive.org/web/20150919114824/http://www.mlssoccer.com/news/article/2013/04/25/mls-commissioner-don-garber-says-league-wont-adopt-goal-line-technology-2014
+      \endverb
+      \verb{url}
+      \verb https://web.archive.org/web/20150919114824/http://www.mlssoccer.com/news/article/2013/04/25/mls-commissioner-don-garber-says-league-wont-adopt-goal-line-technology-2014
+      \endverb
+    \endentry
+    \entry{wong2016lowcost}{report}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=72d3e74ace19c96ef32040a937c0f231}{%
+           family={Wong},
+           familyi={W\bibinitperiod},
+           given={Yu-Po\bibnamedelima (Ken)},
+           giveni={Y\bibinithyphendelim P\bibinitperiod\bibinitdelim (\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{institution}{1}{%
+        {Department of Applied Physics, Stanford University}%
+      }
+      \list{location}{1}{%
+        {Stanford, CA 94305}%
+      }
+      \strng{namehash}{72d3e74ace19c96ef32040a937c0f231}
+      \strng{fullhash}{72d3e74ace19c96ef32040a937c0f231}
+      \strng{bibnamehash}{72d3e74ace19c96ef32040a937c0f231}
+      \strng{authorbibnamehash}{72d3e74ace19c96ef32040a937c0f231}
+      \strng{authornamehash}{72d3e74ace19c96ef32040a937c0f231}
+      \strng{authorfullhash}{72d3e74ace19c96ef32040a937c0f231}
+      \field{sortinit}{W}
+      \field{sortinithash}{4315d78024d0cea9b57a0c6f0e35ed0d}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{note}{Accessed 2025-07-15}
+      \field{title}{Low-cost Tennis Line Call System with Four Webcams}
+      \field{type}{techreport}
+      \field{year}{2016}
+      \verb{urlraw}
+      \verb https://web.stanford.edu/class/cs231a/prev_projects_2016/final_report_v2.pdf
+      \endverb
+      \verb{url}
+      \verb https://web.stanford.edu/class/cs231a/prev_projects_2016/final_report_v2.pdf
+      \endverb
+    \endentry
+    \entry{wipo2023goalline}{online}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=4c054fc51a257ddd2724164785846a4c}{%
+           family={{World Intellectual Property Organization}},
+           familyi={W\bibinitperiod}}}%
+      }
+      \strng{namehash}{4c054fc51a257ddd2724164785846a4c}
+      \strng{fullhash}{4c054fc51a257ddd2724164785846a4c}
+      \strng{bibnamehash}{4c054fc51a257ddd2724164785846a4c}
+      \strng{authorbibnamehash}{4c054fc51a257ddd2724164785846a4c}
+      \strng{authornamehash}{4c054fc51a257ddd2724164785846a4c}
+      \strng{authorfullhash}{4c054fc51a257ddd2724164785846a4c}
+      \field{sortinit}{W}
+      \field{sortinithash}{4315d78024d0cea9b57a0c6f0e35ed0d}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{howpublished}{Online magazine article}
+      \field{note}{Accessed 2025-07-15}
+      \field{title}{Goal‑line technology – Getting it right}
+      \field{year}{2023}
+      \verb{urlraw}
+      \verb https://www.wipo.int/en/web/wipo-magazine/articles/goal-line-technology-getting-it-right-37357
+      \endverb
+      \verb{url}
+      \verb https://www.wipo.int/en/web/wipo-magazine/articles/goal-line-technology-getting-it-right-37357
+      \endverb
+    \endentry
+    \entry{xbotgo2024chameleon}{online}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=52d57eb13c90161e9c71e037e944fb24}{%
+           family={{XbotGo}},
+           familyi={X\bibinitperiod}}}%
+      }
+      \strng{namehash}{52d57eb13c90161e9c71e037e944fb24}
+      \strng{fullhash}{52d57eb13c90161e9c71e037e944fb24}
+      \strng{bibnamehash}{52d57eb13c90161e9c71e037e944fb24}
+      \strng{authorbibnamehash}{52d57eb13c90161e9c71e037e944fb24}
+      \strng{authornamehash}{52d57eb13c90161e9c71e037e944fb24}
+      \strng{authorfullhash}{52d57eb13c90161e9c71e037e944fb24}
+      \field{sortinit}{X}
+      \field{sortinithash}{1965c258adceecf23ce3d67b05113442}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{howpublished}{Product page}
+      \field{note}{Accessed 2025-07-15}
+      \field{title}{XbotGo Chameleon – AI-Powered Sports Tracking Camera}
+      \field{year}{2024}
+      \verb{urlraw}
+      \verb https://xbotgo.com/pages/xbotgo-chameleon
+      \endverb
+      \verb{url}
+      \verb https://xbotgo.com/pages/xbotgo-chameleon
+      \endverb
+    \endentry
+    \entry{zhao2015overview}{inproceedings}{}
+      \name{author}{5}{}{%
+        {{un=0,uniquepart=base,hash=f307257e97939449ed94ff82bedd137c}{%
+           family={Zhao},
+           familyi={Z\bibinitperiod},
+           given={Yuwei},
+           giveni={Y\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=461224100b575ced2c8d97bf6d541320}{%
+           family={Shi},
+           familyi={S\bibinitperiod},
+           given={Hui},
+           giveni={H\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=5f6e544514452ea4e70dc5d9e78e6489}{%
+           family={Chen},
+           familyi={C\bibinitperiod},
+           given={Xiaoyang},
+           giveni={X\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=940c2cbf8086f7eaa9dad329c8a915b1}{%
+           family={Li},
+           familyi={L\bibinitperiod},
+           given={Xiaojun},
+           giveni={X\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=655fcd62c04bdc7006d47bb7712c197e}{%
+           family={Wang},
+           familyi={W\bibinitperiod},
+           given={Chunjie},
+           giveni={C\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{publisher}{1}{%
+        {IEEE}%
+      }
+      \strng{namehash}{e0bbaca2202e600db20637e3bea0b197}
+      \strng{fullhash}{0a11acc19b8fbfc4e7fa433e1ce091bd}
+      \strng{bibnamehash}{e0bbaca2202e600db20637e3bea0b197}
+      \strng{authorbibnamehash}{e0bbaca2202e600db20637e3bea0b197}
+      \strng{authornamehash}{e0bbaca2202e600db20637e3bea0b197}
+      \strng{authorfullhash}{0a11acc19b8fbfc4e7fa433e1ce091bd}
+      \field{sortinit}{Z}
+      \field{sortinithash}{96892c0b0a36bb8557c40c49813d48b3}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{2015 IEEE International Conference on Information and Automation (ICIA)}
+      \field{month}{8}
+      \field{title}{An Overview of Object Detection and Tracking}
+      \field{year}{2015}
+      \field{pages}{280\bibrangedash 286}
+      \range{pages}{7}
+      \verb{doi}
+      \verb 10.1109/ICInfA.2015.7279340
+      \endverb
+    \endentry
+  \enddatalist
+\endrefsection
+\endinput
+
