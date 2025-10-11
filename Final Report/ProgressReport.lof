@@ -4,7 +4,7 @@
 \contentsline {figure}{\numberline {3}{\ignorespaces Example of a \acl {clg} network showing discrete \acs {rv} $X$ and continuous \acs {rv}s $Y$ and $Z$}}{17}{}%
 \contentsline {figure}{\numberline {4}{\ignorespaces Overview of the model design}}{20}{}%
 \contentsline {figure}{\numberline {5}{\ignorespaces Flow diagram showing the flow of logic each of the \acs {ipa} will follow}}{23}{}%
-\contentsline {figure}{\numberline {6}{\ignorespaces Relationship between $Pos_{x,y}$, $Alg_n$ and $a_n$ for single algorithm and time step}}{29}{}%
+\contentsline {figure}{\numberline {6}{\ignorespaces Relationship between $Pos_{x,y}$, $Alg_n$ and $a_n$ for single algorithm and time step}}{30}{}%
 \contentsline {figure}{\numberline {7}{\ignorespaces \acl {bn} showing the relationships between $Pos_{x,y}$ and the various algorithms used}}{30}{}%
-\contentsline {figure}{\numberline {8}{\ignorespaces \acl {bn} showing the relationships between $Pos_{x,y}$, the various \acs {ipa} used and the discrete Outlier Indicators at the different time steps}}{30}{}%
-\contentsline {figure}{\numberline {9}{\ignorespaces Flow diagram showing the flow of logic the \acs {pgm} will follow}}{32}{}%
+\contentsline {figure}{\numberline {8}{\ignorespaces \acl {bn} showing the relationships between $Pos_{x,y}$, the various \acs {ipa} used and the discrete Outlier Indicators at the different time steps}}{31}{}%
+\contentsline {figure}{\numberline {9}{\ignorespaces Flow diagram showing the flow of logic the \acs {pgm} will follow}}{33}{}%

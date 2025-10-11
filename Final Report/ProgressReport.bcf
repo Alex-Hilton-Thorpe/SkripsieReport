@@ -2398,42 +2398,45 @@
     <bcf:citekey order="31" intorder="1">metaeye</bcf:citekey>
     <bcf:citekey order="32" intorder="1">metaeye</bcf:citekey>
     <bcf:citekey order="33" intorder="1">metaeye</bcf:citekey>
-    <bcf:citekey order="34" intorder="1">culjak2012opencv</bcf:citekey>
-    <bcf:citekey order="35" intorder="1">mohamad2015opencv</bcf:citekey>
-    <bcf:citekey order="36" intorder="1">marengoni2011opencv</bcf:citekey>
-    <bcf:citekey order="37" intorder="1">opencv_threshold</bcf:citekey>
-    <bcf:citekey order="38" intorder="1">opencv_inrange</bcf:citekey>
-    <bcf:citekey order="39" intorder="1">opencv_median</bcf:citekey>
-    <bcf:citekey order="40" intorder="1">opencv_gaussian</bcf:citekey>
-    <bcf:citekey order="41" intorder="1">szeliski2010computer</bcf:citekey>
-    <bcf:citekey order="42" intorder="1">opencv_canny</bcf:citekey>
-    <bcf:citekey order="43" intorder="1">opencv_sobel</bcf:citekey>
-    <bcf:citekey order="44" intorder="1">opencv_color</bcf:citekey>
-    <bcf:citekey order="45" intorder="1">opencv_dilate</bcf:citekey>
-    <bcf:citekey order="46" intorder="1">opencv_erode</bcf:citekey>
-    <bcf:citekey order="47" intorder="1">opencv_morphologyex</bcf:citekey>
-    <bcf:citekey order="48" intorder="1">opencv_contours</bcf:citekey>
-    <bcf:citekey order="49" intorder="1">opencv_connected</bcf:citekey>
-    <bcf:citekey order="50" intorder="1">opencv_hough</bcf:citekey>
-    <bcf:citekey order="51" intorder="1">opencv_contours</bcf:citekey>
-    <bcf:citekey order="52" intorder="1">opencv_convex</bcf:citekey>
-    <bcf:citekey order="53" intorder="1">opencv_arclength</bcf:citekey>
-    <bcf:citekey order="54" intorder="1">opencv_bgsub</bcf:citekey>
-    <bcf:citekey order="55" intorder="1">opencv_farneback</bcf:citekey>
-    <bcf:citekey order="56" intorder="1">opencv_pylk</bcf:citekey>
-    <bcf:citekey order="57" intorder="1">koller2009pgm</bcf:citekey>
+    <bcf:citekey order="34" intorder="1">opencv_library</bcf:citekey>
+    <bcf:citekey order="35" intorder="1">culjak2012opencv</bcf:citekey>
+    <bcf:citekey order="36" intorder="1">mohamad2015opencv</bcf:citekey>
+    <bcf:citekey order="37" intorder="1">marengoni2011opencv</bcf:citekey>
+    <bcf:citekey order="38" intorder="1">opencv_threshold</bcf:citekey>
+    <bcf:citekey order="39" intorder="1">opencv_inrange</bcf:citekey>
+    <bcf:citekey order="40" intorder="1">opencv_median</bcf:citekey>
+    <bcf:citekey order="41" intorder="1">opencv_gaussian</bcf:citekey>
+    <bcf:citekey order="42" intorder="1">szeliski2010computer</bcf:citekey>
+    <bcf:citekey order="43" intorder="1">opencv_canny</bcf:citekey>
+    <bcf:citekey order="44" intorder="1">opencv_sobel</bcf:citekey>
+    <bcf:citekey order="45" intorder="1">opencv_color</bcf:citekey>
+    <bcf:citekey order="46" intorder="1">opencv_dilate</bcf:citekey>
+    <bcf:citekey order="47" intorder="1">opencv_erode</bcf:citekey>
+    <bcf:citekey order="48" intorder="1">opencv_morphologyex</bcf:citekey>
+    <bcf:citekey order="49" intorder="1">opencv_contours</bcf:citekey>
+    <bcf:citekey order="50" intorder="1">opencv_connected</bcf:citekey>
+    <bcf:citekey order="51" intorder="1">opencv_hough</bcf:citekey>
+    <bcf:citekey order="52" intorder="1">opencv_contours</bcf:citekey>
+    <bcf:citekey order="53" intorder="1">opencv_convex</bcf:citekey>
+    <bcf:citekey order="54" intorder="1">opencv_arclength</bcf:citekey>
+    <bcf:citekey order="55" intorder="1">opencv_bgsub</bcf:citekey>
+    <bcf:citekey order="56" intorder="1">opencv_farneback</bcf:citekey>
+    <bcf:citekey order="57" intorder="1">opencv_pylk</bcf:citekey>
     <bcf:citekey order="58" intorder="1">koller2009pgm</bcf:citekey>
-    <bcf:citekey order="59" intorder="1">kollerVideoGen1</bcf:citekey>
-    <bcf:citekey order="59" intorder="2">kollerVideoGen2</bcf:citekey>
-    <bcf:citekey order="60" intorder="1">minka2013ep</bcf:citekey>
+    <bcf:citekey order="59" intorder="1">koller2009pgm</bcf:citekey>
+    <bcf:citekey order="60" intorder="1">kollerVideoGen1</bcf:citekey>
+    <bcf:citekey order="60" intorder="2">kollerVideoGen2</bcf:citekey>
     <bcf:citekey order="61" intorder="1">minka2013ep</bcf:citekey>
     <bcf:citekey order="62" intorder="1">minka2013ep</bcf:citekey>
-    <bcf:citekey order="63" intorder="1">minka2001expectation</bcf:citekey>
-    <bcf:citekey order="63" intorder="2">heskes2006approximate</bcf:citekey>
-    <bcf:citekey order="64" intorder="1">bishop2006prml</bcf:citekey>
+    <bcf:citekey order="63" intorder="1">minka2013ep</bcf:citekey>
+    <bcf:citekey order="64" intorder="1">minka2001expectation</bcf:citekey>
+    <bcf:citekey order="64" intorder="2">heskes2006approximate</bcf:citekey>
     <bcf:citekey order="65" intorder="1">bishop2006prml</bcf:citekey>
-    <bcf:citekey order="66" intorder="1">youtube_ZverevDjokovic</bcf:citekey>
-    <bcf:citekey order="67" intorder="1">koller2009pgm</bcf:citekey>
+    <bcf:citekey order="66" intorder="1">bishop2006prml</bcf:citekey>
+    <bcf:citekey order="67" intorder="1">youtube_ZverevDjokovic</bcf:citekey>
+    <bcf:citekey order="68" intorder="1">opencv_library</bcf:citekey>
+    <bcf:citekey order="69" intorder="1">koller2009pgm</bcf:citekey>
+    <bcf:citekey order="70" intorder="1">opencv_library</bcf:citekey>
   </bcf:section>
   <!-- SORTING TEMPLATES -->
   <bcf:sortingtemplate name="nyt">

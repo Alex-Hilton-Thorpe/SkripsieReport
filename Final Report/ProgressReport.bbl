@@ -309,6 +309,576 @@
       \field{pages}{205\bibrangedash 210}
       \range{pages}{6}
     \endentry
+    \entry{opencv_bgsub}{online}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=9df083c94429647164640b76c66eb181}{%
+           family={Itseez},
+           familyi={I\bibinitperiod}}}%
+      }
+      \strng{namehash}{9df083c94429647164640b76c66eb181}
+      \strng{fullhash}{9df083c94429647164640b76c66eb181}
+      \strng{bibnamehash}{9df083c94429647164640b76c66eb181}
+      \strng{authorbibnamehash}{9df083c94429647164640b76c66eb181}
+      \strng{authornamehash}{9df083c94429647164640b76c66eb181}
+      \strng{authorfullhash}{9df083c94429647164640b76c66eb181}
+      \field{extraname}{1}
+      \field{sortinit}{I}
+      \field{sortinithash}{8d291c51ee89b6cd86bf5379f0b151d8}
+      \field{extradate}{1}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{note}{Accessed: 2025-10-04}
+      \field{title}{Background Subtraction}
+      \field{year}{2023}
+      \verb{urlraw}
+      \verb https://docs.opencv.org/4.x/d1/dc5/tutorial_background_subtraction.html
+      \endverb
+      \verb{url}
+      \verb https://docs.opencv.org/4.x/d1/dc5/tutorial_background_subtraction.html
+      \endverb
+    \endentry
+    \entry{opencv_canny}{online}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=9df083c94429647164640b76c66eb181}{%
+           family={Itseez},
+           familyi={I\bibinitperiod}}}%
+      }
+      \strng{namehash}{9df083c94429647164640b76c66eb181}
+      \strng{fullhash}{9df083c94429647164640b76c66eb181}
+      \strng{bibnamehash}{9df083c94429647164640b76c66eb181}
+      \strng{authorbibnamehash}{9df083c94429647164640b76c66eb181}
+      \strng{authornamehash}{9df083c94429647164640b76c66eb181}
+      \strng{authorfullhash}{9df083c94429647164640b76c66eb181}
+      \field{extraname}{2}
+      \field{sortinit}{I}
+      \field{sortinithash}{8d291c51ee89b6cd86bf5379f0b151d8}
+      \field{extradate}{2}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{note}{Accessed: 2025-10-04}
+      \field{title}{Canny Edge Detection}
+      \field{year}{2023}
+      \verb{urlraw}
+      \verb https://docs.opencv.org/4.x/da/d22/tutorial_py_canny.html
+      \endverb
+      \verb{url}
+      \verb https://docs.opencv.org/4.x/da/d22/tutorial_py_canny.html
+      \endverb
+    \endentry
+    \entry{opencv_sobel}{online}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=9df083c94429647164640b76c66eb181}{%
+           family={Itseez},
+           familyi={I\bibinitperiod}}}%
+      }
+      \strng{namehash}{9df083c94429647164640b76c66eb181}
+      \strng{fullhash}{9df083c94429647164640b76c66eb181}
+      \strng{bibnamehash}{9df083c94429647164640b76c66eb181}
+      \strng{authorbibnamehash}{9df083c94429647164640b76c66eb181}
+      \strng{authornamehash}{9df083c94429647164640b76c66eb181}
+      \strng{authorfullhash}{9df083c94429647164640b76c66eb181}
+      \field{extraname}{3}
+      \field{sortinit}{I}
+      \field{sortinithash}{8d291c51ee89b6cd86bf5379f0b151d8}
+      \field{extradate}{3}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{note}{Accessed: 2025-10-04}
+      \field{title}{Canny Edge Detection}
+      \field{year}{2023}
+      \verb{urlraw}
+      \verb https://docs.opencv.org/4.x/da/d22/tutorial_py_canny.html
+      \endverb
+      \verb{url}
+      \verb https://docs.opencv.org/4.x/da/d22/tutorial_py_canny.html
+      \endverb
+    \endentry
+    \entry{opencv_color}{online}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=9df083c94429647164640b76c66eb181}{%
+           family={Itseez},
+           familyi={I\bibinitperiod}}}%
+      }
+      \strng{namehash}{9df083c94429647164640b76c66eb181}
+      \strng{fullhash}{9df083c94429647164640b76c66eb181}
+      \strng{bibnamehash}{9df083c94429647164640b76c66eb181}
+      \strng{authorbibnamehash}{9df083c94429647164640b76c66eb181}
+      \strng{authornamehash}{9df083c94429647164640b76c66eb181}
+      \strng{authorfullhash}{9df083c94429647164640b76c66eb181}
+      \field{extraname}{4}
+      \field{sortinit}{I}
+      \field{sortinithash}{8d291c51ee89b6cd86bf5379f0b151d8}
+      \field{extradate}{4}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{note}{Accessed: 2025-10-04}
+      \field{title}{Changing Colorspaces}
+      \field{year}{2023}
+      \verb{urlraw}
+      \verb https://docs.opencv.org/4.x/df/d9d/tutorial_py_colorspaces.html
+      \endverb
+      \verb{url}
+      \verb https://docs.opencv.org/4.x/df/d9d/tutorial_py_colorspaces.html
+      \endverb
+    \endentry
+    \entry{opencv_connected}{online}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=9df083c94429647164640b76c66eb181}{%
+           family={Itseez},
+           familyi={I\bibinitperiod}}}%
+      }
+      \strng{namehash}{9df083c94429647164640b76c66eb181}
+      \strng{fullhash}{9df083c94429647164640b76c66eb181}
+      \strng{bibnamehash}{9df083c94429647164640b76c66eb181}
+      \strng{authorbibnamehash}{9df083c94429647164640b76c66eb181}
+      \strng{authornamehash}{9df083c94429647164640b76c66eb181}
+      \strng{authorfullhash}{9df083c94429647164640b76c66eb181}
+      \field{extraname}{5}
+      \field{sortinit}{I}
+      \field{sortinithash}{8d291c51ee89b6cd86bf5379f0b151d8}
+      \field{extradate}{5}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{note}{Accessed: 2025-10-04}
+      \field{title}{Connected Components}
+      \field{year}{2023}
+      \verb{urlraw}
+      \verb https://docs.opencv.org/4.x/d4/d73/tutorial_py_contours_begin.html
+      \endverb
+      \verb{url}
+      \verb https://docs.opencv.org/4.x/d4/d73/tutorial_py_contours_begin.html
+      \endverb
+    \endentry
+    \entry{opencv_convex}{online}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=9df083c94429647164640b76c66eb181}{%
+           family={Itseez},
+           familyi={I\bibinitperiod}}}%
+      }
+      \strng{namehash}{9df083c94429647164640b76c66eb181}
+      \strng{fullhash}{9df083c94429647164640b76c66eb181}
+      \strng{bibnamehash}{9df083c94429647164640b76c66eb181}
+      \strng{authorbibnamehash}{9df083c94429647164640b76c66eb181}
+      \strng{authornamehash}{9df083c94429647164640b76c66eb181}
+      \strng{authorfullhash}{9df083c94429647164640b76c66eb181}
+      \field{extraname}{6}
+      \field{sortinit}{I}
+      \field{sortinithash}{8d291c51ee89b6cd86bf5379f0b151d8}
+      \field{extradate}{6}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{note}{Accessed: 2025-10-04}
+      \field{title}{Contour Features}
+      \field{year}{2023}
+      \verb{urlraw}
+      \verb https://docs.opencv.org/4.x/dd/d49/tutorial_py_contour_features.html
+      \endverb
+      \verb{url}
+      \verb https://docs.opencv.org/4.x/dd/d49/tutorial_py_contour_features.html
+      \endverb
+    \endentry
+    \entry{opencv_arclength}{online}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=9df083c94429647164640b76c66eb181}{%
+           family={Itseez},
+           familyi={I\bibinitperiod}}}%
+      }
+      \strng{namehash}{9df083c94429647164640b76c66eb181}
+      \strng{fullhash}{9df083c94429647164640b76c66eb181}
+      \strng{bibnamehash}{9df083c94429647164640b76c66eb181}
+      \strng{authorbibnamehash}{9df083c94429647164640b76c66eb181}
+      \strng{authornamehash}{9df083c94429647164640b76c66eb181}
+      \strng{authorfullhash}{9df083c94429647164640b76c66eb181}
+      \field{extraname}{7}
+      \field{sortinit}{I}
+      \field{sortinithash}{8d291c51ee89b6cd86bf5379f0b151d8}
+      \field{extradate}{7}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{note}{Accessed: 2025-10-04}
+      \field{title}{Contour Features}
+      \field{year}{2023}
+      \verb{urlraw}
+      \verb https://docs.opencv.org/4.x/dd/d49/tutorial_py_contour_features.html
+      \endverb
+      \verb{url}
+      \verb https://docs.opencv.org/4.x/dd/d49/tutorial_py_contour_features.html
+      \endverb
+    \endentry
+    \entry{opencv_contours}{online}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=9df083c94429647164640b76c66eb181}{%
+           family={Itseez},
+           familyi={I\bibinitperiod}}}%
+      }
+      \strng{namehash}{9df083c94429647164640b76c66eb181}
+      \strng{fullhash}{9df083c94429647164640b76c66eb181}
+      \strng{bibnamehash}{9df083c94429647164640b76c66eb181}
+      \strng{authorbibnamehash}{9df083c94429647164640b76c66eb181}
+      \strng{authornamehash}{9df083c94429647164640b76c66eb181}
+      \strng{authorfullhash}{9df083c94429647164640b76c66eb181}
+      \field{extraname}{8}
+      \field{sortinit}{I}
+      \field{sortinithash}{8d291c51ee89b6cd86bf5379f0b151d8}
+      \field{extradate}{8}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{note}{Accessed: 2025-10-04}
+      \field{title}{Contours: Getting Started}
+      \field{year}{2023}
+      \verb{urlraw}
+      \verb https://docs.opencv.org/4.x/d4/d73/tutorial_py_contours_begin.html
+      \endverb
+      \verb{url}
+      \verb https://docs.opencv.org/4.x/d4/d73/tutorial_py_contours_begin.html
+      \endverb
+    \endentry
+    \entry{opencv_hough}{online}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=9df083c94429647164640b76c66eb181}{%
+           family={Itseez},
+           familyi={I\bibinitperiod}}}%
+      }
+      \strng{namehash}{9df083c94429647164640b76c66eb181}
+      \strng{fullhash}{9df083c94429647164640b76c66eb181}
+      \strng{bibnamehash}{9df083c94429647164640b76c66eb181}
+      \strng{authorbibnamehash}{9df083c94429647164640b76c66eb181}
+      \strng{authornamehash}{9df083c94429647164640b76c66eb181}
+      \strng{authorfullhash}{9df083c94429647164640b76c66eb181}
+      \field{extraname}{9}
+      \field{sortinit}{I}
+      \field{sortinithash}{8d291c51ee89b6cd86bf5379f0b151d8}
+      \field{extradate}{9}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{note}{Accessed: 2025-10-04}
+      \field{title}{Hough Circle Transform}
+      \field{year}{2023}
+      \verb{urlraw}
+      \verb https://docs.opencv.org/4.x/da/d53/tutorial_py_houghcircles.html
+      \endverb
+      \verb{url}
+      \verb https://docs.opencv.org/4.x/da/d53/tutorial_py_houghcircles.html
+      \endverb
+    \endentry
+    \entry{opencv_threshold}{online}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=9df083c94429647164640b76c66eb181}{%
+           family={Itseez},
+           familyi={I\bibinitperiod}}}%
+      }
+      \strng{namehash}{9df083c94429647164640b76c66eb181}
+      \strng{fullhash}{9df083c94429647164640b76c66eb181}
+      \strng{bibnamehash}{9df083c94429647164640b76c66eb181}
+      \strng{authorbibnamehash}{9df083c94429647164640b76c66eb181}
+      \strng{authornamehash}{9df083c94429647164640b76c66eb181}
+      \strng{authorfullhash}{9df083c94429647164640b76c66eb181}
+      \field{extraname}{10}
+      \field{sortinit}{I}
+      \field{sortinithash}{8d291c51ee89b6cd86bf5379f0b151d8}
+      \field{extradate}{10}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{note}{Accessed: 2025-10-04}
+      \field{title}{Image Thresholding}
+      \field{year}{2023}
+      \verb{urlraw}
+      \verb https://docs.opencv.org/4.x/d7/d4d/tutorial_py_thresholding.html
+      \endverb
+      \verb{url}
+      \verb https://docs.opencv.org/4.x/d7/d4d/tutorial_py_thresholding.html
+      \endverb
+    \endentry
+    \entry{opencv_inrange}{online}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=9df083c94429647164640b76c66eb181}{%
+           family={Itseez},
+           familyi={I\bibinitperiod}}}%
+      }
+      \strng{namehash}{9df083c94429647164640b76c66eb181}
+      \strng{fullhash}{9df083c94429647164640b76c66eb181}
+      \strng{bibnamehash}{9df083c94429647164640b76c66eb181}
+      \strng{authorbibnamehash}{9df083c94429647164640b76c66eb181}
+      \strng{authornamehash}{9df083c94429647164640b76c66eb181}
+      \strng{authorfullhash}{9df083c94429647164640b76c66eb181}
+      \field{extraname}{11}
+      \field{sortinit}{I}
+      \field{sortinithash}{8d291c51ee89b6cd86bf5379f0b151d8}
+      \field{extradate}{11}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{note}{Accessed: 2025-10-04}
+      \field{title}{Image Thresholding}
+      \field{year}{2023}
+      \verb{urlraw}
+      \verb https://docs.opencv.org/4.x/d7/d4d/tutorial_py_thresholding.html
+      \endverb
+      \verb{url}
+      \verb https://docs.opencv.org/4.x/d7/d4d/tutorial_py_thresholding.html
+      \endverb
+    \endentry
+    \entry{opencv_dilate}{online}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=9df083c94429647164640b76c66eb181}{%
+           family={Itseez},
+           familyi={I\bibinitperiod}}}%
+      }
+      \strng{namehash}{9df083c94429647164640b76c66eb181}
+      \strng{fullhash}{9df083c94429647164640b76c66eb181}
+      \strng{bibnamehash}{9df083c94429647164640b76c66eb181}
+      \strng{authorbibnamehash}{9df083c94429647164640b76c66eb181}
+      \strng{authornamehash}{9df083c94429647164640b76c66eb181}
+      \strng{authorfullhash}{9df083c94429647164640b76c66eb181}
+      \field{extraname}{12}
+      \field{sortinit}{I}
+      \field{sortinithash}{8d291c51ee89b6cd86bf5379f0b151d8}
+      \field{extradate}{12}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{note}{Accessed: 2025-10-04}
+      \field{title}{Morphological Transformations}
+      \field{year}{2023}
+      \verb{urlraw}
+      \verb https://docs.opencv.org/4.x/d9/d61/tutorial_py_morphological_ops.html
+      \endverb
+      \verb{url}
+      \verb https://docs.opencv.org/4.x/d9/d61/tutorial_py_morphological_ops.html
+      \endverb
+    \endentry
+    \entry{opencv_erode}{online}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=9df083c94429647164640b76c66eb181}{%
+           family={Itseez},
+           familyi={I\bibinitperiod}}}%
+      }
+      \strng{namehash}{9df083c94429647164640b76c66eb181}
+      \strng{fullhash}{9df083c94429647164640b76c66eb181}
+      \strng{bibnamehash}{9df083c94429647164640b76c66eb181}
+      \strng{authorbibnamehash}{9df083c94429647164640b76c66eb181}
+      \strng{authornamehash}{9df083c94429647164640b76c66eb181}
+      \strng{authorfullhash}{9df083c94429647164640b76c66eb181}
+      \field{extraname}{13}
+      \field{sortinit}{I}
+      \field{sortinithash}{8d291c51ee89b6cd86bf5379f0b151d8}
+      \field{extradate}{13}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{note}{Accessed: 2025-10-04}
+      \field{title}{Morphological Transformations}
+      \field{year}{2023}
+      \verb{urlraw}
+      \verb https://docs.opencv.org/4.x/d9/d61/tutorial_py_morphological_ops.html
+      \endverb
+      \verb{url}
+      \verb https://docs.opencv.org/4.x/d9/d61/tutorial_py_morphological_ops.html
+      \endverb
+    \endentry
+    \entry{opencv_morphologyex}{online}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=9df083c94429647164640b76c66eb181}{%
+           family={Itseez},
+           familyi={I\bibinitperiod}}}%
+      }
+      \strng{namehash}{9df083c94429647164640b76c66eb181}
+      \strng{fullhash}{9df083c94429647164640b76c66eb181}
+      \strng{bibnamehash}{9df083c94429647164640b76c66eb181}
+      \strng{authorbibnamehash}{9df083c94429647164640b76c66eb181}
+      \strng{authornamehash}{9df083c94429647164640b76c66eb181}
+      \strng{authorfullhash}{9df083c94429647164640b76c66eb181}
+      \field{extraname}{14}
+      \field{sortinit}{I}
+      \field{sortinithash}{8d291c51ee89b6cd86bf5379f0b151d8}
+      \field{extradate}{14}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{note}{Accessed: 2025-10-04}
+      \field{title}{Morphological Transformations}
+      \field{year}{2023}
+      \verb{urlraw}
+      \verb https://docs.opencv.org/4.x/d9/d61/tutorial_py_morphological_ops.html
+      \endverb
+      \verb{url}
+      \verb https://docs.opencv.org/4.x/d9/d61/tutorial_py_morphological_ops.html
+      \endverb
+    \endentry
+    \entry{opencv_farneback}{online}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=9df083c94429647164640b76c66eb181}{%
+           family={Itseez},
+           familyi={I\bibinitperiod}}}%
+      }
+      \strng{namehash}{9df083c94429647164640b76c66eb181}
+      \strng{fullhash}{9df083c94429647164640b76c66eb181}
+      \strng{bibnamehash}{9df083c94429647164640b76c66eb181}
+      \strng{authorbibnamehash}{9df083c94429647164640b76c66eb181}
+      \strng{authornamehash}{9df083c94429647164640b76c66eb181}
+      \strng{authorfullhash}{9df083c94429647164640b76c66eb181}
+      \field{extraname}{15}
+      \field{sortinit}{I}
+      \field{sortinithash}{8d291c51ee89b6cd86bf5379f0b151d8}
+      \field{extradate}{15}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{note}{Accessed: 2025-10-04}
+      \field{title}{Optical Flow}
+      \field{year}{2023}
+      \verb{urlraw}
+      \verb https://docs.opencv.org/4.x/d4/dee/tutorial_optical_flow.html
+      \endverb
+      \verb{url}
+      \verb https://docs.opencv.org/4.x/d4/dee/tutorial_optical_flow.html
+      \endverb
+    \endentry
+    \entry{opencv_pylk}{online}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=9df083c94429647164640b76c66eb181}{%
+           family={Itseez},
+           familyi={I\bibinitperiod}}}%
+      }
+      \strng{namehash}{9df083c94429647164640b76c66eb181}
+      \strng{fullhash}{9df083c94429647164640b76c66eb181}
+      \strng{bibnamehash}{9df083c94429647164640b76c66eb181}
+      \strng{authorbibnamehash}{9df083c94429647164640b76c66eb181}
+      \strng{authornamehash}{9df083c94429647164640b76c66eb181}
+      \strng{authorfullhash}{9df083c94429647164640b76c66eb181}
+      \field{extraname}{16}
+      \field{sortinit}{I}
+      \field{sortinithash}{8d291c51ee89b6cd86bf5379f0b151d8}
+      \field{extradate}{16}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{note}{Accessed: 2025-10-04}
+      \field{title}{Optical Flow}
+      \field{year}{2023}
+      \verb{urlraw}
+      \verb https://docs.opencv.org/4.x/d4/dee/tutorial_optical_flow.html
+      \endverb
+      \verb{url}
+      \verb https://docs.opencv.org/4.x/d4/dee/tutorial_optical_flow.html
+      \endverb
+    \endentry
+    \entry{opencv_median}{online}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=9df083c94429647164640b76c66eb181}{%
+           family={Itseez},
+           familyi={I\bibinitperiod}}}%
+      }
+      \strng{namehash}{9df083c94429647164640b76c66eb181}
+      \strng{fullhash}{9df083c94429647164640b76c66eb181}
+      \strng{bibnamehash}{9df083c94429647164640b76c66eb181}
+      \strng{authorbibnamehash}{9df083c94429647164640b76c66eb181}
+      \strng{authornamehash}{9df083c94429647164640b76c66eb181}
+      \strng{authorfullhash}{9df083c94429647164640b76c66eb181}
+      \field{extraname}{17}
+      \field{sortinit}{I}
+      \field{sortinithash}{8d291c51ee89b6cd86bf5379f0b151d8}
+      \field{extradate}{17}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{note}{Accessed: 2025-10-04}
+      \field{title}{Smoothing Images}
+      \field{year}{2023}
+      \verb{urlraw}
+      \verb https://docs.opencv.org/4.x/dc/dd3/tutorial_py_filtering.html
+      \endverb
+      \verb{url}
+      \verb https://docs.opencv.org/4.x/dc/dd3/tutorial_py_filtering.html
+      \endverb
+    \endentry
+    \entry{opencv_gaussian}{online}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=9df083c94429647164640b76c66eb181}{%
+           family={Itseez},
+           familyi={I\bibinitperiod}}}%
+      }
+      \strng{namehash}{9df083c94429647164640b76c66eb181}
+      \strng{fullhash}{9df083c94429647164640b76c66eb181}
+      \strng{bibnamehash}{9df083c94429647164640b76c66eb181}
+      \strng{authorbibnamehash}{9df083c94429647164640b76c66eb181}
+      \strng{authornamehash}{9df083c94429647164640b76c66eb181}
+      \strng{authorfullhash}{9df083c94429647164640b76c66eb181}
+      \field{extraname}{18}
+      \field{sortinit}{I}
+      \field{sortinithash}{8d291c51ee89b6cd86bf5379f0b151d8}
+      \field{extradate}{18}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{note}{Accessed: 2025-10-04}
+      \field{title}{Smoothing Images}
+      \field{year}{2023}
+      \verb{urlraw}
+      \verb https://docs.opencv.org/4.x/dc/dd3/tutorial_py_filtering.html
+      \endverb
+      \verb{url}
+      \verb https://docs.opencv.org/4.x/dc/dd3/tutorial_py_filtering.html
+      \endverb
+    \endentry
+    \entry{opencv_library}{software}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=9df083c94429647164640b76c66eb181}{%
+           family={Itseez},
+           familyi={I\bibinitperiod}}}%
+      }
+      \strng{namehash}{9df083c94429647164640b76c66eb181}
+      \strng{fullhash}{9df083c94429647164640b76c66eb181}
+      \strng{bibnamehash}{9df083c94429647164640b76c66eb181}
+      \strng{authorbibnamehash}{9df083c94429647164640b76c66eb181}
+      \strng{authornamehash}{9df083c94429647164640b76c66eb181}
+      \strng{authorfullhash}{9df083c94429647164640b76c66eb181}
+      \field{extraname}{19}
+      \field{sortinit}{I}
+      \field{sortinithash}{8d291c51ee89b6cd86bf5379f0b151d8}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{note}{Accessed: 2025-10-11}
+      \field{title}{OpenCV: Open Source Computer Vision Library}
+      \field{version}{4.12.0}
+      \field{year}{2024}
+      \verb{urlraw}
+      \verb https://opencv.org
+      \endverb
+      \verb{url}
+      \verb https://opencv.org
+      \endverb
+    \endentry
     \entry{ji2013_3dvision_intro}{misc}{}
       \name{author}{1}{}{%
         {{un=0,uniquepart=base,hash=f2825e3c1e08515c8a535d9517c5879f}{%
@@ -872,546 +1442,6 @@
       \endverb
       \verb{url}
       \verb https://www.isspf.com/articles/performance-tracking-in-professional-football/
-      \endverb
-    \endentry
-    \entry{opencv_bgsub}{online}{}
-      \name{author}{1}{}{%
-        {{un=0,uniquepart=base,hash=5bd3dfdc302c8d0660444d98cf3baa60}{%
-           family={{OpenCV Team}},
-           familyi={O\bibinitperiod}}}%
-      }
-      \strng{namehash}{5bd3dfdc302c8d0660444d98cf3baa60}
-      \strng{fullhash}{5bd3dfdc302c8d0660444d98cf3baa60}
-      \strng{bibnamehash}{5bd3dfdc302c8d0660444d98cf3baa60}
-      \strng{authorbibnamehash}{5bd3dfdc302c8d0660444d98cf3baa60}
-      \strng{authornamehash}{5bd3dfdc302c8d0660444d98cf3baa60}
-      \strng{authorfullhash}{5bd3dfdc302c8d0660444d98cf3baa60}
-      \field{extraname}{1}
-      \field{sortinit}{O}
-      \field{sortinithash}{2cd7140a07aea5341f9e2771efe90aae}
-      \field{extradate}{1}
-      \field{extradatescope}{labelyear}
-      \field{labeldatesource}{}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{note}{Accessed: 2025-10-04}
-      \field{title}{Background Subtraction}
-      \field{year}{2023}
-      \verb{urlraw}
-      \verb https://docs.opencv.org/4.x/d1/dc5/tutorial_background_subtraction.html
-      \endverb
-      \verb{url}
-      \verb https://docs.opencv.org/4.x/d1/dc5/tutorial_background_subtraction.html
-      \endverb
-    \endentry
-    \entry{opencv_canny}{online}{}
-      \name{author}{1}{}{%
-        {{un=0,uniquepart=base,hash=5bd3dfdc302c8d0660444d98cf3baa60}{%
-           family={{OpenCV Team}},
-           familyi={O\bibinitperiod}}}%
-      }
-      \strng{namehash}{5bd3dfdc302c8d0660444d98cf3baa60}
-      \strng{fullhash}{5bd3dfdc302c8d0660444d98cf3baa60}
-      \strng{bibnamehash}{5bd3dfdc302c8d0660444d98cf3baa60}
-      \strng{authorbibnamehash}{5bd3dfdc302c8d0660444d98cf3baa60}
-      \strng{authornamehash}{5bd3dfdc302c8d0660444d98cf3baa60}
-      \strng{authorfullhash}{5bd3dfdc302c8d0660444d98cf3baa60}
-      \field{extraname}{2}
-      \field{sortinit}{O}
-      \field{sortinithash}{2cd7140a07aea5341f9e2771efe90aae}
-      \field{extradate}{2}
-      \field{extradatescope}{labelyear}
-      \field{labeldatesource}{}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{note}{Accessed: 2025-10-04}
-      \field{title}{Canny Edge Detection}
-      \field{year}{2023}
-      \verb{urlraw}
-      \verb https://docs.opencv.org/4.x/da/d22/tutorial_py_canny.html
-      \endverb
-      \verb{url}
-      \verb https://docs.opencv.org/4.x/da/d22/tutorial_py_canny.html
-      \endverb
-    \endentry
-    \entry{opencv_sobel}{online}{}
-      \name{author}{1}{}{%
-        {{un=0,uniquepart=base,hash=5bd3dfdc302c8d0660444d98cf3baa60}{%
-           family={{OpenCV Team}},
-           familyi={O\bibinitperiod}}}%
-      }
-      \strng{namehash}{5bd3dfdc302c8d0660444d98cf3baa60}
-      \strng{fullhash}{5bd3dfdc302c8d0660444d98cf3baa60}
-      \strng{bibnamehash}{5bd3dfdc302c8d0660444d98cf3baa60}
-      \strng{authorbibnamehash}{5bd3dfdc302c8d0660444d98cf3baa60}
-      \strng{authornamehash}{5bd3dfdc302c8d0660444d98cf3baa60}
-      \strng{authorfullhash}{5bd3dfdc302c8d0660444d98cf3baa60}
-      \field{extraname}{3}
-      \field{sortinit}{O}
-      \field{sortinithash}{2cd7140a07aea5341f9e2771efe90aae}
-      \field{extradate}{3}
-      \field{extradatescope}{labelyear}
-      \field{labeldatesource}{}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{note}{Accessed: 2025-10-04}
-      \field{title}{Canny Edge Detection}
-      \field{year}{2023}
-      \verb{urlraw}
-      \verb https://docs.opencv.org/4.x/da/d22/tutorial_py_canny.html
-      \endverb
-      \verb{url}
-      \verb https://docs.opencv.org/4.x/da/d22/tutorial_py_canny.html
-      \endverb
-    \endentry
-    \entry{opencv_color}{online}{}
-      \name{author}{1}{}{%
-        {{un=0,uniquepart=base,hash=5bd3dfdc302c8d0660444d98cf3baa60}{%
-           family={{OpenCV Team}},
-           familyi={O\bibinitperiod}}}%
-      }
-      \strng{namehash}{5bd3dfdc302c8d0660444d98cf3baa60}
-      \strng{fullhash}{5bd3dfdc302c8d0660444d98cf3baa60}
-      \strng{bibnamehash}{5bd3dfdc302c8d0660444d98cf3baa60}
-      \strng{authorbibnamehash}{5bd3dfdc302c8d0660444d98cf3baa60}
-      \strng{authornamehash}{5bd3dfdc302c8d0660444d98cf3baa60}
-      \strng{authorfullhash}{5bd3dfdc302c8d0660444d98cf3baa60}
-      \field{extraname}{4}
-      \field{sortinit}{O}
-      \field{sortinithash}{2cd7140a07aea5341f9e2771efe90aae}
-      \field{extradate}{4}
-      \field{extradatescope}{labelyear}
-      \field{labeldatesource}{}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{note}{Accessed: 2025-10-04}
-      \field{title}{Changing Colorspaces}
-      \field{year}{2023}
-      \verb{urlraw}
-      \verb https://docs.opencv.org/4.x/df/d9d/tutorial_py_colorspaces.html
-      \endverb
-      \verb{url}
-      \verb https://docs.opencv.org/4.x/df/d9d/tutorial_py_colorspaces.html
-      \endverb
-    \endentry
-    \entry{opencv_connected}{online}{}
-      \name{author}{1}{}{%
-        {{un=0,uniquepart=base,hash=5bd3dfdc302c8d0660444d98cf3baa60}{%
-           family={{OpenCV Team}},
-           familyi={O\bibinitperiod}}}%
-      }
-      \strng{namehash}{5bd3dfdc302c8d0660444d98cf3baa60}
-      \strng{fullhash}{5bd3dfdc302c8d0660444d98cf3baa60}
-      \strng{bibnamehash}{5bd3dfdc302c8d0660444d98cf3baa60}
-      \strng{authorbibnamehash}{5bd3dfdc302c8d0660444d98cf3baa60}
-      \strng{authornamehash}{5bd3dfdc302c8d0660444d98cf3baa60}
-      \strng{authorfullhash}{5bd3dfdc302c8d0660444d98cf3baa60}
-      \field{extraname}{5}
-      \field{sortinit}{O}
-      \field{sortinithash}{2cd7140a07aea5341f9e2771efe90aae}
-      \field{extradate}{5}
-      \field{extradatescope}{labelyear}
-      \field{labeldatesource}{}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{note}{Accessed: 2025-10-04}
-      \field{title}{Connected Components}
-      \field{year}{2023}
-      \verb{urlraw}
-      \verb https://docs.opencv.org/4.x/d4/d73/tutorial_py_contours_begin.html
-      \endverb
-      \verb{url}
-      \verb https://docs.opencv.org/4.x/d4/d73/tutorial_py_contours_begin.html
-      \endverb
-    \endentry
-    \entry{opencv_convex}{online}{}
-      \name{author}{1}{}{%
-        {{un=0,uniquepart=base,hash=5bd3dfdc302c8d0660444d98cf3baa60}{%
-           family={{OpenCV Team}},
-           familyi={O\bibinitperiod}}}%
-      }
-      \strng{namehash}{5bd3dfdc302c8d0660444d98cf3baa60}
-      \strng{fullhash}{5bd3dfdc302c8d0660444d98cf3baa60}
-      \strng{bibnamehash}{5bd3dfdc302c8d0660444d98cf3baa60}
-      \strng{authorbibnamehash}{5bd3dfdc302c8d0660444d98cf3baa60}
-      \strng{authornamehash}{5bd3dfdc302c8d0660444d98cf3baa60}
-      \strng{authorfullhash}{5bd3dfdc302c8d0660444d98cf3baa60}
-      \field{extraname}{6}
-      \field{sortinit}{O}
-      \field{sortinithash}{2cd7140a07aea5341f9e2771efe90aae}
-      \field{extradate}{6}
-      \field{extradatescope}{labelyear}
-      \field{labeldatesource}{}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{note}{Accessed: 2025-10-04}
-      \field{title}{Contour Features}
-      \field{year}{2023}
-      \verb{urlraw}
-      \verb https://docs.opencv.org/4.x/dd/d49/tutorial_py_contour_features.html
-      \endverb
-      \verb{url}
-      \verb https://docs.opencv.org/4.x/dd/d49/tutorial_py_contour_features.html
-      \endverb
-    \endentry
-    \entry{opencv_arclength}{online}{}
-      \name{author}{1}{}{%
-        {{un=0,uniquepart=base,hash=5bd3dfdc302c8d0660444d98cf3baa60}{%
-           family={{OpenCV Team}},
-           familyi={O\bibinitperiod}}}%
-      }
-      \strng{namehash}{5bd3dfdc302c8d0660444d98cf3baa60}
-      \strng{fullhash}{5bd3dfdc302c8d0660444d98cf3baa60}
-      \strng{bibnamehash}{5bd3dfdc302c8d0660444d98cf3baa60}
-      \strng{authorbibnamehash}{5bd3dfdc302c8d0660444d98cf3baa60}
-      \strng{authornamehash}{5bd3dfdc302c8d0660444d98cf3baa60}
-      \strng{authorfullhash}{5bd3dfdc302c8d0660444d98cf3baa60}
-      \field{extraname}{7}
-      \field{sortinit}{O}
-      \field{sortinithash}{2cd7140a07aea5341f9e2771efe90aae}
-      \field{extradate}{7}
-      \field{extradatescope}{labelyear}
-      \field{labeldatesource}{}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{note}{Accessed: 2025-10-04}
-      \field{title}{Contour Features}
-      \field{year}{2023}
-      \verb{urlraw}
-      \verb https://docs.opencv.org/4.x/dd/d49/tutorial_py_contour_features.html
-      \endverb
-      \verb{url}
-      \verb https://docs.opencv.org/4.x/dd/d49/tutorial_py_contour_features.html
-      \endverb
-    \endentry
-    \entry{opencv_contours}{online}{}
-      \name{author}{1}{}{%
-        {{un=0,uniquepart=base,hash=5bd3dfdc302c8d0660444d98cf3baa60}{%
-           family={{OpenCV Team}},
-           familyi={O\bibinitperiod}}}%
-      }
-      \strng{namehash}{5bd3dfdc302c8d0660444d98cf3baa60}
-      \strng{fullhash}{5bd3dfdc302c8d0660444d98cf3baa60}
-      \strng{bibnamehash}{5bd3dfdc302c8d0660444d98cf3baa60}
-      \strng{authorbibnamehash}{5bd3dfdc302c8d0660444d98cf3baa60}
-      \strng{authornamehash}{5bd3dfdc302c8d0660444d98cf3baa60}
-      \strng{authorfullhash}{5bd3dfdc302c8d0660444d98cf3baa60}
-      \field{extraname}{8}
-      \field{sortinit}{O}
-      \field{sortinithash}{2cd7140a07aea5341f9e2771efe90aae}
-      \field{extradate}{8}
-      \field{extradatescope}{labelyear}
-      \field{labeldatesource}{}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{note}{Accessed: 2025-10-04}
-      \field{title}{Contours: Getting Started}
-      \field{year}{2023}
-      \verb{urlraw}
-      \verb https://docs.opencv.org/4.x/d4/d73/tutorial_py_contours_begin.html
-      \endverb
-      \verb{url}
-      \verb https://docs.opencv.org/4.x/d4/d73/tutorial_py_contours_begin.html
-      \endverb
-    \endentry
-    \entry{opencv_hough}{online}{}
-      \name{author}{1}{}{%
-        {{un=0,uniquepart=base,hash=5bd3dfdc302c8d0660444d98cf3baa60}{%
-           family={{OpenCV Team}},
-           familyi={O\bibinitperiod}}}%
-      }
-      \strng{namehash}{5bd3dfdc302c8d0660444d98cf3baa60}
-      \strng{fullhash}{5bd3dfdc302c8d0660444d98cf3baa60}
-      \strng{bibnamehash}{5bd3dfdc302c8d0660444d98cf3baa60}
-      \strng{authorbibnamehash}{5bd3dfdc302c8d0660444d98cf3baa60}
-      \strng{authornamehash}{5bd3dfdc302c8d0660444d98cf3baa60}
-      \strng{authorfullhash}{5bd3dfdc302c8d0660444d98cf3baa60}
-      \field{extraname}{9}
-      \field{sortinit}{O}
-      \field{sortinithash}{2cd7140a07aea5341f9e2771efe90aae}
-      \field{extradate}{9}
-      \field{extradatescope}{labelyear}
-      \field{labeldatesource}{}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{note}{Accessed: 2025-10-04}
-      \field{title}{Hough Circle Transform}
-      \field{year}{2023}
-      \verb{urlraw}
-      \verb https://docs.opencv.org/4.x/da/d53/tutorial_py_houghcircles.html
-      \endverb
-      \verb{url}
-      \verb https://docs.opencv.org/4.x/da/d53/tutorial_py_houghcircles.html
-      \endverb
-    \endentry
-    \entry{opencv_threshold}{online}{}
-      \name{author}{1}{}{%
-        {{un=0,uniquepart=base,hash=5bd3dfdc302c8d0660444d98cf3baa60}{%
-           family={{OpenCV Team}},
-           familyi={O\bibinitperiod}}}%
-      }
-      \strng{namehash}{5bd3dfdc302c8d0660444d98cf3baa60}
-      \strng{fullhash}{5bd3dfdc302c8d0660444d98cf3baa60}
-      \strng{bibnamehash}{5bd3dfdc302c8d0660444d98cf3baa60}
-      \strng{authorbibnamehash}{5bd3dfdc302c8d0660444d98cf3baa60}
-      \strng{authornamehash}{5bd3dfdc302c8d0660444d98cf3baa60}
-      \strng{authorfullhash}{5bd3dfdc302c8d0660444d98cf3baa60}
-      \field{extraname}{10}
-      \field{sortinit}{O}
-      \field{sortinithash}{2cd7140a07aea5341f9e2771efe90aae}
-      \field{extradate}{10}
-      \field{extradatescope}{labelyear}
-      \field{labeldatesource}{}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{note}{Accessed: 2025-10-04}
-      \field{title}{Image Thresholding}
-      \field{year}{2023}
-      \verb{urlraw}
-      \verb https://docs.opencv.org/4.x/d7/d4d/tutorial_py_thresholding.html
-      \endverb
-      \verb{url}
-      \verb https://docs.opencv.org/4.x/d7/d4d/tutorial_py_thresholding.html
-      \endverb
-    \endentry
-    \entry{opencv_inrange}{online}{}
-      \name{author}{1}{}{%
-        {{un=0,uniquepart=base,hash=5bd3dfdc302c8d0660444d98cf3baa60}{%
-           family={{OpenCV Team}},
-           familyi={O\bibinitperiod}}}%
-      }
-      \strng{namehash}{5bd3dfdc302c8d0660444d98cf3baa60}
-      \strng{fullhash}{5bd3dfdc302c8d0660444d98cf3baa60}
-      \strng{bibnamehash}{5bd3dfdc302c8d0660444d98cf3baa60}
-      \strng{authorbibnamehash}{5bd3dfdc302c8d0660444d98cf3baa60}
-      \strng{authornamehash}{5bd3dfdc302c8d0660444d98cf3baa60}
-      \strng{authorfullhash}{5bd3dfdc302c8d0660444d98cf3baa60}
-      \field{extraname}{11}
-      \field{sortinit}{O}
-      \field{sortinithash}{2cd7140a07aea5341f9e2771efe90aae}
-      \field{extradate}{11}
-      \field{extradatescope}{labelyear}
-      \field{labeldatesource}{}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{note}{Accessed: 2025-10-04}
-      \field{title}{Image Thresholding}
-      \field{year}{2023}
-      \verb{urlraw}
-      \verb https://docs.opencv.org/4.x/d7/d4d/tutorial_py_thresholding.html
-      \endverb
-      \verb{url}
-      \verb https://docs.opencv.org/4.x/d7/d4d/tutorial_py_thresholding.html
-      \endverb
-    \endentry
-    \entry{opencv_dilate}{online}{}
-      \name{author}{1}{}{%
-        {{un=0,uniquepart=base,hash=5bd3dfdc302c8d0660444d98cf3baa60}{%
-           family={{OpenCV Team}},
-           familyi={O\bibinitperiod}}}%
-      }
-      \strng{namehash}{5bd3dfdc302c8d0660444d98cf3baa60}
-      \strng{fullhash}{5bd3dfdc302c8d0660444d98cf3baa60}
-      \strng{bibnamehash}{5bd3dfdc302c8d0660444d98cf3baa60}
-      \strng{authorbibnamehash}{5bd3dfdc302c8d0660444d98cf3baa60}
-      \strng{authornamehash}{5bd3dfdc302c8d0660444d98cf3baa60}
-      \strng{authorfullhash}{5bd3dfdc302c8d0660444d98cf3baa60}
-      \field{extraname}{12}
-      \field{sortinit}{O}
-      \field{sortinithash}{2cd7140a07aea5341f9e2771efe90aae}
-      \field{extradate}{12}
-      \field{extradatescope}{labelyear}
-      \field{labeldatesource}{}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{note}{Accessed: 2025-10-04}
-      \field{title}{Morphological Transformations}
-      \field{year}{2023}
-      \verb{urlraw}
-      \verb https://docs.opencv.org/4.x/d9/d61/tutorial_py_morphological_ops.html
-      \endverb
-      \verb{url}
-      \verb https://docs.opencv.org/4.x/d9/d61/tutorial_py_morphological_ops.html
-      \endverb
-    \endentry
-    \entry{opencv_erode}{online}{}
-      \name{author}{1}{}{%
-        {{un=0,uniquepart=base,hash=5bd3dfdc302c8d0660444d98cf3baa60}{%
-           family={{OpenCV Team}},
-           familyi={O\bibinitperiod}}}%
-      }
-      \strng{namehash}{5bd3dfdc302c8d0660444d98cf3baa60}
-      \strng{fullhash}{5bd3dfdc302c8d0660444d98cf3baa60}
-      \strng{bibnamehash}{5bd3dfdc302c8d0660444d98cf3baa60}
-      \strng{authorbibnamehash}{5bd3dfdc302c8d0660444d98cf3baa60}
-      \strng{authornamehash}{5bd3dfdc302c8d0660444d98cf3baa60}
-      \strng{authorfullhash}{5bd3dfdc302c8d0660444d98cf3baa60}
-      \field{extraname}{13}
-      \field{sortinit}{O}
-      \field{sortinithash}{2cd7140a07aea5341f9e2771efe90aae}
-      \field{extradate}{13}
-      \field{extradatescope}{labelyear}
-      \field{labeldatesource}{}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{note}{Accessed: 2025-10-04}
-      \field{title}{Morphological Transformations}
-      \field{year}{2023}
-      \verb{urlraw}
-      \verb https://docs.opencv.org/4.x/d9/d61/tutorial_py_morphological_ops.html
-      \endverb
-      \verb{url}
-      \verb https://docs.opencv.org/4.x/d9/d61/tutorial_py_morphological_ops.html
-      \endverb
-    \endentry
-    \entry{opencv_morphologyex}{online}{}
-      \name{author}{1}{}{%
-        {{un=0,uniquepart=base,hash=5bd3dfdc302c8d0660444d98cf3baa60}{%
-           family={{OpenCV Team}},
-           familyi={O\bibinitperiod}}}%
-      }
-      \strng{namehash}{5bd3dfdc302c8d0660444d98cf3baa60}
-      \strng{fullhash}{5bd3dfdc302c8d0660444d98cf3baa60}
-      \strng{bibnamehash}{5bd3dfdc302c8d0660444d98cf3baa60}
-      \strng{authorbibnamehash}{5bd3dfdc302c8d0660444d98cf3baa60}
-      \strng{authornamehash}{5bd3dfdc302c8d0660444d98cf3baa60}
-      \strng{authorfullhash}{5bd3dfdc302c8d0660444d98cf3baa60}
-      \field{extraname}{14}
-      \field{sortinit}{O}
-      \field{sortinithash}{2cd7140a07aea5341f9e2771efe90aae}
-      \field{extradate}{14}
-      \field{extradatescope}{labelyear}
-      \field{labeldatesource}{}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{note}{Accessed: 2025-10-04}
-      \field{title}{Morphological Transformations}
-      \field{year}{2023}
-      \verb{urlraw}
-      \verb https://docs.opencv.org/4.x/d9/d61/tutorial_py_morphological_ops.html
-      \endverb
-      \verb{url}
-      \verb https://docs.opencv.org/4.x/d9/d61/tutorial_py_morphological_ops.html
-      \endverb
-    \endentry
-    \entry{opencv_farneback}{online}{}
-      \name{author}{1}{}{%
-        {{un=0,uniquepart=base,hash=5bd3dfdc302c8d0660444d98cf3baa60}{%
-           family={{OpenCV Team}},
-           familyi={O\bibinitperiod}}}%
-      }
-      \strng{namehash}{5bd3dfdc302c8d0660444d98cf3baa60}
-      \strng{fullhash}{5bd3dfdc302c8d0660444d98cf3baa60}
-      \strng{bibnamehash}{5bd3dfdc302c8d0660444d98cf3baa60}
-      \strng{authorbibnamehash}{5bd3dfdc302c8d0660444d98cf3baa60}
-      \strng{authornamehash}{5bd3dfdc302c8d0660444d98cf3baa60}
-      \strng{authorfullhash}{5bd3dfdc302c8d0660444d98cf3baa60}
-      \field{extraname}{15}
-      \field{sortinit}{O}
-      \field{sortinithash}{2cd7140a07aea5341f9e2771efe90aae}
-      \field{extradate}{15}
-      \field{extradatescope}{labelyear}
-      \field{labeldatesource}{}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{note}{Accessed: 2025-10-04}
-      \field{title}{Optical Flow}
-      \field{year}{2023}
-      \verb{urlraw}
-      \verb https://docs.opencv.org/4.x/d4/dee/tutorial_optical_flow.html
-      \endverb
-      \verb{url}
-      \verb https://docs.opencv.org/4.x/d4/dee/tutorial_optical_flow.html
-      \endverb
-    \endentry
-    \entry{opencv_pylk}{online}{}
-      \name{author}{1}{}{%
-        {{un=0,uniquepart=base,hash=5bd3dfdc302c8d0660444d98cf3baa60}{%
-           family={{OpenCV Team}},
-           familyi={O\bibinitperiod}}}%
-      }
-      \strng{namehash}{5bd3dfdc302c8d0660444d98cf3baa60}
-      \strng{fullhash}{5bd3dfdc302c8d0660444d98cf3baa60}
-      \strng{bibnamehash}{5bd3dfdc302c8d0660444d98cf3baa60}
-      \strng{authorbibnamehash}{5bd3dfdc302c8d0660444d98cf3baa60}
-      \strng{authornamehash}{5bd3dfdc302c8d0660444d98cf3baa60}
-      \strng{authorfullhash}{5bd3dfdc302c8d0660444d98cf3baa60}
-      \field{extraname}{16}
-      \field{sortinit}{O}
-      \field{sortinithash}{2cd7140a07aea5341f9e2771efe90aae}
-      \field{extradate}{16}
-      \field{extradatescope}{labelyear}
-      \field{labeldatesource}{}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{note}{Accessed: 2025-10-04}
-      \field{title}{Optical Flow}
-      \field{year}{2023}
-      \verb{urlraw}
-      \verb https://docs.opencv.org/4.x/d4/dee/tutorial_optical_flow.html
-      \endverb
-      \verb{url}
-      \verb https://docs.opencv.org/4.x/d4/dee/tutorial_optical_flow.html
-      \endverb
-    \endentry
-    \entry{opencv_median}{online}{}
-      \name{author}{1}{}{%
-        {{un=0,uniquepart=base,hash=5bd3dfdc302c8d0660444d98cf3baa60}{%
-           family={{OpenCV Team}},
-           familyi={O\bibinitperiod}}}%
-      }
-      \strng{namehash}{5bd3dfdc302c8d0660444d98cf3baa60}
-      \strng{fullhash}{5bd3dfdc302c8d0660444d98cf3baa60}
-      \strng{bibnamehash}{5bd3dfdc302c8d0660444d98cf3baa60}
-      \strng{authorbibnamehash}{5bd3dfdc302c8d0660444d98cf3baa60}
-      \strng{authornamehash}{5bd3dfdc302c8d0660444d98cf3baa60}
-      \strng{authorfullhash}{5bd3dfdc302c8d0660444d98cf3baa60}
-      \field{extraname}{17}
-      \field{sortinit}{O}
-      \field{sortinithash}{2cd7140a07aea5341f9e2771efe90aae}
-      \field{extradate}{17}
-      \field{extradatescope}{labelyear}
-      \field{labeldatesource}{}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{note}{Accessed: 2025-10-04}
-      \field{title}{Smoothing Images}
-      \field{year}{2023}
-      \verb{urlraw}
-      \verb https://docs.opencv.org/4.x/dc/dd3/tutorial_py_filtering.html
-      \endverb
-      \verb{url}
-      \verb https://docs.opencv.org/4.x/dc/dd3/tutorial_py_filtering.html
-      \endverb
-    \endentry
-    \entry{opencv_gaussian}{online}{}
-      \name{author}{1}{}{%
-        {{un=0,uniquepart=base,hash=5bd3dfdc302c8d0660444d98cf3baa60}{%
-           family={{OpenCV Team}},
-           familyi={O\bibinitperiod}}}%
-      }
-      \strng{namehash}{5bd3dfdc302c8d0660444d98cf3baa60}
-      \strng{fullhash}{5bd3dfdc302c8d0660444d98cf3baa60}
-      \strng{bibnamehash}{5bd3dfdc302c8d0660444d98cf3baa60}
-      \strng{authorbibnamehash}{5bd3dfdc302c8d0660444d98cf3baa60}
-      \strng{authornamehash}{5bd3dfdc302c8d0660444d98cf3baa60}
-      \strng{authorfullhash}{5bd3dfdc302c8d0660444d98cf3baa60}
-      \field{extraname}{18}
-      \field{sortinit}{O}
-      \field{sortinithash}{2cd7140a07aea5341f9e2771efe90aae}
-      \field{extradate}{18}
-      \field{extradatescope}{labelyear}
-      \field{labeldatesource}{}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{note}{Accessed: 2025-10-04}
-      \field{title}{Smoothing Images}
-      \field{year}{2023}
-      \verb{urlraw}
-      \verb https://docs.opencv.org/4.x/dc/dd3/tutorial_py_filtering.html
-      \endverb
-      \verb{url}
-      \verb https://docs.opencv.org/4.x/dc/dd3/tutorial_py_filtering.html
       \endverb
     \endentry
     \entry{pal2021deep}{article}{}
