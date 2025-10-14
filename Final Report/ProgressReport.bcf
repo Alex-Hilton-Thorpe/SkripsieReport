@@ -2437,6 +2437,10 @@
     <bcf:citekey order="68" intorder="1">opencv_library</bcf:citekey>
     <bcf:citekey order="69" intorder="1">koller2009pgm</bcf:citekey>
     <bcf:citekey order="70" intorder="1">opencv_library</bcf:citekey>
+    <bcf:citekey order="71" intorder="1">emdw_repo</bcf:citekey>
+    <bcf:citekey order="72" intorder="1">bishop2006prml</bcf:citekey>
+    <bcf:citekey order="73" intorder="1">bishop2006prml</bcf:citekey>
+    <bcf:citekey order="74" intorder="1">minka2001expectation</bcf:citekey>
   </bcf:section>
   <!-- SORTING TEMPLATES -->
   <bcf:sortingtemplate name="nyt">

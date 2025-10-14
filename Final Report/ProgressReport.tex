@@ -24,6 +24,8 @@
 \usepackage{soul}
 \usepackage{tabularx}%this and one below for tables
 \usepackage{booktabs}
+\usepackage{algorithm}
+\usepackage{algpseudocode}
 \ifxetex
 \usepackage[math-style=TeX, bold-style=TeX, ]{unicode-math}
 \setmainfont{Times New Roman}
@@ -862,11 +864,7 @@ This subsection discusses and guides the design of the various candidate algorit
     \endlastfoot
     \acs{hsv} Colour Thresholding & Median blur and morphological operations & Contour detection and shape analysis \\
     
-    Shape-Aware Motion Tracker & Frame differencing, thresholding, and morphological operations & Contour detection, ellipse fitting, and shape analysis \\
-    
-    Brightness Streak Detector & Frame differencing, thresholding, and dilation & Contour detection and shape analysis \\
-    
-    Motion Blur Hybrid & Frame differencing, thresholding, and morphological operations & Contour detection and shape analysis \\
+    Motion Tracker & Frame differencing, thresholding, and morphological operations & Contour detection, ellipse fitting, and shape analysis \\
     
     Background Subtraction Tracker & Morphological operations & Background subtraction (MOG2), contour detection and shape analysis \\
     
@@ -879,23 +877,17 @@ This subsection discusses and guides the design of the various candidate algorit
 
 The descriptions for each algorithm are as follows:
 
-\begin{itemize}
-    \item \textbf{\acs{hsv} Colour Thresholding:} This algorithm uses colour-based segmentation by converting the frame to a \acs{hsv} colour space. It applies median blur to reduce noise while preserving edges, followed by morphological operations like erosion and dilation to refine the binary mask. Contours are then detected, and shape analysis filters for circular shapes based on metrics like circularity and aspect ratio, making it effective for detecting the ball against varying backgrounds, however it may potentially be sensitive to lighting changes affecting colour perception.
+    \textbf{\acs{hsv} Colour Thresholding:} This algorithm uses colour-based segmentation by converting the frame to a \acs{hsv} colour space. It applies median blur to reduce noise while preserving edges, followed by morphological operations like erosion and dilation to refine the binary mask. Contours are then detected, and shape analysis filters for circular shapes based on metrics like circularity and aspect ratio, making it effective for detecting the ball against varying backgrounds, however it may potentially be sensitive to lighting changes affecting colour perception.
     
-    \item \textbf{Shape-Aware Motion Tracker:} This algorithm focuses on motion detection. It computes frame differencing to highlight moving objects, applies thresholding to create a binary image, and uses morphological operations to clean up noise. It detects contours and fits ellipses to candidate shapes, then applies shape analysis to filter based on elongation and size, which is particularly useful for tracking fast-moving balls but may struggle with slow or stationary objects.
+    \textbf{Motion Tracker:} This algorithm focuses on motion detection. It computes frame differencing to highlight moving objects, applies thresholding to create a binary image, and uses morphological operations to clean up noise. It detects contours and fits ellipses to candidate shapes, then applies shape analysis to filter based on elongation and size, which is particularly useful for tracking fast-moving balls but may struggle with slow or stationary objects.
     
-    \item \textbf{Brightness Streak Detector:} This algorithm is designed to detect bright streaks caused by ball motion blur. It performs frame differencing to capture motion, thresholds the result, and applies dilation to connect fragmented streaks. Contour detection identifies potential ball paths, with shape analysis filtering for elongated shapes typical of motion-blurred balls, offering robustness to high-speed motion but potentially missing slow-moving or non-blurred balls.
-
-    \item \textbf{Motion Blur Hybrid:} This algorithm combines motion detection with shape analysis for blurred trajectories. It uses frame differencing and thresholding to isolate moving regions, applies morphological operations for refinement, detects contours, and analyzes shapes for elongated forms regardless of motion blur. This approach should excel when there is significant motion blur but may require tuning for different blur intensities.
-
-    \item \textbf{Background Subtraction Tracker:} This algorithm utilizes background modeling to separate foreground from background. It applies morphological operations to preprocess frames, uses MOG2 background subtraction to generate foreground masks, detects contours in the mask, and applies shape analysis to identify ball-like objects. It should be effective for static camera scenarios but may be affected by changing backgrounds or lighting variations.
+    \textbf{Background Subtraction Tracker:} This algorithm utilizes background modeling to separate foreground from background. It applies morphological operations to preprocess frames, uses MOG2 background subtraction to generate foreground masks, detects contours in the mask, and applies shape analysis to identify ball-like objects. It should be effective for static camera scenarios but may be affected by changing backgrounds or lighting variations.
     
-    \item \textbf{Canny Edge and Hough Circles:} This algorithm detects edges using the Canny edge detector to identify object boundaries. It then applies the Hough circle transform to find circular shapes. It should be particularly suited for detecting the ball when it's well-defined and circular, offering geometric precision but potentially struggling with deformed or partially occluded balls.
+    \textbf{Canny Edge and Hough Circles:} This algorithm detects edges using the Canny edge detector to identify object boundaries. It then applies the Hough circle transform to find circular shapes. It should be particularly suited for detecting the ball when it's well-defined and circular, offering geometric precision but potentially struggling with deformed or partially occluded balls.
     
-    \item \textbf{Lucas-Kanade Optical Flow:} This algorithm implements sparse optical flow using the Lucas-Kanade method. It tracks feature points across frames to estimate motion trajectories. It should be ideal for following the ball's path over time, providing temporal continuity, but requires good feature initialization and may drift over long sequences.
+    \textbf{Lucas-Kanade Optical Flow:} This algorithm implements sparse optical flow using the Lucas-Kanade method. It tracks feature points across frames to estimate motion trajectories. It should be ideal for following the ball's path over time, providing temporal continuity, but requires good feature initialization and may drift over long sequences.
     
-    \item \textbf{Template Matching:} This algorithm uses correlation-based template matching to locate the ball by comparing a reference template against the frame. It should be straightforward and effective when the ball appearance is consistent, but can be computationally intensive and sensitive to scale, rotation, or appearance changes.
-\end{itemize}
+    \textbf{Template Matching:} This algorithm uses correlation-based template matching to locate the ball by comparing a reference template against the frame. It should be straightforward and effective when the ball appearance is consistent, but can be computationally intensive and sensitive to scale, rotation, or appearance changes.
 
 These algorithms all have been designed and tested to ensure the algorithms meet the requirements outlined in Section 3.2.1. All of these algorithms use low-level vision to remove noise and make the algorithms more robust and free from distractions. The intermediate-level vision operations are utilized to accurately determine the center of the ball's position. Therefore based on Figure~\ref{fig:ipaflow} and the descriptions above, these algorithms meet all of the requirements set.
 
@@ -1051,65 +1043,223 @@ This chapter discusses the implementation of the ball tracking system, focusing 
 \subsection{\acs{ipa} Implementation}
 This subsection will detail the practical implementation of the \acs{ipa} discussed and designed in Section 3.2. It will detail the \acs{ipa}s implementation and Code architecture, parameter selection, output specification for each candidate algorithm and then final selection of algorithms. The implementation will ensure processing at 30~\acs{fps} while maintaining robustness to noise, distractions, or other factors which may affect tracking.
 
-Based on the candidate algorithms discussed in Section 3.2.3, these \acs{ipa}s will be implemented and tested. The final selection will be based on their strengths when compared with the other \acs{ipa}, ensuring the selected algorithms complement each other in terms of ensuring the ball is tracked every frame by at least one algorithm and aren't too computationally heavy. The final selection of \acs{ipa} will be confirmed at the end of this subsection.
+Based on the candidate algorithms discussed in Section 3.2.3, these \acs{ipa}s will be implemented and tested. The final selection will be based on their strengths when compared with the other \acs{ipa}, ensuring the selected algorithms complement each other in terms of ensuring the ball is tracked every frame by at least one algorithm and aren't too computationally heavy.
 
 \subsubsection{Implementation and Code Architecture}
-This subsection details the implementation of the \acs{ipa}s that are described in Section 3.2.3. The implementation is done in Python using the OpenCV library \parencite{opencv_library}. 
+This subsection details the implementation of the \acs{ipa}s described in Section 3.2.3. All implementations are developed in Python utilizing the OpenCV library \parencite{opencv_library} for computer vision operations.
 
-All the \acs{ipa}s use \texttt{cv2.VideoCapture} to read the video footage frame by frame. Then each frame is processed according to its design. The upper and lower bound \acs{hsv} values that where found to work the best were $[27, 15, 150]$ and $[80, 255, 255]$ respectively. These values were found by isolating the ball at different frames and selecting the ball when it was its lightest and darkest and then getting the colour that corresponds to each.
+Each \acs{ipa} employs \texttt{cv2.VideoCapture} to process video footage frame-by-frame. Frames are analyzed according to the algorithm's design, with shared parameters including HSV bounds of $[27, 15, 150]$ to $[80, 255, 255]$, which are derived through iterative sampling of the ball's color across varying lighting conditions and the area constraints of $[20, 150]$ pixels, established via pixel counting at different distances to accommodate ball size variations. Pseudocode for these algorithms is provided in Appendix B.
+
+If no ball is found in the algorithm, the output is set to $(-1,-1)$. Once the algorithm is done processing the outputs are written to a text file with naming convention of \texttt{alg\_n.txt}, where $n$ is the algorithm number. These algorithms will all be tested and evaluated in Chapter 5 to determine the best performing algorithms for this project. The final selection of algorithms will be confirmed in the Evaluation Chapter.
 
 
 \paragraph{\acs{hsv} Colour Thresholding}
 \mbox{}\\
-The \acs{hsv} Colour Thresholding algorithm uses a modular structure that processes video frames sequentially to detect the ball based on colour segmentation. The implementation of the algorithm is as follows:
+The HSV Colour Thresholding algorithm forms the foundation of the system's low-level vision pipeline, leveraging colour segmentation for robust ball detection under varying illumination. Implemented in Python with OpenCV, it processes each frame sequentially, starting with noise reduction and progressing to shape-based filtering. The core architecture emphasizes modularity: colour conversion isolates the ball, morphological operations refine the mask, and contour analysis selects the most probable candidate based on geometric properties.
 
-\begin{enumerate}
-	\item Start with Low-Level vision and apply \texttt{cv2.medianBlur} with a $5x5$ kernel to reduce noise and preserve the edge details.
-	\item The colour space is then converted from \acs{bgr} to \acs{hsv} using \texttt{cv2.cvtColor}, which enables a colour-based detection under varying lighting conditions.
-	\item A mask is created using \texttt{cv2.inRange} with predefined lower and upper \acs{hsv} bounds that correspond to the ball's colour, these are parameters that need to be tuned based on the specific video footage.
-	\item Morphological operations enhance the mask using \texttt{cv2.dilate} followed by \texttt{cv2.erode}, both with a $3x3$ kernel which refines small objects and removes noise.
-	\item Moving onto more Intermediate-Level vision, Contours are detected using \texttt{cv2.findContours}. For each of these contours the position of the ball is selected according to area (\texttt{cv2.contourArea}), aspect ratio (\texttt{cv2.boundingRect}), circularity (\texttt{cv2.arcLength}) and (\texttt{cv2.contourArea}) and solidity (\texttt{cv2.convexHull}).
-	\item The most likely position is then selected based on a scoring system, which prioritizes circularity and area, to pick the best contour and normalized to the range $[0,1]$.
-	\item If no contours are found, the output is set to $(-1,-1)$.
-	\item The output is written to a text file in the format \texttt{alg\_n.txt}, where $n$ is the algorithm number.
-\end{enumerate}
+The processing pipeline begins with median blurring to preserve edges while suppressing noise, using \texttt{cv2.medianBlur}.
 
-\paragraph{Shape-Aware Motion Tracker}
+Colour space conversion to HSV enables threshold-based segmentation, invariant to brightness variations: \texttt{cv2.cvtColor} and \texttt{cv2.inRange}.
+
+Morphological dilation and erosion refine the binary mask, filling gaps and removing distortions, using a 3x3 rectangular kernel: \texttt{cv2.dilate} and \texttt{cv2.erode}.
+
+At the intermediate level, contour detection identifies potential ball regions, with selection criteria prioritizing circularity and solidity (area ratio to convex hull) to distinguish the ball from elongated or irregular shapes. A weighted scoring system ranks contours, selecting the top candidate and normalizing its centroid to $[0,1]$ for PGM integration.
+
+\paragraph{Motion Tracker}
 \mbox{}\\
+The Motion Tracker algorithm detects and tracks the ball by combining motion detection with shape analysis, making it effective for fast-moving objects in dynamic scenes. Implemented in Python with OpenCV, it processes frames by first isolating motion through differencing, then refining with color cues and contour filtering.
 
-\paragraph{Brightness Streak Detector}
-\mbox{}\\
+The algorithm starts by converting frames to grayscale and HSV for dual processing: \texttt{cv2.cvtColor}.
 
-\paragraph{Motion Blur Hybrid}
-\mbox{}\\
+Frame differencing highlights moving regions using absolute difference and thresholding: \texttt{cv2.absdiff} and \texttt{cv2.threshold}.
+
+Finally the algorithm combines the masks via bitwise AND isolates the ball:\\ \texttt{cv2.bitwise\_and}.
+
+Contour detection and shape analysis apply the same criteria as \acs{hsv} Colour Thresholding (area, circularity, aspect ratio, solidity), prioritizing elongated shapes from motion streaks. The top-ranked contour's centroid is normalized to $[0,1]$ for PGM integration. 
 
 \paragraph{Background Subtraction Tracker}
 \mbox{}\\
+The Background Subtraction Tracker leverages background modeling to identify foreground motion, ideal for static camera setups. Using OpenCV's MOG2 algorithm, it separates moving objects from the background, combining this with color filtering for robust ball isolation.
+
+Initialization sets up the subtractor with tuned parameters:\\ \texttt{cv2.createBackgroundSubtractorMOG2}.
+
+Each frame is processed with HSV color masking and background application: \texttt{cv2.cvtColor}, \texttt{cv2.inRange}, and the subtractor's \texttt{apply} method.
+
+Masks are combined and refined with morphological opening: \texttt{cv2.bitwise\_and} and \texttt{cv2.morphologyEx}.
+
+Contour detection uses the same selection criteria as HSV Colour Thresholding (area, circularity, aspect ratio, solidity), normalizing the best match to $[0,1]$. 
 
 \paragraph{Canny Edge and Hough Circles}
 \mbox{}\\
 
+The Canny Edge and Hough Circles algorithm detects the ball through geometric shape recognition, focusing on circular edges for precise localization. Implemented in OpenCV, it preprocesses frames with color masking and blurring before applying edge detection and circle fitting.
+
+Frame preprocessing involves HSV color masking and morphological cleanup: \texttt{cv2.cvtColor}, \texttt{cv2.inRange}, and \texttt{cv2.morphologyEx}.
+
+Grayscale conversion and Gaussian blurring prepare for edge detection: \texttt{cv2.GaussianBlur}, and \texttt{cv2.bitwise\_and}.
+
+Canny edge detection identifies boundaries, followed by dilation for completeness: \texttt{cv2.Canny} and \texttt{cv2.dilate}.
+
+The Hough Circle Transform detects circles with tuned parameters: \texttt{cv2.HoughCircles}.
+
+The best circle's center is selected and normalized to $[0,1]$ if detected.
+
 \paragraph{Lucas-Kanade Optical Flow}
 \mbox{}\\
+
+The Lucas-Kanade Optical Flow algorithm tracks the ball by estimating feature point motion across frames, providing temporal continuity for dynamic trajectories. Using OpenCV's sparse optical flow, it initializes and updates points within color-masked regions.
+
+Parameters are set for robust tracking using dictionaries for optical flow and feature detection.
+
+Frames are preprocessed with color masking and morphology: \texttt{cv2.cvtColor}, \texttt{cv2.inRange}, and \texttt{cv2.morphologyEx}.
+
+Feature detection and optical flow computation track points: \texttt{cv2.goodFeaturesToTrack} and \texttt{cv2.calcOpticalFlowPyrLK}.
+
+Valid points within the mask are filtered, and their centroid is calculated and normalized to $[0,1]$ if sufficient points are tracked.
 
 \paragraph{Template Matching}
 \mbox{}\\
 
+The Template Matching algorithm locates the ball by correlating a reference template with each frame, offering straightforward detection when appearance is consistent. Using OpenCV's normalized cross-correlation, it preprocesses frames and applies a similarity threshold.
 
-\subsection{Mathematical Foundations}
-This subsection will present the underlying mathematics of the probabilistic graphical model from first principles. It will derive the Gaussian distributions, factor definitions, and inference algorithms used in the Bayesian Network, providing the theoretical foundation for the implementation.
+The template is loaded and prepared: \texttt{cv2.imread}.
 
-\subsection{EMDW Library Integration}
-This subsection will describe the EMDW library developed at Stellenbosch University and its role in implementing the probabilistic graphical model. It will explain the key components used for graph construction, factor manipulation, and inference in hybrid networks.
+Frames are masked and matched: \texttt{cv2.cvtColor}, \texttt{cv2.inRange}, \texttt{cv2.bitwise\_and}, and \texttt{cv2.matchTemplate}.
+
+The best match is located and thresholded: \texttt{cv2.minMaxLoc}.
+
+The center is normalized to $[0,1]$ if above threshold.
 
 \subsection{\acs{pgm} Implementation}
-This subsection will detail how the Bayesian Network is constructed and implemented using EMDW. It will cover network structure definition, factor implementation, Expectation Propagation for inference, and the fusion of multiple algorithm outputs into unified position estimates.
+This section describes the practical realization of the \acs{pgm} framework designed in Section 3.3. It addresses three principal challenges: representing Gaussian factors in a stable form suitable for message passing, performing \acs{ep} on the hybrid \acs{bn}, and handling the mixture model for probabilistic outlier rejection. The following subsections discuss the key technical decisions, algorithmic adaptations, and numerical considerations that enabled a robust and efficient implementation.
 
-\subsection{System Integration and Data Flow}
-This subsection will describe the complete data flow through the system, from video input through IPA processing, PGM fusion, to final output generation. It will detail file formats, data structures, and the integration points between components.
+\subsubsection{Software Framework and Architecture}
+The tracker was implemented in C++ to leverage computational efficiency and precision required for ball tracking processing. The implementation builds upon the EMDW framework developed at Stellenbosch University \parencite{emdw_repo}, which provides foundational infrastructure for probabilistic graphical models. The Prlite library within EMDW supplies matrix and vector data structures \\(\texttt{RowMatrix}, \texttt{ColVector}), and the Eigen library provides linear algebra operations for matrix inversion and determinant computation.
 
-\subsection{Implementation Challenges and Solutions}
-This subsection will discuss the implementation challenges encountered and their solutions, including handling hybrid networks, computational efficiency, parameter tuning, and integration of multiple algorithms.
+This dual library approach was adopted because the Prlite matrices integrate well with EMDW's probabilistic modeling framework, while the Eigen library offers numerical algorithms for critical operations. Conversion functions bridge the two representations, transforming matrices between libraries only when necessary to minimize computational overhead.
+
+\subsubsection{Canonical Form Representation}
+The implementation employs Canonical (Information) form of Gaussian distributions rather than Mean-Covariance form. A Gaussian distribution in Canonical form is represented by its precision matrix and information vector. As shown in Equation 20 and 21 these are calculated using the mean $\mu$ and covariance $\Sigma$ from the Mean-Covariance form:
+
+\begin{equation}
+\Lambda = \Sigma^{-1}
+\end{equation}
+
+\begin{equation}
+h = \Lambda\mu
+\end{equation}
+
+This representation offers significant advantages for \acs{ep} message passing. Product operations, which occur frequently during belief updates, reduce to simple addition in canonical form as shown in Equation 22.
+\begin{equation}
+\mathcal{N}(x; \mu_1, \Sigma_1) \times \mathcal{N}(x; \mu_2, \Sigma_2) \propto \mathcal{N}(x; \Lambda_1 + \Lambda_2, h_1 + h_2)
+\end{equation}
+
+Similarly the division operations, required for cavity computation, become subtractions. This eliminates the need for repeated matrix inversions that would dominate the computational cost. The posterior distribution and all factor messages are maintained in canonical form throughout inference, with conversion to Mean-Covariance form performed only at the final output stage.
+
+\subsubsection{Expectation Propagation Inference}
+Standard \acs{bp} algorithms are unsuitable for a hybrid network such as this one, being unable to effectively handle the mixture of discrete outlier indicators $a_n$ coupled with continuous position variables. \acs{ep} provides an approximate inference framework that marginalizes over discrete variables while maintaining tractable Gaussian beliefs over continuous variables.
+
+The idea behind the next 2 subsections is that the \acs{ep} tracker refines position estimates by: removing each algorithm's contribution (cavity), evaluating mixture components via Bayesian weighting, collapsing to a single Gaussian through moment matching, and updating messages in canonical form. This process automatically reduces the number of outliers through Mahalanobis distance based weighting while the canonical form ensures stability through efficient matrix operations. The result is a robust fusion method that adapts to varying measurement quality without manual tuning.
+
+\textbf{Cavity Distribution Computation}
+
+At each iteration for algorithm $n$, \acs{ep} constructs a cavity distribution $q_{-n}(x)$ by removing the current factor's contribution from the posterior. In canonical form, this is computed as:
+
+\begin{equation}
+\Lambda_{-n} = \Lambda_q - \Lambda_n
+\end{equation}
+\begin{equation}
+h_{-n} = h_q - h_n
+\end{equation}
+
+where $\Lambda_q$ and $h_q$ represent the current posterior, and $\Lambda_n$ and $h_n$ are the message parameters from algorithm $n$. The cavity distribution serves as the prior for evaluating the mixture model in the next step.
+
+\textbf{Message Update}
+
+After computing the tilted distribution (described later in this subsection under the Mixture-Based Outlier Model), the new message is obtained by division. Since the distributions are in canonical form, this division operation reduces to subtraction:
+\begin{equation}
+\Lambda_n^{\text{new}} = \Lambda_{\text{tilt}} - \Lambda_{-n} 
+\end{equation}
+\begin{equation}
+h_n^{\text{new}} = h_{\text{tilt}} - h_{-n}
+\end{equation}
+
+This update ensures the algorithm incorporates new information from each algorithm. The posterior is then updated by incorporating these new message:
+\begin{equation}
+\Lambda_q = \Lambda_{-n} + \Lambda_n 
+\end{equation}
+\begin{equation}
+h_q = h_{-n} + h_n
+\end{equation}
+
+This direct update approach ensures that each algorithm's contribution is fully reflected in the posterior after a single pass through all measurements, making the inference efficient for sequential processing.
+
+\textbf{Mixture-Based Outlier Model}
+
+Each algorithm's measurement likelihood is modeled as a two-component Gaussian mixture that marginalizes over the discrete outlier indicator $a_n$ and weights $w_{\pi,a}^{(n)}$ representing the prior probability of each component. The mixture model is defined as follows:
+\begin{equation}
+p(Alg_n | Pos_{x,y}) = w_{\pi,\text{outlier}}^{(n)} \cdot \mathcal{N}(Alg_n; Pos_{x,y}, \Sigma_{\text{outlier}}) + w_{\pi,\text{inlier}}^{(n)} \cdot \mathcal{N}(Alg_n; Pos_{x,y}, \Sigma_n)
+\end{equation}
+where:
+\begin{itemize}
+    \item The outlier component (first term) has a large covariance $\Sigma_{\text{outlier}} = \sigma_0^2 I$ with $\sigma_0^2 = 1.0$, representing high uncertainty when the algorithm produces an invalid measurement.
+    \item The inlier component (second term) has algorithm-specific covariance $\Sigma_n$, representing the regular covariance matrix of algorithm $n$ under normal conditions.
+\end{itemize}
+
+\textbf{Bayesian Component Weighting}
+
+An updated weight for each component is computed using Bayes' rule, incorporating both the prior mixture weights $w_{\pi,a}^{(n)}$ and the likelihood that this position is an outlier. This is done to determine how much each component should influence the final estimate.\\
+
+The weights are computed as follows as per \parencite[pg.~438-439]{bishop2006prml}:
+
+\begin{equation}
+w_a \propto w_{\pi,a}^{(n)} \cdot \mathcal{N}(\text{Alg}_n; \mu_{-n}, \Sigma_{-n} + \Sigma_a^{(n)})
+\end{equation}
+
+To ensure numerical stability, weights are computed in log-space also from \parencite[pg.~438-439]{bishop2006prml}:
+
+\begin{equation}
+\log w_a = \log w_{\pi,a}^{(n)} - \frac{1}{2}\log|\Sigma_{-n} + \Sigma_a^{(n)}| - \frac{1}{2}(\text{Alg}_n - \mu_{-n})^T\left(\Sigma_{-n} + \Sigma_a^{(n)}\right)^{-1}(\text{Alg}_n - \mu_{-n})
+\end{equation}
+
+The final term represents the squared Mahalanobis distance between the position and the cavity mean. With this the measurements close to the predicted position (small Mahalanobis distance) receive high inlier weights, while distant measurements are automatically classified as likely outliers.
+
+\textbf{Moment Matching for Mixture Collapse}
+
+Since \acs{ep} requires a single Gaussian approximation, the two-component mixture is collapsed to a single Gaussian via standard moment matching \parencite{minka2001expectation}, then converted to canonical form $(\Lambda_{\text{tilt}}, h_{\text{tilt}})$ for the message update.
+
+\subsubsection{Temporal Motion Modeling}
+The temporal dynamics factor $P(Pos_{x,y}^t | Pos_{x,y}^{t-1})$ is implemented as a constant-velocity motion model. At each frame $t > 0$, the velocity is estimated as:
+
+\begin{equation}
+\mathbf{v}^t = Pos_{x,y}^{t-1} - Pos_{x,y}^{t-2}
+\end{equation}
+
+The prior mean for frame $t$ is then predicted as:
+
+\begin{equation}
+\mu_{\text{prior}}^t = Pos_{x,y}^{t-1} + \beta v^t
+\end{equation}
+
+where $\beta$ is the velocity contribution parameter that controls the model's momentum and will be determined through evaluation in Chapter 5. The prior covariance is set to a fixed process noise $\Sigma_{\text{prior}} = \sigma_p^2 I$ with $\sigma_p^2$ being determined through evaluation in Chapter 5.
+
+For the first frame ($t=0$), an uninformative prior is employed to avoid biasing the initial estimate. The prior mean is set to the image center $\mu_{\text{prior}}^0 = (0.5, 0.5)$ with high uncertainty $\Sigma_{\text{prior}}^0 = 0.5 I$, allowing the \acs{ep} algorithm to determine the initial position primarily from the algorithm measurements. This initialization strategy ensures consistency with the \acs{ep} framework by treating the first frame identically to subsequent frames, differing only in the prior distribution
+
+\subsubsection{Implementation Summary}
+The implementation meets the designed \acs{pgm} requirements through a combination of canonical form representation, \acs{ep} message passing, and mixture-based outlier modeling. The canonical form reduces computational cost by eliminating redundant matrix inversions, while the mixture model provides outlier rejection without manual threshold tuning. The complete system processes algorithm outputs frame-by-frame, producing posterior position estimates with associated uncertainty quantification suitable for downstream analysis and visualization.
+
+
+\subsection{System outputs and Data Flow}
+A pipeline for all the logic is set up that runs all of the \acs{ipa}, then the \acs{pgm} and finally outputs the results to a video file. The data flow is shown in Figure~\ref{fig:model_overview}. The output works by taking the output of the \acs{pgm} which will be the mean position and the covariance matrix. This is then overlayed onto the video footage as seen in Figure~\ref{fig:output}. Where the mean is red and the green circle is the standard deviation around the mean, as calculated from the covariance matrix.
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=\textwidth]{ZvsDOut.jpg}
+	\caption{Example of output from the \acs{pgm} overlayed with the original video footage}
+	\label{fig:output}
+\end{figure}
+
+The pipeline is set up within the files in Ubuntu and is run through a shell script.
 
 \newpage
 \section{Evaluation}

@@ -251,6 +251,37 @@
       \verb 10.1016/j.infrared.2013.10.010
       \endverb
     \endentry
+    \entry{emdw_repo}{online}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=9a81757a08fbd224991ce3cc8c252086}{%
+           family={Du\bibnamedelima Preez},
+           familyi={D\bibinitperiod\bibinitdelim P\bibinitperiod},
+           given={J.},
+           giveni={J\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{9a81757a08fbd224991ce3cc8c252086}
+      \strng{fullhash}{9a81757a08fbd224991ce3cc8c252086}
+      \strng{bibnamehash}{9a81757a08fbd224991ce3cc8c252086}
+      \strng{authorbibnamehash}{9a81757a08fbd224991ce3cc8c252086}
+      \strng{authornamehash}{9a81757a08fbd224991ce3cc8c252086}
+      \strng{authorfullhash}{9a81757a08fbd224991ce3cc8c252086}
+      \field{sortinit}{D}
+      \field{sortinithash}{6f385f66841fb5e82009dc833c761848}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{note}{Accessed: 2025-04-15}
+      \field{title}{EMDW Workspace}
+      \field{year}{2017}
+      \verb{urlraw}
+      \verb https://bitbucket.org/jadupreez/workspace/overview
+      \endverb
+      \verb{url}
+      \verb https://bitbucket.org/jadupreez/workspace/overview
+      \endverb
+    \endentry
     \entry{hawkeye2024}{online}{}
       \name{author}{1}{}{%
         {{un=0,uniquepart=base,hash=e3144cb7a5ff2779f5b111da4c11c7fe}{%

@@ -33,24 +33,24 @@
 \contentsline {subsubsection}{\numberline {3.2.2}Algorithm Design}{22}{}%
 \contentsline {subsubsection}{\numberline {3.2.3}Candidate Algorithms}{24}{}%
 \contentsline {subsection}{\numberline {3.3}\acl {pgm}}{26}{}%
-\contentsline {subsubsection}{\numberline {3.3.1}Design Requirements}{27}{}%
-\contentsline {subsubsection}{\numberline {3.3.2}Model Construction}{28}{}%
-\contentsline {subsubsection}{\numberline {3.3.3}\acs {pgm} Design}{32}{}%
-\contentsline {section}{\numberline {4}Implementation}{34}{}%
-\contentsline {subsection}{\numberline {4.1}\acs {ipa} Implementation}{34}{}%
-\contentsline {subsubsection}{\numberline {4.1.1}Implementation and Code Architecture}{34}{}%
+\contentsline {subsubsection}{\numberline {3.3.1}Design Requirements}{26}{}%
+\contentsline {subsubsection}{\numberline {3.3.2}Model Construction}{27}{}%
+\contentsline {subsubsection}{\numberline {3.3.3}\acs {pgm} Design}{31}{}%
+\contentsline {section}{\numberline {4}Implementation}{33}{}%
+\contentsline {subsection}{\numberline {4.1}\acs {ipa} Implementation}{33}{}%
+\contentsline {subsubsection}{\numberline {4.1.1}Implementation and Code Architecture}{33}{}%
 \contentsline {paragraph}{\acs {hsv} Colour Thresholding}{34}{}%
-\contentsline {paragraph}{Shape-Aware Motion Tracker}{35}{}%
-\contentsline {paragraph}{Brightness Streak Detector}{35}{}%
-\contentsline {paragraph}{Motion Blur Hybrid}{35}{}%
-\contentsline {paragraph}{Background Subtraction Tracker}{35}{}%
+\contentsline {paragraph}{Motion Tracker}{34}{}%
+\contentsline {paragraph}{Background Subtraction Tracker}{34}{}%
 \contentsline {paragraph}{Canny Edge and Hough Circles}{35}{}%
-\contentsline {paragraph}{Lucas-Kanade Optical Flow}{36}{}%
+\contentsline {paragraph}{Lucas-Kanade Optical Flow}{35}{}%
 \contentsline {paragraph}{Template Matching}{36}{}%
-\contentsline {subsection}{\numberline {4.2}Mathematical Foundations}{36}{}%
-\contentsline {subsection}{\numberline {4.3}EMDW Library Integration}{36}{}%
-\contentsline {subsection}{\numberline {4.4}\acs {pgm} Implementation}{36}{}%
-\contentsline {subsection}{\numberline {4.5}System Integration and Data Flow}{36}{}%
-\contentsline {subsection}{\numberline {4.6}Implementation Challenges and Solutions}{36}{}%
-\contentsline {section}{\numberline {5}Evaluation}{37}{}%
-\contentsline {section}{\numberline {6}Conclusion}{38}{}%
+\contentsline {subsection}{\numberline {4.2}\acs {pgm} Implementation}{36}{}%
+\contentsline {subsubsection}{\numberline {4.2.1}Software Framework and Architecture}{36}{}%
+\contentsline {subsubsection}{\numberline {4.2.2}Canonical Form Representation}{37}{}%
+\contentsline {subsubsection}{\numberline {4.2.3}Expectation Propagation Inference}{37}{}%
+\contentsline {subsubsection}{\numberline {4.2.4}Temporal Motion Modeling}{39}{}%
+\contentsline {subsubsection}{\numberline {4.2.5}Implementation Summary}{40}{}%
+\contentsline {subsection}{\numberline {4.3}System outputs and Data Flow}{40}{}%
+\contentsline {section}{\numberline {5}Evaluation}{41}{}%
+\contentsline {section}{\numberline {6}Conclusion}{42}{}%
