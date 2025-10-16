@@ -31,7 +31,7 @@
 \contentsline {subsection}{\numberline {3.2}\acl {ipa}}{21}{}%
 \contentsline {subsubsection}{\numberline {3.2.1}Requirements}{21}{}%
 \contentsline {subsubsection}{\numberline {3.2.2}Algorithm Design}{22}{}%
-\contentsline {subsubsection}{\numberline {3.2.3}Candidate Algorithms}{24}{}%
+\contentsline {subsubsection}{\numberline {3.2.3}Candidate Algorithms}{23}{}%
 \contentsline {subsection}{\numberline {3.3}\acl {pgm}}{26}{}%
 \contentsline {subsubsection}{\numberline {3.3.1}Design Requirements}{26}{}%
 \contentsline {subsubsection}{\numberline {3.3.2}Model Construction}{27}{}%
@@ -53,4 +53,10 @@
 \contentsline {subsubsection}{\numberline {4.2.5}Implementation Summary}{40}{}%
 \contentsline {subsection}{\numberline {4.3}System outputs and Data Flow}{40}{}%
 \contentsline {section}{\numberline {5}Evaluation}{41}{}%
-\contentsline {section}{\numberline {6}Conclusion}{42}{}%
+\contentsline {subsection}{\numberline {5.1}Datasets and Inputs}{41}{}%
+\contentsline {subsection}{\numberline {5.2}Evaluation Metrics}{42}{}%
+\contentsline {subsubsection}{\numberline {5.2.1}\acs {ipa} Evaluation Metrics}{42}{}%
+\contentsline {subsubsection}{\numberline {5.2.2}\acs {pgm} Evaluation Metrics}{43}{}%
+\contentsline {subsection}{\numberline {5.3}Experimental Setup}{44}{}%
+\contentsline {subsubsection}{\numberline {5.3.1}\acs {ipa} Experimental Setup}{44}{}%
+\contentsline {section}{\numberline {6}Conclusion}{45}{}%

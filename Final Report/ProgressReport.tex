@@ -839,7 +839,7 @@ which maps positions into the unit square $[0,1]\times[0,1]$. The idea behind us
 
 \begin{figure}[H]
 	\centering
-	\includegraphics[width=1\textwidth]{ipa_flow.jpg}
+	\includegraphics[width=0.75\textwidth]{ipa_flow.jpg}
 	\caption{Flow diagram showing the flow of logic each of the \acs{ipa} will follow}
 	\label{fig:ipaflow}
 \end{figure}
@@ -952,7 +952,7 @@ There are 3 \acs{rv}s per time step, these are presented in Table~\ref{tab:rvs}.
 		Outlier Indicator & $a_n$ (for $n=1,...,N$) & Discrete \acs{rv} indicating if $Alg_n$ is an outlier & $\{0 = \text{outlier}; 1 = \text{inlier}\}$ \\
 \end{longtable}
 
-Since each image processing algorithm typically outputs a single $(x, y)$ position estimate, this alone does not provide a continuous distribution over all possible ball locations. To meet the requirement of a multivariate normal distribution in the model, a Gaussian factor is applied to each algorithm’s output. This is done by taking the algorithm's output as the mean $\mu_n$ of a multivariate Gaussian distribution and associating it with a covariance matrix $\Sigma_n$ that captures the algorithm's expected positional uncertainty. The specific values for these covariance matrices, along with temporal motion parameters and outlier probability priors, will be determined through systematic empirical evaluation in Chapter 4.
+Since each image processing algorithm typically outputs a single $(x, y)$ position estimate, this alone does not provide a continuous distribution over all possible ball locations. To meet the requirement of a multivariate normal distribution in the model, a Gaussian factor is applied to each algorithm’s output. This is done by taking the algorithm's output as the mean $\mu_n$ of a multivariate Gaussian distribution and associating it with a covariance matrix $\Sigma_n$ that captures the algorithm's expected positional uncertainty. The specific values for these covariance matrices, along with temporal motion parameters and outlier probability priors, will be determined through systematic evaluation in Chapter 5.
 
 This transforms the single point estimate into a probabilistic relationship, centered around the algorithm's prediction with an associated covariance that represents its uncertainty. The resulting domain for each algorithm’s output becomes $[0,1]\times[0,1]$, with a continuous distribution that reflects the inherent error or noise in the algorithm's estimate.
 
@@ -964,7 +964,7 @@ Now that the \acs{rv}s have been defined, the next step is to define the relatio
 
 \begin{figure}[H]
 	\centering
-	\includegraphics[width=0.7\textwidth]{smallBN.jpg}
+	\includegraphics[width=0.35\textwidth]{smallBN.jpg}
 	\caption{Relationship between $Pos_{x,y}$, $Alg_n$ and $a_n$ for single algorithm and time step}
 	\label{fig:smallBN}
 \end{figure}
@@ -973,7 +973,7 @@ With this in mind, the full model can be defined as shown in Figure~\ref{fig:ful
 
 \begin{figure}[H]
 	\centering
-	\includegraphics[width=0.75\textwidth]{fullBN.jpg}
+	\includegraphics[width=0.5\textwidth]{fullBN.jpg}
 	\caption{\acl{bn} showing the relationships between $Pos_{x,y}$ and the various algorithms used}
 	\label{fig:fullBN}
 \end{figure}
@@ -1050,7 +1050,7 @@ This subsection details the implementation of the \acs{ipa}s described in Sectio
 
 Each \acs{ipa} employs \texttt{cv2.VideoCapture} to process video footage frame-by-frame. Frames are analyzed according to the algorithm's design, with shared parameters including HSV bounds of $[27, 15, 150]$ to $[80, 255, 255]$, which are derived through iterative sampling of the ball's color across varying lighting conditions and the area constraints of $[20, 150]$ pixels, established via pixel counting at different distances to accommodate ball size variations. Pseudocode for these algorithms is provided in Appendix B.
 
-If no ball is found in the algorithm, the output is set to $(-1,-1)$. Once the algorithm is done processing the outputs are written to a text file with naming convention of \texttt{alg\_n.txt}, where $n$ is the algorithm number. These algorithms will all be tested and evaluated in Chapter 5 to determine the best performing algorithms for this project. The final selection of algorithms will be confirmed in the Evaluation Chapter.
+If no ball is found in the algorithm, the output is set to $(-1,-1)$. Once the algorithm is done processing the outputs are written to a text file with naming convention of \texttt{alg\_n.txt}, where $n$ is the algorithm number. These algorithms will all be tested and evaluated in Chapter 5 to determine the best performing algorithms for this project. The final selection of algorithms will be confirmed in the Chapter 5.
 
 
 \paragraph{\acs{hsv} Colour Thresholding}
@@ -1073,7 +1073,7 @@ The algorithm starts by converting frames to grayscale and HSV for dual processi
 
 Frame differencing highlights moving regions using absolute difference and thresholding: \texttt{cv2.absdiff} and \texttt{cv2.threshold}.
 
-Finally the algorithm combines the masks via bitwise AND isolates the ball:\\ \texttt{cv2.bitwise\_and}.
+Finally the algorithm combines the masks via bitwise operations and isolates the ball:\\ \texttt{cv2.bitwise\_and}.
 
 Contour detection and shape analysis apply the same criteria as \acs{hsv} Colour Thresholding (area, circularity, aspect ratio, solidity), prioritizing elongated shapes from motion streaks. The top-ranked contour's centroid is normalized to $[0,1]$ for PGM integration. 
 
@@ -1202,7 +1202,7 @@ p(Alg_n | Pos_{x,y}) = w_{\pi,\text{outlier}}^{(n)} \cdot \mathcal{N}(Alg_n; Pos
 \end{equation}
 where:
 \begin{itemize}
-    \item The outlier component (first term) has a large covariance $\Sigma_{\text{outlier}} = \sigma_0^2 I$ with $\sigma_0^2 = 1.0$, representing high uncertainty when the algorithm produces an invalid measurement.
+    \item The outlier component (first term) has a large covariance $\Sigma_{\text{outlier}} = \sigma_0^2 I$ with $\sigma_0^2 = 1.0$, representing high uncertainty when the algorithm produces an invalid measurement. 1.0 is selected as it covers the entire normalized image space, effectively treating outliers as uniformly distributed.
     \item The inlier component (second term) has algorithm-specific covariance $\Sigma_n$, representing the regular covariance matrix of algorithm $n$ under normal conditions.
 \end{itemize}
 
@@ -1229,28 +1229,27 @@ The final term represents the squared Mahalanobis distance between the position 
 Since \acs{ep} requires a single Gaussian approximation, the two-component mixture is collapsed to a single Gaussian via standard moment matching \parencite{minka2001expectation}, then converted to canonical form $(\Lambda_{\text{tilt}}, h_{\text{tilt}})$ for the message update.
 
 \subsubsection{Temporal Motion Modeling}
-The temporal dynamics factor $P(Pos_{x,y}^t | Pos_{x,y}^{t-1})$ is implemented as a constant-velocity motion model. At each frame $t > 0$, the velocity is estimated as:
 
+To incorporate temporal information into the tracking framework, a constant velocity motion model is employed to predict the ball's position at time $t$ based on its previous trajectory. The velocity vector $v^{t-1}$ is estimated from the displacement between consecutive posterior estimates:
 \begin{equation}
-\mathbf{v}^t = Pos_{x,y}^{t-1} - Pos_{x,y}^{t-2}
+v^{t-1} = \text{Pos}_{x,y}^{t-1} - \text{Pos}_{x,y}^{t-2}
 \end{equation}
 
-The prior mean for frame $t$ is then predicted as:
-
+The prior mean for frame $t$ is then predicted by adding the previous position and the estimated velocity:
 \begin{equation}
-\mu_{\text{prior}}^t = Pos_{x,y}^{t-1} + \beta v^t
+\mu_{\text{prior}}^t = \text{Pos}_{x,y}^{t-1} + v^{t-1}
 \end{equation}
 
-where $\beta$ is the velocity contribution parameter that controls the model's momentum and will be determined through evaluation in Chapter 5. The prior covariance is set to a fixed process noise $\Sigma_{\text{prior}} = \sigma_p^2 I$ with $\sigma_p^2$ being determined through evaluation in Chapter 5.
+The model predicts that the ball will continue along its current trajectory unless new measurement evidence suggests otherwise. The uncertainty in this motion prediction is captured by the process noise covariance matrix $\Sigma_{\text{prior}}^t = \sigma_p I$, where $\sigma_p$ represents the variance in position due to unmodeled dynamics such as acceleration, deceleration, or changes in direction. This process noise allows the tracker to remain responsive to actual changes in the ball's motion while still benefiting from the smoothing effect of the velocity-based prediction.
 
-For the first frame ($t=0$), an uninformative prior is employed to avoid biasing the initial estimate. The prior mean is set to the image center $\mu_{\text{prior}}^0 = (0.5, 0.5)$ with high uncertainty $\Sigma_{\text{prior}}^0 = 0.5 I$, allowing the \acs{ep} algorithm to determine the initial position primarily from the algorithm measurements. This initialization strategy ensures consistency with the \acs{ep} framework by treating the first frame identically to subsequent frames, differing only in the prior distribution
+For the first frame ($t=1$), no velocity information is available, so an uninformative prior centered at the image center with high uncertainty is used instead.
 
 \subsubsection{Implementation Summary}
 The implementation meets the designed \acs{pgm} requirements through a combination of canonical form representation, \acs{ep} message passing, and mixture-based outlier modeling. The canonical form reduces computational cost by eliminating redundant matrix inversions, while the mixture model provides outlier rejection without manual threshold tuning. The complete system processes algorithm outputs frame-by-frame, producing posterior position estimates with associated uncertainty quantification suitable for downstream analysis and visualization.
 
 
 \subsection{System outputs and Data Flow}
-A pipeline for all the logic is set up that runs all of the \acs{ipa}, then the \acs{pgm} and finally outputs the results to a video file. The data flow is shown in Figure~\ref{fig:model_overview}. The output works by taking the output of the \acs{pgm} which will be the mean position and the covariance matrix. This is then overlayed onto the video footage as seen in Figure~\ref{fig:output}. Where the mean is red and the green circle is the standard deviation around the mean, as calculated from the covariance matrix.
+The system is configured as a pipeline that sequentially processes all IPAs, executes the PGM, and finally overlays the results onto the video file. The data flow is shown in Figure~\ref{fig:model_overview}. The output works by taking the output of the \acs{pgm} which will be the mean position and the covariance matrix. This is then overlayed onto the video footage as seen in Figure~\ref{fig:output}. Where the mean is red and the green circle is the standard deviation around the mean, as calculated from the covariance matrix. The pipeline is set up within the files in Ubuntu and is run through a shell script.
 
 \begin{figure}[H]
 	\centering
@@ -1259,11 +1258,94 @@ A pipeline for all the logic is set up that runs all of the \acs{ipa}, then the 
 	\label{fig:output}
 \end{figure}
 
-The pipeline is set up within the files in Ubuntu and is run through a shell script.
-
 \newpage
 \section{Evaluation}
-This chapter outlines the experimental setup for evaluating the performance of the ball tracking system. It describes the datasets used, the evaluation metrics, and the experimental procedures. The goal is to systematically assess how well the integrated image processing algorithms and probabilistic graphical model work together to accurately track the ball's position in various sports video scenarios. (this still needs to be completed, will emphasize more on what was said in the opening paragraph).
+This chapter outlines the experimental setup for evaluating the performance of the ball tracking system, focusing predominantly on accuracy and computational efficiency. The chapter begins by describing the datasets and the various inputs required for the system to run, including the video footage and the ground truth data used for evaluation and to ensure reliable benchmarking. This is followed by a discussion of the evaluation metrics used to assess the system's performance, including the accuracy and success rate of the \acs{ipa}, the accuracy of the \acs{pgm} in keeping estimates within a standard deviation of the ground truth, and the overall computational efficiency measured by runtime. The experimental setup is then discussed, detailing the software environment used. The chapter then tunes the parameters of the system to ensure optimal performance. Finally, it concludes with the results and analysis of the system's performance based on the evaluation metrics discussed.
+
+\subsection{Datasets and Inputs}
+This section covers the video footage that is used as an input as well as how the ground truth data is generated for evaluation.
+
+\textbf{Video Footage}
+
+The video footage used in this project as described in Section 3.1 is sourced from a YouTube video \parencite{youtube_ZverevDjokovic}, the video is a practice match between Novak Djokovic and Alexander Zverev. The footage is 1080p resolution at 30~\acs{fps} and are cut down to about 15 to 20 seconds long. The frame is 1080x1920 pixels and the camera is static throughout the footage. An example snippet of the footage is shown in Figure~\ref{fig:footage}.
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=1\textwidth]{ZvDIn.jpg}
+	\caption{Example snippet of the video footage used in the project}
+	\label{fig:footage}
+\end{figure}
+
+The video shows clear lines on the court which is blue and the ball can be see relatively clearly as it is yellow against the background. The footage also shows a variety of ball trajectories, speeds, and occlusions, making it a suitable test case for the tracking system.
+
+The evaluation of the \acs{ipa} and \acs{pgm} will be done using different footage to ensure that the system is robust and can handle various video footage. The ground truth data will be generated for each new footage used in the evaluation.
+
+\textbf{Ground Truth Data}
+
+The ground truth data for the video footage is generated through manual annotation. This is done in a basic Python script, using OpenCV, that allows the user to click on the ball in each frame of the video and then pressing the space bar to move to the next frame. The script also allows the user to skip frames if the ball is not visible, in which case the output for that frame is set to $(-1,-1)$. These recorded positions are then normalized and outputted to a text file called \texttt{groundtruth$\_n$.txt}, the $n$ indicating the specific video footage used. These values will be used to evaluate the performance of the system for both the \acs{ipa} and the \acs{pgm}.
+
+\subsection{Evaluation Metrics}
+The performance of all the various systems in the pipeline is discussed in this section. The metrics per system used are discussed in its subsection, that being the \acs{ipa} and the \acs{pgm}.
+
+\subsubsection{\acs{ipa} Evaluation Metrics}
+The \acs{ipa} performance is evaluated and selected using two main metrics: Mean Error and Success Rate. This section also details how the Covariance Matrix, and the outlier weights $w_{\pi,a}^{(n)}$ for each \acs{ipa} will be determined for the \acs{pgm}.
+
+\textbf{Mean Error}
+
+The Mean Error is calculated as the average Euclidean distance between the predicted ball position and the ground truth position across all the frames where the ball is visible. This metric providdes a quantitative measure of the accuracy of each algorithm. The formula for Mean Error is given in Equation 34.
+
+\begin{equation}
+\text{Mean Error} = \frac{1}{N} \sum_{i=1}^{N} \sqrt{(x_i - x_{gt,i})^2 + (y_i - y_{gt,i})^2}
+\end{equation}
+
+where:
+\begin{itemize}
+	\item $N$ is the number of frames where the ball is visible.
+	\item $(x_i, y_i)$ is the predicted position in frame $i$.
+	\item $(x_{gt,i}, y_{gt,i})$ is the ground truth position in frame $i$.
+\end{itemize}
+
+\textbf{Success Rate}
+
+The success rate of each of the \acs{ipa} is calculated as the percentage of frames where the algorithm successfully detects the ball. Therefore a predicted position of (-1,-1) is considered a failure and any other position is considered a success. The formula for Success Rate is given in Equation 35.
+
+\begin{equation}
+\text{Success Rate} = \frac{\text{Number of Successful Detections}}{N} \times 100\%
+\end{equation}
+
+\textbf{Covariance Matrix and Weights Determination}
+
+The ground truths data will be compared with the outputs of each algorithm to determine an objective measure for determining the Covariance Matrix which will be used in the \acs{pgm}. This will be done by calculating the standard deviation in the $x$ and $y$ positions and then taking the standard deviation, getting the variances using ($sd^2 = \sigma$) and using it to construct the covariance matrix, where $\sigma_{xx}$ and $\sigma_{yy}$ are the variances of the $x$ and $y$ positions, respectively. The covariance matrix $\Sigma_n$ for algorithm $n$ is defined in Equation 36. This will all be done on a Python script.
+
+\begin{equation}
+\Sigma_n = \begin{bmatrix}
+\sigma_{x,x} & \sigma_{x,y} \\
+\sigma_{y,x} & \sigma_{y,y}
+\end{bmatrix}
+\end{equation}
+
+The weights will be calculated based on the success rate of each \acs{ipa}. The weight for the inlier component $w_{\pi,inlier}^{(n)}$ will be set to the success rate of algorithm $n$, while the weight for the outlier component $w_{\pi,outlier}^{(n)}$ will be set to $1 - w_{\pi,inlier}^{(n)}$. This ensures that algorithms with higher success rates have a greater influence on the final position estimate, while those with lower success rates are more likely to be treated as outliers.
+
+\subsubsection{\acs{pgm} Evaluation Metrics}
+The \acs{pgm} performance is evaluated using two main metrics: Standard Deviation Accuracy and Computational Efficiency. This subsection also highlights the parameter tuning process used to optimize the \acs{pgm} performance.
+
+\textbf{Standard Deviation Accuracy}
+
+The Standard Deviation accuracy metric evaluates how well the \acs{pgm} maintains the estimated ball position within one standard deviation of the ground truth. This metric is calculated by taking the Euclidean distance between the mean of the \acs{pgm} output and the ground truth positions. This distance is then compared with the standard deviation and if it falls within this range it is considered a success, these successes are all summed together and divided by the total number of frames to get the percentage of accuracy. The formula for Standard Deviation Accuracy is given in Equation 37.
+
+\begin{equation}
+\text{Std Dev Accuracy} = \frac{\text{Number of Frames within 1 Std Dev}}{N} \times 100\%
+\end{equation}
+
+\textbf{Computational Efficiency}
+
+The computational efficiency of the entire system is measured by the runtime of the system after everything has been processed. This is done by measuring the time taken from start to end and is done entirely in code. The runtime is measured in seconds and the aim is to get the runtime to be as close to the actual length of the video footage as possible.
+
+\subsection{Experimental Setup}
+The experimental setup for Evaluating the system is done using Ubuntu 24.04.2 LTS on a computer with a 12th Gen Intel Core i5-12450H and 32Gb of RAM. 
+
+\subsubsection{\acs{ipa} Experimental Setup}
+In order to evaluate the performance of each \acs{ipa}, each algorithm is run independently with the 1st video footage. This is done to judge the Mean Error and Success Rate of each of the algorithms.
 
 \newpage
 \section{Conclusion}
