@@ -1,16 +1,18 @@
 \acswitchoff 
 \contentsline {table}{\numberline {1}{\ignorespaces Low-Level Vision Functions from OpenCV}}{8}{}%
-\contentsline {table}{\numberline {2}{\ignorespaces Intermediate-Level Vision Functions from OpenCV}}{10}{}%
-\contentsline {table}{\numberline {3}{\ignorespaces Requirements for Image Processing Algorithms}}{21}{}%
-\contentsline {table}{\numberline {4}{\ignorespaces Candidate Image Processing Algorithms}}{24}{}%
-\contentsline {table}{\numberline {5}{\ignorespaces Requirements for the Probabilistic Graphical Model}}{26}{}%
-\contentsline {table}{\numberline {6}{\ignorespaces Random Variables for the Probabilistic Graphical Model}}{27}{}%
-\contentsline {table}{\numberline {7}{\ignorespaces IPA Performance Metrics}}{45}{}%
-\contentsline {table}{\numberline {8}{\ignorespaces Final System Performance Metrics}}{47}{}%
-\contentsline {table}{\numberline {9}{\ignorespaces \acs {hsv} Colour Thresholding Performance Metrics}}{57}{}%
-\contentsline {table}{\numberline {10}{\ignorespaces Motion Tracker Performance Metrics}}{57}{}%
-\contentsline {table}{\numberline {11}{\ignorespaces Background Subtraction Tracker Performance Metrics}}{58}{}%
-\contentsline {table}{\numberline {12}{\ignorespaces Canny Edge and Hough Circles Performance Metrics}}{58}{}%
-\contentsline {table}{\numberline {13}{\ignorespaces Lucas-Kanade Optical Flow Performance Metrics}}{59}{}%
-\contentsline {table}{\numberline {14}{\ignorespaces Template Matching Performance Metrics}}{59}{}%
-\contentsline {table}{\numberline {15}{\ignorespaces \acs {pgm} and $\beta $ Performance Metrics}}{60}{}%
+\contentsline {table}{\numberline {2}{\ignorespaces Intermediate-Level Vision Functions from OpenCV}}{9}{}%
+\contentsline {table}{\numberline {3}{\ignorespaces Requirements for Image Processing Algorithms}}{19}{}%
+\contentsline {table}{\numberline {4}{\ignorespaces Candidate Image Processing Algorithms}}{22}{}%
+\contentsline {table}{\numberline {5}{\ignorespaces Requirements for the Probabilistic Graphical Model}}{24}{}%
+\contentsline {table}{\numberline {6}{\ignorespaces Random Variables for the Probabilistic Graphical Model}}{25}{}%
+\contentsline {table}{\numberline {7}{\ignorespaces IPA Performance Metrics}}{42}{}%
+\contentsline {table}{\numberline {8}{\ignorespaces Final System Performance Metrics}}{44}{}%
+\contentsline {table}{\numberline {9}{\ignorespaces Project Proposed Cost Breakdown}}{53}{}%
+\contentsline {table}{\numberline {10}{\ignorespaces Project Estimated Cost Breakdown}}{54}{}%
+\contentsline {table}{\numberline {11}{\ignorespaces \acs {hsv} Colour Thresholding Performance Metrics}}{57}{}%
+\contentsline {table}{\numberline {12}{\ignorespaces Motion Tracker Performance Metrics}}{57}{}%
+\contentsline {table}{\numberline {13}{\ignorespaces Background Subtraction Tracker Performance Metrics}}{57}{}%
+\contentsline {table}{\numberline {14}{\ignorespaces Canny Edge and Hough Circles Performance Metrics}}{57}{}%
+\contentsline {table}{\numberline {15}{\ignorespaces Lucas-Kanade Optical Flow Performance Metrics}}{58}{}%
+\contentsline {table}{\numberline {16}{\ignorespaces Template Matching Performance Metrics}}{58}{}%
+\contentsline {table}{\numberline {17}{\ignorespaces \acs {pgm} and $\beta $ Performance Metrics}}{59}{}%

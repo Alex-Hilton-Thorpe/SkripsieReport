@@ -51,13 +51,12 @@
 	\rowcolor[gray]{.9}%
 	\centering\arraybackslash%
 	\bfseries\normalsize}
-\newcommand{\tstrut}{\rule{0pt}{2.6ex}}       % "top" strut
 	
 \geometry{
 	a4paper,
 	left=35mm,
 	right=35mm,
-	top=20mm,
+	top=26mm,
 	bottom=44mm
 }
 % Remove marginpar space (prevents visual extra right gutter)
@@ -278,9 +277,10 @@
 \pagenumbering{roman}
 \setcounter{page}{1}
 \fancyfoot[C]{\thepage}
-
-
-
+        
+%\section*{Acknowledgments}
+%\pagenumbering{roman}
+%\addcontentsline{toc}{section}{Acknowledgments}
 %\newpage
 \section*{Plagiarism Declaration}
 \addcontentsline{toc}{section}{Plagiarism Declaration}
@@ -315,55 +315,64 @@ I know that a mark of zero may be awarded to assignments with plagiarism and als
 	
 	\newpage
 
-\section*{AI Use Declaration}
-\addcontentsline{toc}{section}{AI Use Declaration}
-{\setlength\labelwidth{1em}%
- \setlength\labelsep{5pt}%
- \setlength\itemindent{0pt}%
- \setlength\leftmargini{\labelwidth}%
- \setlength\topsep{0pt}%
- \setlength\partopsep{0pt}%
-\begin{enumerate}
-    \setlength\itemsep{\smallskipamount}%
-    \setlength\parskip{0pt}%
-    \small
-    
-    \item I am convinced and can support my claim that my assessment product is an indication of my own learning, knowledge, skills, and understanding.
-    
-    \item Where I have used AI tools for enhancing my own creation of ideas and words, I acknowledge that I have to declare it.
-    
-    \item Where I have used AI tools for generating new ideas, words, code, image-prompts for other AI Image-generating tools, or structure and even presentations (or other AI tools that can be used as assistants to the knowledge building and representing process), I have declared and documented the use of such tools and I am prepared to talk about the process I used and what it contributed to my learning and insights.
-    
-    \item I am aware that the lecturer can ask me to demonstrate my learning, for example through explaining the choices I made in terms of approach, content used, literature selected, conclusions drawn, etc. through an additional assessment like an oral (for example).
-    
-    \item I understand that if I am not able to agree to the above points, there is a chance that my academic behaviour will be deemed unethical and might lead to a disciplinary case being brought against me on the grounds of cheating or plagiarism and that the standard procedures for such behaviour will be followed.
-    
-    \item As per the Disciplinary Code of SU (par. 10.2.1 and 10.2.2), I understand that I take responsibility for the integrity of my work, which includes the obligation to ask for clarification from an academic member of staff if I am unsure of anything, and that I strictly adhered to all instructions received in the course of the academic assessment by relevant and authorized staff (whether the instruction is in oral or written format).
-    
-    \item I understand that when I am not able to document and declare my use of AI tools, this behaviour will be deemed as cheating in examinations and assessments (Disciplinary Code 1.1 c.) as I referred to "unauthorized notes, books, electronic devices or other reference material".
-\end{enumerate}}
-\vspace{10mm}
-\begin{table}[ht]
+\section*{AI Declaration}
+\addcontentsline{toc}{section}{AI Declaration}
+{\footnotesize
+\noindent
+I am convinced and can support my claim that my report is an indication of my own learning, knowledge, skills, and understanding. \\
+ Where I have used AI tools for enhancing my own creation of ideas and words, I acknowledge that I have to declare it.\\
+ Where I have used AI tools for generating new ideas, words, code, image-prompts for other AI Image-generating tools, or structure and even presentations (or other AI tools that can be used as assistants to the knowledge building and representing process), I have declared and documented the use of such tools and I am prepared to talk about the process I used and what it contributed to my learning and insights. \\
+ I am aware that the lecturer can ask me to demonstrate my learning, for example through explaining the choices I made in terms of approach, content used, literature selected, conclusions drawn, etc. through an additional assessment like an oral (for example). \\
+ Where the use of AI tools was explicitly not allowed, I can say with integrity and honesty that I did not use any such tools.\\ 
+ I understand that if I am not able to agree to the above points, there is a chance that my academic behaviour will be deemed unethical and might lead to a disciplinary case being brought against me on the grounds of cheating or plagiarism and that the standard procedures for such behaviour will be followed.\\ 
+ As per the Disciplinary Code of SU (par. 10.2.1 and 10.2.2) I understand that I take responsibility for the integrity of my work, which includes the obligation to ask for clarification from an academic member of staff if I am unsure of anything, and that I strictly adhered to all instructions received in the course of the academic assessment by relevant and authorised staff (whether the instruction is in oral or written format). \\
+ I understand that when AI-tools were not allowed in the assessment, or where I am not able to document and declare my use of such tools, this behaviour will be deemed as cheating in examinations and assessments (Disciplinary Code 1.1 c.) as I referred to ``unauthorized notes, books, electronic devices or other reference material''.\\
+}
+
+\vspace{0.2cm}
+\noindent
+\textbf{AI Tools Usage:}
+
+\begin{table}[H]
+	\centering
+	\footnotesize
+	\begin{tabular}{p{3cm} p{4cm} p{7cm}}
+		\toprule
+		\textbf{AI system used} & \textbf{What was it used for?} & \textbf{Where in the work was it used?} \\
+		\midrule
+		Chatgpt & Spell and logic checking & Throughout the report to ensure report remains logical throughout \\
+		\midrule
+		Claude AI & Debugging code and help with code structure & During the implementation of the various \acs{ipa}s and \acs{pgm}s \\
+		\bottomrule
+	\end{tabular}
+\end{table}
+
+\vspace{0.1cm}
+\noindent
+{\small \textbf{To what extent did you use AI and why do you consider the work as your own?}
+
+The AI tools were used as assistants to help with spell checking, logic checking, and debugging code. The core ideas, structure, and content of the report and code were developed independently. The AI tools served as supplementary aids to enhance clarity and correctness, but the intellectual effort and original contributions remain my own.}
+
+\vspace{0.3cm}
+\begin{table}[H]
 	\begin{center}
 		\begin{tabular*}{15.5cm}{@{\extracolsep{\fill}}lll}
-			%		\begin{tabular}{l l l}
-				\includegraphics[width=2cm]{Signature.jpeg} & & 25934171\\
+				\includegraphics[width=1.8cm]{Signature.jpeg} & & 25934171\\
 				\makebox[8cm]{\hrulefill} & & \makebox[6cm]{\hrulefill}\\
-				Signature & & Student number\\[1cm]
+				Signature & & Student number\\[0.3cm]
 				\theauthor & & \thedate\\
 				\makebox[8cm]{\hrulefill} & & \makebox[6cm]{\hrulefill}\\ 
 				Initials and surname & & Date \\
 			\end{tabular*}
 		\end{center}
 	\end{table}
-\noindent
 
 \newpage
 
 \section*{Executive Summary}
 \addcontentsline{toc}{section}{Executive Summary}
 \noindent
-\begin{tabular}{|p{\dimexpr \linewidth-2\tabcolsep-2\arrayrulewidth}|}
+\begin{longtable}{|p{\dimexpr \linewidth-2\tabcolsep-2\arrayrulewidth}|}
 	\hline%------------------------------------------------------------
 	\sumheading  Title of Project \\
 	\hline%------------------------------------------------------------
@@ -372,27 +381,27 @@ I know that a mark of zero may be awarded to assignments with plagiarism and als
 	\hline%------------------------------------------------------------
 	\sumheading  Objectives \\
 	\hline%------------------------------------------------------------
-	This project developed a ball position estimation system using standard video footage. Three object tracking algorithms (HSV Colour Thresholding, Motion Tracker, and Background Subtraction) were implemented and their outputs fused using \acl{ep} (\acs{ep}) inference in a \acl{pgm} (\acs{pgm}) to enhance accuracy and robustness. \\[1ex]
+	This project aims to estimate a ball’s position in real time using standard video footage. Multiple object tracking algorithms will be applied, and their outputs fused using a probabilistic graphical model (PGM) to enhance accuracy, robustness, and responsiveness. The final goal is to evaluate the PGM-based fusion model against individual trackers. \\[1ex]
 	
 	\hline%------------------------------------------------------------
 	\sumheading  What is current practice and what are its limitations? \\
 	\hline%------------------------------------------------------------
-	Hawk-Eye and Tracab are industry leaders in ball tracking for sports officiating. Despite their accuracy, both require complex, expensive multi-camera setups and proprietary infrastructure, limiting use in smaller-scale or research applications. \\[1ex]
+	Hawk-Eye and Tracab are industry leaders in ball tracking and sports officiating. Hawk-Eye supports over 20 sports with real-time tracking and visualization, while Tracab focuses on football, analyzing player movement and ball trajectory \parencite{hawkeye2024, tracab2024}. Despite their accuracy, both systems require complex, expensive multi-camera setups and proprietary infrastructure, limiting their use in smaller-scale, research, or open-source applications. \\[1ex]
 	
 	\hline%------------------------------------------------------------
 	\sumheading  What is new in this project? \\
 	\hline%------------------------------------------------------------
-	This project delivered an accurate, low-complexity ball tracking system using minimal camera infrastructure, running on consumer-grade hardware, making advanced tracking accessible for research and amateur sports. \\[1ex]
+	This project introduces an accurate, low-complexity ball tracking system that requires minimal camera infrastructure, making it accessible for research, amateur sports, and low-budget environments.\\[1ex]
 	
 	\hline%------------------------------------------------------------
 	\sumheading  If the project is successful, how will it make a difference? \\
 	\hline%------------------------------------------------------------
-	The project successfully enhanced decision-making in sports by providing accurate real-time ball localization, enabling better officiating and training analysis, while democratizing access to tracking technology beyond elite systems. \\[1ex]
+	If successful, this project could enhance decision-making across various sports by accurately determining ball location in real time — such as confirming goals or out-of-bounds events — making advanced tracking more accessible beyond elite-level systems. \\[1ex]
 	
 	\hline%------------------------------------------------------------
 	\sumheading  What are the risks to the project being a success? Why is it expected to be successful? \\
 	\hline%------------------------------------------------------------
-	Risks included not matching commercial efficiency, but the project succeeded by achieving high accuracy with a lightweight alternative, balancing performance and cost. \\[1ex]
+	A key risk is that the system may not match the efficiency or accuracy of existing commercial trackers, limiting its ability to fully replace them. However, by studying and building on established tracking methods, this project is expected to deliver a more lightweight and accessible alternative — one that balances performance with lower complexity and cost. \\[1ex]
 	
 	\hline%------------------------------------------------------------
 	\sumheading  What contributions have/will other students made/make? \\
@@ -402,50 +411,52 @@ I know that a mark of zero may be awarded to assignments with plagiarism and als
 	\hline%------------------------------------------------------------
 	\sumheading  Which aspects of the project will carry on after completion and why? \\
 	\hline%------------------------------------------------------------
-	The system can be extended with sport-specific rules for automated officiating, building on core tracking for real-time decision support. As well as bringing in a real-time aspect for live video feeds.\\[1ex]
+	After completion, the project could be extended by incorporating sport-specific rules, enabling the system to automatically detect rule violations such as offside positions, fouls, or out-of-bounds events. This would build on the core tracking functionality and move the system toward real-time decision support and automated officiating. \\[1ex]
 	
 	\hline%------------------------------------------------------------
 	\sumheading  What arrangements have been/will be made to expedite continuation? \\
 	\hline%------------------------------------------------------------
-	All components are documented with clear architecture, algorithms, and data handling for easy continuation of the project. \\[1ex]
+	All components of the project will be thoroughly documented, with clear definitions of the system architecture, algorithms, and data handling. This will ensure the project can be easily continued by future students or refined further for potential commercialization.\\[1ex]
 	
 	\hline%------------------------------------------------------------
-\end{tabular}
+\end{longtable}
 \newpage
 
 \section*{Evaluation of ECSA Exit Level Outcomes}
 \addcontentsline{toc}{section}{Evaluation of ECSA Exit Level Outcomes}
-\renewcommand{\arraystretch}{1.5} % Reduced vertical spacing
+\renewcommand{\arraystretch}{3} % More vertical spacing
 \rowcolors{2}{gray!10}{white}     % Alternating row colors
 
-\begin{tabular}{|p{0.55\linewidth}|p{0.4\linewidth}|}
+\begin{longtable}{|p{0.6\linewidth}|p{0.35\linewidth}|}
 \hline
 \rowcolor{gray!30}
 \multicolumn{2}{|c|}{\textbf{ECSA Outcomes Assessed in this Module}} \\
 \hline
 \textbf{ECSA Outcome} & \textbf{Addressed in Section} \\
 \hline
-\textbf{GA 1. Problem solving:} Demonstrate competence to identify, assess, formulate and solve convergent and divergent engineering problems creatively and innovatively. & 2; 3; 5 \\
+\textbf{GA 1. Problem solving:} Demonstrate competence to identify, assess, formulate and solve convergent and divergent engineering problems creatively and innovatively. & 2, 3, 5 \\
 \hline
-\textbf{GA 2. Application of scientific and engineering knowledge:} Demonstrate competence to apply knowledge of mathematics, basic science and engineering sciences from first principles to solve engineering problems. & 2; 3; 4; 5 \\
+\textbf{GA 2. Application of scientific and engineering knowledge:} Demonstrate competence to apply knowledge of mathematics, basic science and engineering sciences from first principles to solve engineering problems. & 2, 3, 4, 5 \\
 \hline
-\textbf{GA 3. Engineering Design:} Demonstrate competence to perform creative, procedural and non-procedural design and synthesis of components, systems, engineering works, products or processes. & 3; 4; 5\\
+\textbf{GA 3. Engineering Design:} Demonstrate competence to perform creative, procedural and non-procedural design and synthesis of components, systems, engineering works, products or processes. & 3, 4, 5\\
 \hline
-\textbf{GA 5. Engineering methods, skills and tools, including Information Technology:} Demonstrate competence to use appropriate engineering methods, skills and tools, including those based on information technology. & 2; 4; 5; Appendix B \\
+\textbf{GA 5. Engineering methods, skills and tools, including Information Technology:} Demonstrate competence to use appropriate engineering methods, skills and tools, including those based on information technology. & 2, 4, 5, Appendix B \\
 \hline
 \textbf{GA 6. Professional and technical communication:} Demonstrate competence to communicate effectively, both orally and in writing, with engineering audiences and the community at large. & Project Proposal; Progress Report; Preliminary Draft; Final Report; Oral Presentation; Project Poster \\
 \hline
 \textbf{GA 8. Individual, Team and Multidisciplinary Working:} Demonstrate competence to work effectively as an individual, in teams and in multidisciplinary environments. & Throughout the report - individual work conducted independently under supervision \\
 \hline
-\textbf{GA 9. Independent Learning Ability:} Demonstrate competence to engage in independent learning through well-developed learning skills. & 2; 4\\
+\textbf{GA 9. Independent Learning Ability:} Demonstrate competence to engage in independent learning through well-developed learning skills. & 2, 4\\
 \hline
-\end{tabular}
+\end{longtable}
+\newpage
+\section*{Acknowledgements}
+\addcontentsline{toc}{section}{Acknowledgements}
+
 \newpage
 \section*{Abstract}
 \addcontentsline{toc}{section}{Abstract}
-This project developed a low-cost ball tracking system using multiple \acl{ipa} fused with a \acl{pgm} (\acs{pgm}) for accurate position estimation from video footage. Three algorithms; \acs{hsv} Colour Thresholding, Motion Tracker, and Background Subtraction; were implemented and their outputs combined using Expectation Propagation inference, achieving 89.89\% accuracy and 0.154 mean error across diverse test videos. The system runs at 1.17× real-time speed on consumer-grade hardware, outperforming individual trackers in robustness and efficiency. This approach improves sports analytics, enabling accessible ball tracking for amateur and research applications, with potential for extension to automated officiating.
 
-\newpage
 \tableofcontents
 \newpage
 \listoffigures
@@ -453,47 +464,12 @@ This project developed a low-cost ball tracking system using multiple \acl{ipa} 
 \listoftables
 \newpage
 \printacronyms[include = abbrev, name = {List of Abbreviations}]
-\addcontentsline{toc}{section}{List of Abbreviations}
 \newpage
-\section*{Nomenclature}
-\addcontentsline{toc}{section}{Nomenclature}
-\begin{description}
-	\item[$A$] Discrete random variable (used for events)
-	\item[$a_n$] Outlier indicator for algorithm $n$
-	\item[$Alg_n$] Output from the $n$-th image processing algorithm
-	\item[$h$] Information vector
-	\item[$h_n$] Message parameter from algorithm
-	\item[$h_q$] Message parameter for cavity distribution
-	\item[$K$] Information (precision) matrix
-	\item[$N$] Number of frames where the ball is visible
-	\item[$n$] Length of a vector
-	\item[$P(A)$] Probability of event $A$ occurring
-	\item[$P(A \mid B)$] Conditional probability of event $A$ given event $B$
-	\item[$P(X_1, \dots, X_n)$] Joint probability distribution over variables $X_1$ through $X_n$
-	\item[$p(x)$] Probability density function with respect to variable $x$
-	\item[$p(x \mid y)$] Conditional probability density of $x$ given $y$
-	\item[$Pos_{x,y}$] Ball position in normalized coordinates
-	\item[$v^{t-1}$] Velocity vector at time $t-1$
-	\item[$w_{\pi,a}^{(n)}$] Mixture weight
-	\item[$x$] Vector of random variables
-	\item[$y$] Continuous random variable
-	\item[$Z$] Continuous parent variable in CLG
-	\item[$\beta$] Damping factor for velocity
-	\item[$\mu_{a,b}$] Message from cluster $a$ to cluster $b$
-	\item[$\Sigma$] Summation operation
-	\item[$\Sigma_n$] Covariance matrix for algorithm $n$
-	\item[$\Sigma_x$] Covariance matrix for state $x$
-	\item[$\phi$] Potential or cluster
-	\item[$\Lambda_q$] Posterior parameter for cavity distribution
-	\item[$\Lambda_n$] Message parameter from algorithm $n$
-	\item[$a_x$], [$b_x$] Parameter in linear function
-\end{description}
+\printacronyms[include=symbol, name = {List of Symbols}]
 \newpage
-
 
 \pagenumbering{arabic}
 \setcounter{page}{1}
-
 \section{Introduction}
 The growing importance of data-driven decision-making in sports has accelerated the adoption of advanced technologies such as \acl{ml} (\acs{ml}), computer vision, and real-time analytics. In particular, ball tracking has become a critical component in modern sports for enhancing player performance analysis, enabling data-supported officiating, and facilitating targeted training interventions. High-profile systems such as Hawk-Eye and TRACAB have become industry standards, Hawk-Eye being widely used for adjudication in tennis and cricket \parencite{hawkeye2024}, while TRACAB supports tactical and performance analysis in football and other team sports \parencite{tracab2024}.
 

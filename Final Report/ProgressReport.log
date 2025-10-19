@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Debian) (preloaded format=pdflatex 2025.10.3)  19 OCT 2025 16:34
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023/Debian) (preloaded format=pdflatex 2025.10.3)  19 OCT 2025 23:27
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -783,7 +783,7 @@ Package: enumitem 2019/06/20 v3.9 Customized lists
 \c@g@acro@muab@int=\count501
 \c@g@acro@sum@int=\count502
 \c@g@acro@phi@int=\count503
-Package translations Info: No language package found. I am going to use `english' as default language. on input line 249.
+Package translations Info: No language package found. I am going to use `english' as default language. on input line 250.
 
 
 Package biblatex Warning: Load 'inputenc' before biblatex.
@@ -793,20 +793,20 @@ Package biblatex Warning: Load 'inputenc' before biblatex.
 (./ProgressReport.aux)
 \openout1 = `ProgressReport.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 249.
-LaTeX Font Info:    ... okay on input line 249.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 249.
-LaTeX Font Info:    ... okay on input line 249.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 249.
-LaTeX Font Info:    ... okay on input line 249.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 249.
-LaTeX Font Info:    ... okay on input line 249.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 249.
-LaTeX Font Info:    ... okay on input line 249.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 249.
-LaTeX Font Info:    ... okay on input line 249.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 249.
-LaTeX Font Info:    ... okay on input line 249.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 250.
+LaTeX Font Info:    ... okay on input line 250.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 250.
+LaTeX Font Info:    ... okay on input line 250.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 250.
+LaTeX Font Info:    ... okay on input line 250.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 250.
+LaTeX Font Info:    ... okay on input line 250.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 250.
+LaTeX Font Info:    ... okay on input line 250.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 250.
+LaTeX Font Info:    ... okay on input line 250.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 250.
+LaTeX Font Info:    ... okay on input line 250.
 
 *geometry* driver: auto-detecting
 *geometry* detected driver: pdftex
@@ -817,14 +817,14 @@ LaTeX Font Info:    ... okay on input line 249.
 * layoutoffset:(h,v)=(0.0pt,0.0pt)
 * modes: 
 * h-part:(L,W,R)=(99.58464pt, 398.3386pt, 99.58464pt)
-* v-part:(T,H,B)=(73.97716pt, 645.87756pt, 125.19212pt)
+* v-part:(T,H,B)=(56.9055pt, 662.94922pt, 125.19212pt)
 * \paperwidth=597.50787pt
 * \paperheight=845.04684pt
 * \textwidth=398.3386pt
-* \textheight=645.87756pt
+* \textheight=662.94922pt
 * \oddsidemargin=27.31465pt
 * \evensidemargin=27.31465pt
-* \topmargin=-35.29283pt
+* \topmargin=-52.36449pt
 * \headheight=12.0pt
 * \headsep=25.0pt
 * \topskip=12.0pt
@@ -843,7 +843,7 @@ LaTeX Font Info:    ... okay on input line 249.
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
 
-Package chemgreek Info: Activating mapping `default' on line 249.
+Package chemgreek Info: Activating mapping `default' on line 250.
 
 (/usr/share/texlive/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
@@ -866,7 +866,7 @@ File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Live
 )) (/usr/share/texlive/texmf-dist/tex/latex/translations/translations-basic-dictionary-english.trsl
 File: translations-basic-dictionary-english.trsl (english translation file `translations-basic-dictionary')
 )
-Package translations Info: loading dictionary `translations-basic-dictionary' for `english'. on input line 249.
+Package translations Info: loading dictionary `translations-basic-dictionary' for `english'. on input line 250.
 \c@lstlisting=\count512
 Package biblatex Info: Trying to load language 'english'...
 Package biblatex Info: ... file 'english.lbx' found.
@@ -881,8 +881,8 @@ Package biblatex Info: Automatic encoding selection.
 Package biblatex Info: Trying to load bibliographic data...
 Package biblatex Info: ... file 'ProgressReport.bbl' found.
  (./ProgressReport.bbl)
-Package biblatex Info: Reference section=0 on input line 249.
-Package biblatex Info: Reference segment=0 on input line 249.
+Package biblatex Info: Reference section=0 on input line 250.
+Package biblatex Info: Reference segment=0 on input line 250.
 Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: float package is loaded.
 Package caption Info: longtable package is loaded.
@@ -893,34 +893,34 @@ Package caption Info: End \AtBeginDocument code.
 <SU_logo_RGB-01.png, id=1, 111.0549pt x 154.176pt>
 File: SU_logo_RGB-01.png Graphic file (type png)
 <use SU_logo_RGB-01.png>
-Package pdftex.def Info: SU_logo_RGB-01.png  used on input line 252.
+Package pdftex.def Info: SU_logo_RGB-01.png  used on input line 253.
 (pdftex.def)             Requested size: 166.58191pt x 231.2634pt.
-LaTeX Font Info:    Trying to load font information for OT1+ztmcm on input line 264.
+LaTeX Font Info:    Trying to load font information for OT1+ztmcm on input line 265.
  (/usr/share/texlive/texmf-dist/tex/latex/psnfss/ot1ztmcm.fd
 File: ot1ztmcm.fd 2000/01/03 Fontinst v1.801 font definitions for OT1/ztmcm.
 )
-LaTeX Font Info:    Trying to load font information for OML+ztmcm on input line 264.
+LaTeX Font Info:    Trying to load font information for OML+ztmcm on input line 265.
  (/usr/share/texlive/texmf-dist/tex/latex/psnfss/omlztmcm.fd
 File: omlztmcm.fd 2000/01/03 Fontinst v1.801 font definitions for OML/ztmcm.
 )
-LaTeX Font Info:    Trying to load font information for OMS+ztmcm on input line 264.
+LaTeX Font Info:    Trying to load font information for OMS+ztmcm on input line 265.
  (/usr/share/texlive/texmf-dist/tex/latex/psnfss/omsztmcm.fd
 File: omsztmcm.fd 2000/01/03 Fontinst v1.801 font definitions for OMS/ztmcm.
 )
-LaTeX Font Info:    Trying to load font information for OMX+ztmcm on input line 264.
+LaTeX Font Info:    Trying to load font information for OMX+ztmcm on input line 265.
  (/usr/share/texlive/texmf-dist/tex/latex/psnfss/omxztmcm.fd
 File: omxztmcm.fd 2000/01/03 Fontinst v1.801 font definitions for OMX/ztmcm.
 )
-LaTeX Font Info:    Trying to load font information for OT1+ptm on input line 264.
+LaTeX Font Info:    Trying to load font information for OT1+ptm on input line 265.
  (/usr/share/texlive/texmf-dist/tex/latex/psnfss/ot1ptm.fd
 File: ot1ptm.fd 2001/06/04 font definitions for OT1/ptm.
 )
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <12> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 264.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 265.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <9> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 264.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 265.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <7> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 264.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 265.
  [1
 
 {/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}{/usr/share/texlive/texmf-dist/fonts/enc/dvips/base/8r.enc} <./SU_logo_RGB-01.png>]
@@ -934,47 +934,61 @@ Overfull \hbox (42.67912pt too wide) in paragraph at lines 304--313
  [] 
  []
 
-[1 <./Signature.jpeg>] [2] [3]
-Underfull \hbox (badness 1762) in paragraph at lines 385--386
-\T1/ptm/m/n/12 and test-ing por-tion of the
+[1 <./Signature.jpeg>]
+File: Signature.jpeg Graphic file (type jpg)
+<use Signature.jpeg>
+Package pdftex.def Info: Signature.jpeg  used on input line 350.
+(pdftex.def)             Requested size: 56.9055pt x 37.93404pt.
+
+Overfull \hbox (42.67912pt too wide) in paragraph at lines 348--357
+ [] 
+ []
+
+[2] [3]
+Underfull \hbox (badness 1132) in paragraph at lines 428--428
+\T1/ptm/m/n/12 pe-tence to iden-tify, as-sess, for-mu-late and
  []
 
 
-Underfull \hbox (badness 1033) in paragraph at lines 385--386
-\T1/ptm/m/n/12 project and when ap-ply-ing
+Underfull \hbox (badness 1442) in paragraph at lines 432--432
+\T1/ptm/m/n/12 com-pe-tence to per-form cre-ative, pro-ce-du-
  []
 
 
-Underfull \hbox (badness 1221) in paragraph at lines 387--387
-\T1/ptm/m/n/12 sys-tems, en-gi-neer-ing works, prod-ucts or pro-
+Underfull \hbox (badness 6094) in paragraph at lines 436--437
+\T1/ptm/m/n/12 port; Pre-lim-i-nary Draft; Fi-
  []
 
 
-Underfull \hbox (badness 1430) in paragraph at lines 387--388
-[]|\T1/ptm/m/n/12 During the con-cept de-sign
+Underfull \hbox (badness 1540) in paragraph at lines 436--437
+\T1/ptm/m/n/12 nal Re-port; Oral Pre-sen-ta-tion;
  []
 
 
-Underfull \hbox (badness 1394) in paragraph at lines 389--389
-\T1/ptm/b/n/12 in-clud-ing In-for-ma-tion Tech-nol-ogy: \T1/ptm/m/n/12 Demon-
+Underfull \hbox (badness 2368) in paragraph at lines 438--439
+[]|\T1/ptm/m/n/12 Throughout the re-port - in-di-
  []
 
 
-Underfull \hbox (badness 2277) in paragraph at lines 391--392
-[]|\T1/ptm/m/n/12 Project Pro-posal; Progress
+Underfull \hbox (badness 1776) in paragraph at lines 440--440
+[]|\T1/ptm/b/n/12 GA 9. In-de-pen-dent Learn-ing Abil-ity:
  []
 
 
-Underfull \hbox (badness 1939) in paragraph at lines 391--392
-\T1/ptm/m/n/12 Re-port; Pre-lim-i-nary Draft;
+Underfull \hbox (badness 1019) in paragraph at lines 440--440
+\T1/ptm/m/n/12 Demon-strate com-pe-tence to en-gage in in-
  []
 
 
-Overfull \hbox (5.2879pt too wide) in alignment at lines 376--397
- [] [] 
+Overfull \hbox (5.28181pt too wide) in paragraph at lines 421--443
+[] 
  []
 
-[4] [5] (./ProgressReport.toc [6] [7])
+[4]
+LaTeX Font Info:    Trying to load font information for TS1+ptm on input line 446.
+ (/usr/share/texlive/texmf-dist/tex/latex/psnfss/ts1ptm.fd
+File: ts1ptm.fd 2001/06/04 font definitions for TS1/ptm.
+) [5] (./ProgressReport.toc [6] [7])
 \tf@toc=\write4
 \openout4 = `ProgressReport.toc'.
 
@@ -986,691 +1000,827 @@ Overfull \hbox (5.2879pt too wide) in alignment at lines 376--397
 \tf@lot=\write6
 \openout6 = `ProgressReport.lot'.
 
- [10] [11] [12] [1]
-Overfull \hbox (6.9215pt too wide) in paragraph at lines 427--428
+ [10] [11] [12] [13] [1]
+Overfull \hbox (6.9215pt too wide) in paragraph at lines 511--512
 \T1/ptm/m/n/12 per-for-mance met-rics, en-abling tar-geted im-prove-ments in tech-nique, decision-making,
  []
 
 [2] [3] [4] [5] [6] [7]
-Overfull \hbox (16.81595pt too wide) in alignment at lines 508--514
+Overfull \hbox (16.81595pt too wide) in alignment at lines 592--598
  [] [] 
  []
 
 
-Overfull \hbox (16.81595pt too wide) in alignment at lines 514--518
+Overfull \hbox (16.81595pt too wide) in alignment at lines 598--602
  [] [] 
  []
 
-LaTeX Font Info:    Trying to load font information for T1+cmtt on input line 519.
+LaTeX Font Info:    Trying to load font information for T1+cmtt on input line 603.
 (/usr/share/texlive/texmf-dist/tex/latex/base/t1cmtt.fd
 File: t1cmtt.fd 2023/04/13 v2.5m Standard LaTeX font definitions
 )
-Underfull \hbox (badness 1097) in paragraph at lines 529--530
+Underfull \hbox (badness 1097) in paragraph at lines 613--614
 \T1/ptm/m/n/12 ob-jects. Can use func-tions like \T1/cmtt/m/n/12 cv2.dilate() \T1/ptm/m/n/12 (ex-
  []
 
 
-Overfull \hbox (16.81595pt too wide) in alignment at lines 518--531
+Overfull \hbox (16.81595pt too wide) in alignment at lines 602--615
  [] [] 
  []
 
-[8] [9]
-Overfull \hbox (7.48022pt too wide) in alignment at lines 537--543
- [] [] 
- []
-
-
-Overfull \hbox (7.48022pt too wide) in alignment at lines 543--547
+[8]
+Overfull \hbox (7.48022pt too wide) in alignment at lines 621--627
  [] [] 
  []
 
 
-Underfull \hbox (badness 1472) in paragraph at lines 548--549
+Overfull \hbox (7.48022pt too wide) in alignment at lines 627--631
+ [] [] 
+ []
+
+
+Underfull \hbox (badness 1472) in paragraph at lines 632--633
 \T1/ptm/m/n/12 in bi-nary im-ages for shape anal-y-sis) ([]It-seez 2023h),
  []
 
 
-Underfull \hbox (badness 1490) in paragraph at lines 550--551
+Underfull \hbox (badness 1490) in paragraph at lines 634--635
 \T1/ptm/m/n/12 fil-ter-ing with \T1/cmtt/m/n/12 cv2.findContours() \T1/ptm/m/n/12 (de-tects con-tours
  []
 
 
-Underfull \hbox (badness 3646) in paragraph at lines 552--553
+Underfull \hbox (badness 3646) in paragraph at lines 636--637
 \T1/ptm/m/n/12 use \T1/cmtt/m/n/12 cv2.createBackgroundSubtractorMOG2() \T1/ptm/m/n/12 (cre-
  []
 
 
-Overfull \hbox (7.48022pt too wide) in alignment at lines 547--556
+Overfull \hbox (7.48022pt too wide) in alignment at lines 631--640
  [] [] 
  []
 
-[10] [11]
+[9] [10]
 <B_Network_Example.jpg, id=91, 553.06625pt x 402.50375pt>
 File: B_Network_Example.jpg Graphic file (type jpg)
 <use B_Network_Example.jpg>
-Package pdftex.def Info: B_Network_Example.jpg  used on input line 574.
+Package pdftex.def Info: B_Network_Example.jpg  used on input line 658.
 (pdftex.def)             Requested size: 179.25114pt x 130.4498pt.
 <M_Network_Example.png, id=92, 412.54124pt x 402.50375pt>
 File: M_Network_Example.png Graphic file (type png)
 <use M_Network_Example.png>
-Package pdftex.def Info: M_Network_Example.png  used on input line 581.
+Package pdftex.def Info: M_Network_Example.png  used on input line 665.
 (pdftex.def)             Requested size: 139.42093pt x 136.02647pt.
- [12 <./B_Network_Example.jpg> <./M_Network_Example.png>] [13]
+ [11 <./B_Network_Example.jpg> <./M_Network_Example.png>]
 File: B_Network_Example.jpg Graphic file (type jpg)
 <use B_Network_Example.jpg>
-Package pdftex.def Info: B_Network_Example.jpg  used on input line 621.
+Package pdftex.def Info: B_Network_Example.jpg  used on input line 705.
 (pdftex.def)             Requested size: 179.25114pt x 130.4498pt.
-<BN-MN.jpg, id=101, 553.06625pt x 402.50375pt>
+<BN-MN.jpg, id=98, 553.06625pt x 402.50375pt>
 File: BN-MN.jpg Graphic file (type jpg)
 <use BN-MN.jpg>
-Package pdftex.def Info: BN-MN.jpg  used on input line 628.
+Package pdftex.def Info: BN-MN.jpg  used on input line 712.
 (pdftex.def)             Requested size: 179.25114pt x 130.4498pt.
- [14 <./BN-MN.jpg>]
-Underfull \hbox (badness 10000) in paragraph at lines 687--688
+ [12] [13 <./BN-MN.jpg>]
+Underfull \hbox (badness 10000) in paragraph at lines 771--772
 
  []
 
-LaTeX Font Info:    Trying to load font information for TS1+ptm on input line 693.
-(/usr/share/texlive/texmf-dist/tex/latex/psnfss/ts1ptm.fd
-File: ts1ptm.fd 2001/06/04 font definitions for TS1/ptm.
-) [15] [16]
+[14] [15]
 <hybridNet.jpg, id=113, 376.90813pt x 317.68687pt>
 File: hybridNet.jpg Graphic file (type jpg)
 <use hybridNet.jpg>
-Package pdftex.def Info: hybridNet.jpg  used on input line 752.
+Package pdftex.def Info: hybridNet.jpg  used on input line 836.
 (pdftex.def)             Requested size: 159.333pt x 134.29527pt.
- [17 <./hybridNet.jpg>] [18] [19]
-<ProjectOverview.jpg, id=124, 688.5725pt x 432.61626pt>
+ [16 <./hybridNet.jpg>] [17]
+<ProjectOverview.jpg, id=121, 688.5725pt x 432.61626pt>
 File: ProjectOverview.jpg Graphic file (type jpg)
 <use ProjectOverview.jpg>
-Package pdftex.def Info: ProjectOverview.jpg  used on input line 795.
+Package pdftex.def Info: ProjectOverview.jpg  used on input line 879.
 (pdftex.def)             Requested size: 398.3386pt x 250.27069pt.
- [20 <./ProjectOverview.jpg>] [21]
-<ipa_flow.jpg, id=131, 1197.47375pt x 1892.06876pt>
+ [18 <./ProjectOverview.jpg>] [19]
+<ipa_flow.jpg, id=128, 1197.47375pt x 1892.06876pt>
 File: ipa_flow.jpg Graphic file (type jpg)
 <use ipa_flow.jpg>
-Package pdftex.def Info: ipa_flow.jpg  used on input line 843.
+Package pdftex.def Info: ipa_flow.jpg  used on input line 927.
 (pdftex.def)             Requested size: 298.75394pt x 472.03444pt.
- [22]
-Underfull \hbox (badness 10000) in paragraph at lines 855--855
+ [20]
+Underfull \hbox (badness 10000) in paragraph at lines 939--939
 []|\T1/ptm/b/n/12 Algorithm
  []
 
 
-Underfull \hbox (badness 6125) in paragraph at lines 855--855
+Underfull \hbox (badness 6125) in paragraph at lines 939--939
 []|\T1/ptm/b/n/12 Low-Level Vi-sion Op-er-a-tion
  []
 
 
-Overfull \hbox (4.07574pt too wide) in alignment at lines 851--857
+Overfull \hbox (4.07574pt too wide) in alignment at lines 935--941
  [] [] [] 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 859--859
+Underfull \hbox (badness 10000) in paragraph at lines 943--943
 []|\T1/ptm/b/n/12 Algorithm
  []
 
 
-Underfull \hbox (badness 6125) in paragraph at lines 859--859
+Underfull \hbox (badness 6125) in paragraph at lines 943--943
 []|\T1/ptm/b/n/12 Low-Level Vi-sion Op-er-a-tion
  []
 
 
-Overfull \hbox (4.07574pt too wide) in alignment at lines 857--861
+Overfull \hbox (4.07574pt too wide) in alignment at lines 941--945
  [] [] [] 
  []
 
 
-Overfull \hbox (4.07574pt too wide) in alignment at lines 861--863
+Overfull \hbox (4.07574pt too wide) in alignment at lines 945--947
  [] [] [] 
  []
 
 
-Overfull \hbox (4.07574pt too wide) in alignment at lines 863--865
+Overfull \hbox (4.07574pt too wide) in alignment at lines 947--949
  [] [] [] 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 866--866
+Underfull \hbox (badness 10000) in paragraph at lines 950--950
 \T1/ptm/m/n/12 Thresh-old-
  []
 
 
-Underfull \hbox (badness 7081) in paragraph at lines 866--867
+Underfull \hbox (badness 7081) in paragraph at lines 950--951
 []|\T1/ptm/m/n/12 Contour de-tec-tion and shape
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 868--868
+Underfull \hbox (badness 10000) in paragraph at lines 952--952
 []|\T1/ptm/m/n/12 Motion
  []
 
 
-Underfull \hbox (badness 3058) in paragraph at lines 868--868
+Underfull \hbox (badness 3058) in paragraph at lines 952--952
 []|\T1/ptm/m/n/12 Frame dif-fer-enc-ing, thresh-old-
  []
 
 
-Underfull \hbox (badness 1377) in paragraph at lines 868--868
+Underfull \hbox (badness 1377) in paragraph at lines 952--952
 \T1/ptm/m/n/12 ing, and mor-pho-log-i-cal op-er-a-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 870--870
+Underfull \hbox (badness 10000) in paragraph at lines 954--954
 []|\T1/ptm/m/n/12 Background
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 870--870
+Underfull \hbox (badness 10000) in paragraph at lines 954--954
 \T1/ptm/m/n/12 Sub-trac-tion
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 870--871
+Underfull \hbox (badness 10000) in paragraph at lines 954--955
 []|\T1/ptm/m/n/12 Background sub-trac-tion
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 870--871
+Underfull \hbox (badness 10000) in paragraph at lines 954--955
 \T1/ptm/m/n/12 (MOG2), con-tour de-tec-tion
  []
 
 
-Underfull \hbox (badness 5274) in paragraph at lines 872--872
+Underfull \hbox (badness 5274) in paragraph at lines 956--956
 \T1/ptm/m/n/12 and Hough
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 874--874
+Underfull \hbox (badness 10000) in paragraph at lines 958--958
 []|\T1/ptm/m/n/12 Lucas-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 874--874
+Underfull \hbox (badness 10000) in paragraph at lines 958--958
 \T1/ptm/m/n/12 Kanade
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 874--874
+Underfull \hbox (badness 10000) in paragraph at lines 958--958
 \T1/ptm/m/n/12 Op-ti-cal
  []
 
 
-Underfull \hbox (badness 2922) in paragraph at lines 874--875
+Underfull \hbox (badness 2922) in paragraph at lines 958--959
 []|\T1/ptm/m/n/12 Optical flow com-pu-ta-tion and
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 876--876
+Underfull \hbox (badness 10000) in paragraph at lines 960--960
 []|\T1/ptm/m/n/12 Template
  []
 
 
-Overfull \hbox (4.07574pt too wide) in alignment at lines 865--877
+Overfull \hbox (4.07574pt too wide) in alignment at lines 949--961
  [] [] [] 
  []
 
-[23 <./ipa_flow.jpg>] [24] [25]
-Overfull \hbox (4.08185pt too wide) in alignment at lines 903--908
+[21 <./ipa_flow.jpg>] [22] [23]
+Overfull \hbox (4.08185pt too wide) in alignment at lines 987--992
  [] [] 
  []
 
 
-Overfull \hbox (4.08185pt too wide) in alignment at lines 908--912
+Overfull \hbox (4.08185pt too wide) in alignment at lines 992--996
  [] [] 
  []
 
 
-Overfull \hbox (4.08185pt too wide) in alignment at lines 912--914
+Overfull \hbox (4.08185pt too wide) in alignment at lines 996--998
  [] [] 
  []
 
 
-Overfull \hbox (4.08185pt too wide) in alignment at lines 914--916
+Overfull \hbox (4.08185pt too wide) in alignment at lines 998--1000
  [] [] 
  []
 
 
-Overfull \hbox (4.08185pt too wide) in alignment at lines 916--928
+Overfull \hbox (4.08185pt too wide) in alignment at lines 1000--1012
  [] [] 
  []
 
-[26]
-Overfull \hbox (8.16368pt too wide) in alignment at lines 937--942
+
+Overfull \hbox (8.16368pt too wide) in alignment at lines 1021--1026
  [] [] [] [] 
  []
 
 
-Overfull \hbox (8.16368pt too wide) in alignment at lines 942--946
+Overfull \hbox (8.16368pt too wide) in alignment at lines 1026--1030
  [] [] [] [] 
  []
 
 
-Overfull \hbox (8.16368pt too wide) in alignment at lines 946--948
+Overfull \hbox (8.16368pt too wide) in alignment at lines 1030--1032
  [] [] [] [] 
  []
 
 
-Overfull \hbox (8.16368pt too wide) in alignment at lines 948--950
+Overfull \hbox (8.16368pt too wide) in alignment at lines 1032--1034
  [] [] [] [] 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 951--951
+Underfull \hbox (badness 10000) in paragraph at lines 1035--1035
 []|\T1/ptm/m/n/12 Ball po-si-
  []
 
 
-Underfull \hbox (badness 2213) in paragraph at lines 951--951
+Underfull \hbox (badness 2213) in paragraph at lines 1035--1035
 []|\T1/ptm/m/n/12 Actual po-si-tion of the
  []
 
 
-Underfull \hbox (badness 2269) in paragraph at lines 951--951
+Underfull \hbox (badness 2269) in paragraph at lines 1035--1035
 \T1/ptm/m/n/12 mal-ized co-or-di-nates (x
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 952--952
+Underfull \hbox (badness 10000) in paragraph at lines 1036--1036
 []|\T1/ptm/m/n/12 Algorithm
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 952--952
+Underfull \hbox (badness 10000) in paragraph at lines 1036--1036
 []|$\OML/ztmcm/m/it/12 Alg[]$ \T1/ptm/m/n/12 (for
  []
 
 
-Overfull \hbox (8.16368pt too wide) in alignment at lines 950--954
+Overfull \hbox (8.16368pt too wide) in alignment at lines 1034--1038
  [] [] [] [] 
  []
 
-[27]
-<smallBN.jpg, id=151, 536.0025pt x 480.29437pt>
+[24]
+<smallBN.jpg, id=145, 536.0025pt x 480.29437pt>
 File: smallBN.jpg Graphic file (type jpg)
 <use smallBN.jpg>
-Package pdftex.def Info: smallBN.jpg  used on input line 968.
+Package pdftex.def Info: smallBN.jpg  used on input line 1052.
 (pdftex.def)             Requested size: 139.42093pt x 124.92488pt.
- [28]
-<fullBN.jpg, id=155, 712.16063pt x 393.47pt>
+ [25]
+<fullBN.jpg, id=149, 712.16063pt x 393.47pt>
 File: fullBN.jpg Graphic file (type jpg)
 <use fullBN.jpg>
-Package pdftex.def Info: fullBN.jpg  used on input line 977.
+Package pdftex.def Info: fullBN.jpg  used on input line 1061.
 (pdftex.def)             Requested size: 199.1693pt x 110.03876pt.
-<BNwtime.jpg, id=156, 1080.035pt x 185.69376pt>
+<BNwtime.jpg, id=150, 1080.035pt x 185.69376pt>
 File: BNwtime.jpg Graphic file (type jpg)
 <use BNwtime.jpg>
-Package pdftex.def Info: BNwtime.jpg  used on input line 988.
+Package pdftex.def Info: BNwtime.jpg  used on input line 1072.
 (pdftex.def)             Requested size: 398.3386pt x 68.48743pt.
- [29 <./smallBN.jpg> <./fullBN.jpg>] [30 <./BNwtime.jpg>]
-<pgmflowdesign.jpg, id=164, 1039.885pt x 2178.1375pt>
+ [26 <./smallBN.jpg> <./fullBN.jpg> <./BNwtime.jpg>]
+<pgmflowdesign.jpg, id=154, 1039.885pt x 2178.1375pt>
 File: pgmflowdesign.jpg Graphic file (type jpg)
 <use pgmflowdesign.jpg>
-Package pdftex.def Info: pgmflowdesign.jpg  used on input line 1035.
+Package pdftex.def Info: pgmflowdesign.jpg  used on input line 1119.
 (pdftex.def)             Requested size: 298.75394pt x 625.761pt.
- [31]
-Overfull \vbox (4.38342pt too high) has occurred while \output is active []
-
- [32 <./pgmflowdesign.jpg>] [33]
-Overfull \hbox (0.28482pt too wide) in paragraph at lines 1079--1080
+ [27] [28] [29 <./pgmflowdesign.jpg>] [30]
+Overfull \hbox (0.28482pt too wide) in paragraph at lines 1163--1164
 []\T1/ptm/m/n/12 Contour de-tec-tion and shape anal-y-sis ap-ply the same cri-te-ria as HSV[] Colour Thresh-
  []
 
-[34]
-Underfull \hbox (badness 10000) in paragraph at lines 1094--1095
+[31]
+Underfull \hbox (badness 10000) in paragraph at lines 1178--1179
 
  []
 
 
-Overfull \hbox (54.72351pt too wide) in paragraph at lines 1098--1099
+Overfull \hbox (54.72351pt too wide) in paragraph at lines 1182--1183
 []\T1/ptm/m/n/12 Frame pre-pro-cess-ing in-volves HSV color mask-ing and mor-pho-log-i-cal cleanup: \T1/cmtt/m/n/12 cv2.cvtColor\T1/ptm/m/n/12 ,
  []
 
 
-Overfull \hbox (44.94244pt too wide) in paragraph at lines 1100--1101
+Overfull \hbox (44.94244pt too wide) in paragraph at lines 1184--1185
 []\T1/ptm/m/n/12 Grayscale con-ver-sion and Gaus-sian blur-ring pre-pare for edge de-tec-tion: \T1/cmtt/m/n/12 cv2.GaussianBlur\T1/ptm/m/n/12 ,
  []
 
 
-Overfull \hbox (24.54181pt too wide) in paragraph at lines 1104--1105
+Overfull \hbox (24.54181pt too wide) in paragraph at lines 1188--1189
 []\T1/ptm/m/n/12 The Hough Cir-cle Trans-form de-tects cir-cles with tuned pa-ram-e-ters: \T1/cmtt/m/n/12 cv2.HoughCircles\T1/ptm/m/n/12 . 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1109--1110
+Underfull \hbox (badness 10000) in paragraph at lines 1193--1194
 
  []
 
 
-Overfull \hbox (30.6407pt too wide) in paragraph at lines 1117--1118
+Overfull \hbox (30.6407pt too wide) in paragraph at lines 1201--1202
 []\T1/ptm/m/n/12 Feature de-tec-tion and op-ti-cal flow com-pu-ta-tion track points: \T1/cmtt/m/n/12 cv2.goodFeaturesToTrack
  []
 
-[35]
-Underfull \hbox (badness 10000) in paragraph at lines 1122--1123
+[32]
+Underfull \hbox (badness 10000) in paragraph at lines 1206--1207
 
  []
 
 
-Overfull \hbox (10.42053pt too wide) in paragraph at lines 1128--1129
+Overfull \hbox (10.42053pt too wide) in paragraph at lines 1212--1213
 []\T1/ptm/m/n/12 Frames are masked and matched: \T1/cmtt/m/n/12 cv2.cvtColor\T1/ptm/m/n/12 , \T1/cmtt/m/n/12 cv2.inRange\T1/ptm/m/n/12 , \T1/cmtt/m/n/12 cv2.bitwise_and\T1/ptm/m/n/12 ,
  []
 
-[36] [37]
-Underfull \hbox (badness 10000) in paragraph at lines 1212--1213
+[33] [34]
+Underfull \hbox (badness 10000) in paragraph at lines 1296--1297
 
  []
 
-[38]
-Overfull \hbox (8.25662pt too wide) detected at line 1224
+[35]
+Overfull \hbox (8.25662pt too wide) detected at line 1308
 [][] \OML/ztmcm/m/it/12 w[] \OT1/ztmcm/m/n/12 = [] \OML/ztmcm/m/it/12 w[] \OMS/ztmcm/m/n/12 ^^@ [] [] j\OT1/ztmcm/m/n/12 ^^F[] + ^^F[]\OMS/ztmcm/m/n/12 j ^^@ []\OT1/ztmcm/m/n/12 ([][] \OMS/ztmcm/m/n/12 ^^@ \OML/ztmcm/m/it/12 ^^V[]\OT1/ztmcm/m/n/12 )[] [][] ([][] \OMS/ztmcm/m/n/12 ^^@ \OML/ztmcm/m/it/12 ^^V[]\OT1/ztmcm/m/n/12 )
  []
 
-[39]
-<ZvsDOut.jpg, id=194, 1183.92313pt x 509.40312pt>
+[36]
+<ZvsDOut.jpg, id=188, 1183.92313pt x 509.40312pt>
 File: ZvsDOut.jpg Graphic file (type jpg)
 <use ZvsDOut.jpg>
-Package pdftex.def Info: ZvsDOut.jpg  used on input line 1257.
+Package pdftex.def Info: ZvsDOut.jpg  used on input line 1341.
 (pdftex.def)             Requested size: 338.59023pt x 145.67885pt.
- [40 <./ZvsDOut.jpg>]
-<ZvDIn.jpg, id=198, 763.85374pt x 336.25626pt>
+ [37 <./ZvsDOut.jpg>]
+<ZvDIn.jpg, id=192, 763.85374pt x 336.25626pt>
 File: ZvDIn.jpg Graphic file (type jpg)
 <use ZvDIn.jpg>
-Package pdftex.def Info: ZvDIn.jpg  used on input line 1275.
+Package pdftex.def Info: ZvDIn.jpg  used on input line 1359.
 (pdftex.def)             Requested size: 398.3386pt x 175.35194pt.
- [41 <./ZvDIn.jpg>] [42] [43]
-Underfull \hbox (badness 10000) in paragraph at lines 1361--1361
+ [38 <./ZvDIn.jpg>] [39] [40]
+Underfull \hbox (badness 10000) in paragraph at lines 1445--1445
 []|\T1/ptm/m/n/12 Mean
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1361--1361
+Underfull \hbox (badness 10000) in paragraph at lines 1445--1445
 []|\T1/ptm/m/n/12 Success
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1361--1361
+Underfull \hbox (badness 10000) in paragraph at lines 1445--1445
 []|\T1/ptm/m/n/12 Variance
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1361--1361
+Underfull \hbox (badness 10000) in paragraph at lines 1445--1445
 []|\T1/ptm/m/n/12 Variance
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1361--1361
+Underfull \hbox (badness 10000) in paragraph at lines 1445--1445
 []|\T1/ptm/m/n/12 Inlier
  []
 
 
-Overfull \hbox (2.51627pt too wide) in paragraph at lines 1361--1362
+Overfull \hbox (2.51627pt too wide) in paragraph at lines 1445--1446
 []|\T1/ptm/m/n/12 Process
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1361--1362
+Underfull \hbox (badness 10000) in paragraph at lines 1445--1446
 \T1/ptm/m/n/12 Time
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1363--1363
+Underfull \hbox (badness 10000) in paragraph at lines 1447--1447
 []|\T1/ptm/m/n/12 HSV
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1363--1363
+Underfull \hbox (badness 10000) in paragraph at lines 1447--1447
 \T1/ptm/m/n/12 Colour
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1363--1363
+Underfull \hbox (badness 10000) in paragraph at lines 1447--1447
 \T1/ptm/m/n/12 Thresh-old-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1364--1364
+Underfull \hbox (badness 10000) in paragraph at lines 1448--1448
 []|\T1/ptm/m/n/12 Motion
  []
 
 
-Overfull \hbox (1.75021pt too wide) in paragraph at lines 1365--1365
+Overfull \hbox (1.75021pt too wide) in paragraph at lines 1449--1449
 []|\T1/ptm/m/n/12 Background
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1365--1365
+Underfull \hbox (badness 10000) in paragraph at lines 1449--1449
 \T1/ptm/m/n/12 Sub-trac-tion
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1366--1366
+Underfull \hbox (badness 10000) in paragraph at lines 1450--1450
 []|\T1/ptm/m/n/12 Canny
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1366--1366
+Underfull \hbox (badness 10000) in paragraph at lines 1450--1450
 \T1/ptm/m/n/12 Edge and
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1366--1366
+Underfull \hbox (badness 10000) in paragraph at lines 1450--1450
 \T1/ptm/m/n/12 Hough
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1367--1367
+Underfull \hbox (badness 10000) in paragraph at lines 1451--1451
 []|\T1/ptm/m/n/12 Lucas-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1367--1367
+Underfull \hbox (badness 10000) in paragraph at lines 1451--1451
 \T1/ptm/m/n/12 Kanade
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1367--1367
+Underfull \hbox (badness 10000) in paragraph at lines 1451--1451
 \T1/ptm/m/n/12 Op-ti-cal
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1368--1368
+Underfull \hbox (badness 10000) in paragraph at lines 1452--1452
 []|\T1/ptm/m/n/12 Template
  []
 
 
-Overfull \hbox (1.48668pt too wide) in paragraph at lines 1359--1371
+Overfull \hbox (1.48668pt too wide) in paragraph at lines 1443--1455
  [][] 
  []
 
-[44] [45]
-<lineGraphBeta.jpg, id=215, 552.56438pt x 415.5525pt>
+[41] [42]
+<lineGraphBeta.jpg, id=209, 552.56438pt x 415.5525pt>
 File: lineGraphBeta.jpg Graphic file (type jpg)
 <use lineGraphBeta.jpg>
-Package pdftex.def Info: lineGraphBeta.jpg  used on input line 1382.
+Package pdftex.def Info: lineGraphBeta.jpg  used on input line 1466.
 (pdftex.def)             Requested size: 239.00558pt x 179.73666pt.
- [46 <./lineGraphBeta.jpg>]
-Underfull \hbox (badness 10000) in paragraph at lines 1396--1396
+
+Underfull \hbox (badness 10000) in paragraph at lines 1480--1480
 []|\T1/ptm/m/n/12 Video
  []
 
-[47] [48] [49]
-Overfull \hbox (4.10062pt too wide) in paragraph at lines 1441--1442
+[43 <./lineGraphBeta.jpg>] [44] [45] [46]
+Overfull \hbox (4.10062pt too wide) in paragraph at lines 1525--1526
 \T1/ptm/m/n/12 hard-ware, demon-strat-ing prac-ti-cal fea-si-bil-ity for post-processing ap-pli-ca-tions. While
  []
 
-[50]
-Overfull \hbox (12.55684pt too wide) in paragraph at lines 1445--1445
+[47]
+Overfull \hbox (12.55684pt too wide) in paragraph at lines 1529--1529
 \T1/ptm/m/n/12 cessed: 2025-08-02. \T1/ptm/m/sc/12 url\T1/ptm/m/n/12 : $\T1/cmtt/m/n/12 https : / / www . youtube . com / watch ? v = n4TTjRjkB8I$\T1/ptm/m/n/12 . 
  []
 
 
-Overfull \hbox (8.14043pt too wide) in paragraph at lines 1445--1445
+Overfull \hbox (8.14043pt too wide) in paragraph at lines 1529--1529
 [][]\T1/ptm/m/n/12 Hawk-Eye In-no-va-tions (2024). \T1/ptm/m/it/12 Our Tech-nol-ogy\T1/ptm/m/n/12 . Ac-cessed: 2025-07-13. \T1/ptm/m/sc/12 url\T1/ptm/m/n/12 : $\T1/cmtt/m/n/12 https :
  []
 
 
-Overfull \hbox (11.71808pt too wide) in paragraph at lines 1445--1445
+Overfull \hbox (11.71808pt too wide) in paragraph at lines 1529--1529
 [][][]\T1/ptm/m/n/12 (2023f). \T1/ptm/m/it/12 Con-tour Fea-tures\T1/ptm/m/n/12 . Ac-cessed: 2025-10-04. \T1/ptm/m/sc/12 url\T1/ptm/m/n/12 : $\T1/cmtt/m/n/12 https : / / docs . opencv .
  []
 
 
-Overfull \hbox (0.8554pt too wide) in paragraph at lines 1445--1445
+Overfull \hbox (0.8554pt too wide) in paragraph at lines 1529--1529
 [][][]\T1/ptm/m/n/12 (2023i). \T1/ptm/m/it/12 Hough Cir-cle Trans-form\T1/ptm/m/n/12 . Ac-cessed: 2025-10-04. \T1/ptm/m/sc/12 url\T1/ptm/m/n/12 : $\T1/cmtt/m/n/12 https : / / docs .
  []
 
-[51]
-Overfull \hbox (0.36061pt too wide) in paragraph at lines 1445--1445
+[48]
+Overfull \hbox (0.36061pt too wide) in paragraph at lines 1529--1529
 [][][]\T1/ptm/m/n/12 (2023m). \T1/ptm/m/it/12 Mor-pho-log-i-cal Trans-for-ma-tions\T1/ptm/m/n/12 . Ac-cessed: 2025-10-04. \T1/ptm/m/sc/12 url\T1/ptm/m/n/12 : $\T1/cmtt/m/n/12 https :
  []
 
-[52]
-Overfull \hbox (0.4001pt too wide) in paragraph at lines 1445--1445
+[49]
+Overfull \hbox (0.4001pt too wide) in paragraph at lines 1529--1529
 \T1/ptm/m/n/12 ence''. In: \T1/ptm/m/it/12 arXiv preprint arXiv:1301.2294\T1/ptm/m/n/12 . Ac-cessed: 2025-09-29. \T1/ptm/m/sc/12 url\T1/ptm/m/n/12 : $\T1/cmtt/m/n/12 https :
  []
 
 
-Overfull \hbox (10.2891pt too wide) in paragraph at lines 1445--1445
+Overfull \hbox (10.2891pt too wide) in paragraph at lines 1529--1529
 \T1/ptm/m/n/12 hen-sive Re-view''. In: \T1/ptm/m/it/12 Sen-sors \T1/ptm/m/n/12 23.15. \T1/ptm/m/sc/12 issn\T1/ptm/m/n/12 : 1424-8220. \T1/ptm/m/sc/12 doi\T1/ptm/m/n/12 : $\T1/cmtt/m/n/12 10 . 3390 / s23156887$\T1/ptm/m/n/12 .
  []
 
 
-Overfull \hbox (1.39992pt too wide) in paragraph at lines 1445--1445
+Overfull \hbox (1.39992pt too wide) in paragraph at lines 1529--1529
 [][]\T1/ptm/m/n/12 TennisNerd (Aug. 2024). \T1/ptm/m/it/12 Elec-tronic Line Call-ing: Hawk[]Eye Tech-nol-ogy Ex-plained\T1/ptm/m/n/12 .
  []
 
 
-Overfull \hbox (16.88368pt too wide) in paragraph at lines 1445--1445
+Overfull \hbox (16.88368pt too wide) in paragraph at lines 1529--1529
 \T1/ptm/m/it/12 force for good in sport\T1/ptm/m/n/12 . Ac-cessed: 2025-07-15. \T1/ptm/m/sc/12 url\T1/ptm/m/n/12 : $\T1/cmtt/m/n/12 https : / / www . theguardian .
  []
 
-[53]
-Overfull \hbox (6.21738pt too wide) in paragraph at lines 1445--1445
+[50]
+Overfull \hbox (6.21738pt too wide) in paragraph at lines 1529--1529
 \T1/ptm/m/n/12 cessed 2025[]07[]15. \T1/ptm/m/sc/12 url\T1/ptm/m/n/12 : $\T1/cmtt/m/n/12 https : / / web . archive . org / web / 20150919114824 /
  []
 
-[54] [55] [56]
-Underfull \hbox (badness 10000) in paragraph at lines 1461--1461
+[51]
+<GanttChart_Final.jpg, id=238, 1025.8325pt x 432.61626pt>
+File: GanttChart_Final.jpg Graphic file (type jpg)
+<use GanttChart_Final.jpg>
+Package pdftex.def Info: GanttChart_Final.jpg  used on input line 1539.
+(pdftex.def)             Requested size: 398.3386pt x 167.98692pt.
+ [52 <./GanttChart_Final.jpg>]
+Underfull \hbox (badness 10000) in paragraph at lines 1554--1554
+[]|\T1/ptm/b/n/12 Time
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1554--1554
+[]|\T1/ptm/b/n/12 Labour
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1554--1554
+[]|\T1/ptm/b/n/12 Material
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1554--1554
+[]|\T1/ptm/b/n/12 Facility
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1554--1554
+\T1/ptm/b/n/12 Use Cost
+ []
+
+
+Underfull \hbox (badness 1406) in paragraph at lines 1554--1555
+[]|\T1/ptm/b/n/12 Total Cost
+ []
+
+
+Underfull \hbox (badness 5771) in paragraph at lines 1556--1556
+[]|\T1/ptm/m/n/12 Review Lit-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1557--1557
+[]|\T1/ptm/m/n/12 Identify
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1557--1557
+\T1/ptm/m/n/12 Com-pat-i-ble
+ []
+
+
+Overfull \hbox (15.97241pt too wide) in paragraph at lines 1560--1560
+[]|\T1/ptm/m/n/12 Experimentation
+ []
+
+
+Underfull \hbox (badness 1412) in paragraph at lines 1561--1561
+[]|\T1/ptm/m/n/12 Model Op-ti-
+ []
+
+
+Underfull \hbox (badness 3148) in paragraph at lines 1562--1562
+[]|\T1/ptm/m/n/12 Finalise Re-
+ []
+
+
+Overfull \hbox (7.98123pt too wide) in paragraph at lines 1552--1568
+ [][] 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1575--1575
+[]|\T1/ptm/b/n/12 Time
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1575--1575
+[]|\T1/ptm/b/n/12 Labour
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1575--1575
+[]|\T1/ptm/b/n/12 Material
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1575--1575
+[]|\T1/ptm/b/n/12 Facility
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1575--1575
+\T1/ptm/b/n/12 Use Cost
+ []
+
+
+Underfull \hbox (badness 1406) in paragraph at lines 1575--1576
+[]|\T1/ptm/b/n/12 Total Cost
+ []
+
+
+Underfull \hbox (badness 5771) in paragraph at lines 1577--1577
+[]|\T1/ptm/m/n/12 Review Lit-
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1578--1578
+[]|\T1/ptm/m/n/12 Identify
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1578--1578
+\T1/ptm/m/n/12 Com-pat-i-ble
+ []
+
+
+Overfull \hbox (15.97241pt too wide) in paragraph at lines 1581--1581
+[]|\T1/ptm/m/n/12 Experimentation
+ []
+
+
+Underfull \hbox (badness 1412) in paragraph at lines 1582--1582
+[]|\T1/ptm/m/n/12 Model Op-ti-
+ []
+
+
+Underfull \hbox (badness 3148) in paragraph at lines 1583--1583
+[]|\T1/ptm/m/n/12 Finalise Re-
+ []
+
+
+Overfull \hbox (7.98123pt too wide) in paragraph at lines 1573--1589
+ [][] 
+ []
+
+[53]
+<budget.jpg, id=246, 399.4925pt x 194.22563pt>
+File: budget.jpg Graphic file (type jpg)
+<use budget.jpg>
+Package pdftex.def Info: budget.jpg  used on input line 1593.
+(pdftex.def)             Requested size: 398.3386pt x 193.6739pt.
+ [54 <./Budget.jpg>] [55] [56]
+Underfull \hbox (badness 10000) in paragraph at lines 1620--1620
 []|\T1/ptm/m/n/12 Success
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1461--1461
+Underfull \hbox (badness 10000) in paragraph at lines 1620--1620
 []|\T1/ptm/m/n/12 Variance
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1461--1461
+Underfull \hbox (badness 10000) in paragraph at lines 1620--1620
 []|\T1/ptm/m/n/12 Variance
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1461--1462
+Underfull \hbox (badness 10000) in paragraph at lines 1620--1621
 []|\T1/ptm/m/n/12 Inlier
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1474--1474
+Underfull \hbox (badness 10000) in paragraph at lines 1633--1633
 []|\T1/ptm/m/n/12 Success
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1474--1474
+Underfull \hbox (badness 10000) in paragraph at lines 1633--1633
 []|\T1/ptm/m/n/12 Variance
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1474--1474
+Underfull \hbox (badness 10000) in paragraph at lines 1633--1633
 []|\T1/ptm/m/n/12 Variance
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1474--1475
+Underfull \hbox (badness 10000) in paragraph at lines 1633--1634
 []|\T1/ptm/m/n/12 Inlier
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1487--1487
+Underfull \hbox (badness 10000) in paragraph at lines 1646--1646
 []|\T1/ptm/m/n/12 Success
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1487--1487
+Underfull \hbox (badness 10000) in paragraph at lines 1646--1646
 []|\T1/ptm/m/n/12 Variance
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1487--1487
+Underfull \hbox (badness 10000) in paragraph at lines 1646--1646
 []|\T1/ptm/m/n/12 Variance
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1487--1488
+Underfull \hbox (badness 10000) in paragraph at lines 1646--1647
+[]|\T1/ptm/m/n/12 Inlier
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1659--1659
+[]|\T1/ptm/m/n/12 Success
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1659--1659
+[]|\T1/ptm/m/n/12 Variance
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1659--1659
+[]|\T1/ptm/m/n/12 Variance
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1659--1660
+[]|\T1/ptm/m/n/12 Inlier
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1672--1672
+[]|\T1/ptm/m/n/12 Success
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1672--1672
+[]|\T1/ptm/m/n/12 Variance
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1672--1672
+[]|\T1/ptm/m/n/12 Variance
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 1672--1673
 []|\T1/ptm/m/n/12 Inlier
  []
 
 [57]
-Underfull \hbox (badness 10000) in paragraph at lines 1500--1500
+Underfull \hbox (badness 10000) in paragraph at lines 1685--1685
 []|\T1/ptm/m/n/12 Success
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1500--1500
+Underfull \hbox (badness 10000) in paragraph at lines 1685--1685
 []|\T1/ptm/m/n/12 Variance
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1500--1500
+Underfull \hbox (badness 10000) in paragraph at lines 1685--1685
 []|\T1/ptm/m/n/12 Variance
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 1500--1501
+Underfull \hbox (badness 10000) in paragraph at lines 1685--1686
 []|\T1/ptm/m/n/12 Inlier
  []
 
-
-Underfull \hbox (badness 10000) in paragraph at lines 1513--1513
-[]|\T1/ptm/m/n/12 Success
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1513--1513
-[]|\T1/ptm/m/n/12 Variance
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1513--1513
-[]|\T1/ptm/m/n/12 Variance
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1513--1514
-[]|\T1/ptm/m/n/12 Inlier
- []
-
-[58]
-Underfull \hbox (badness 10000) in paragraph at lines 1526--1526
-[]|\T1/ptm/m/n/12 Success
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1526--1526
-[]|\T1/ptm/m/n/12 Variance
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1526--1526
-[]|\T1/ptm/m/n/12 Variance
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 1526--1527
-[]|\T1/ptm/m/n/12 Inlier
- []
-
-[59] [60] [61] [62] (./ProgressReport.aux)
+[58] [59] [60] (./ProgressReport.aux)
  ***********
 LaTeX2e <2023-11-01> patch level 1
 L3 programming layer <2024-01-22>
@@ -1680,18 +1830,18 @@ Package logreq Info: Writing requests to 'ProgressReport.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 27300 strings out of 476106
- 629043 string characters out of 5793933
+ 27315 strings out of 476106
+ 629470 string characters out of 5793933
  1961975 words of memory out of 5000000
- 49012 multiletter control sequences out of 15000+600000
- 636904 words of font info for 138 fonts, out of 8000000 for 9000
+ 49027 multiletter control sequences out of 15000+600000
+ 636903 words of font info for 138 fonts, out of 8000000 for 9000
  59 hyphenation exceptions out of 8191
- 73i,14n,84p,1683b,1672s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 73i,14n,84p,1683b,1645s stack positions out of 10000i,1000n,20000p,200000b,200000s
  </home/alex/.texlive2023/texmf-var/fonts/pk/ljfour/jknappen/ec/ectt1200.600pk></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/rsfs/rsfs10.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/symbol/usyr.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/symbol/usyr.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmr8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmri8a.pfb>
-Output written on ProgressReport.pdf (75 pages, 1462305 bytes).
+Output written on ProgressReport.pdf (74 pages, 1741131 bytes).
 PDF statistics:
- 386 PDF objects out of 1000 (max. 8388607)
- 204 compressed objects within 3 object streams
+ 385 PDF objects out of 1000 (max. 8388607)
+ 202 compressed objects within 3 object streams
  0 named destinations out of 1000 (max. 500000)
- 76 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 86 words of extra memory for PDF output out of 10000 (max. 10000000)
 

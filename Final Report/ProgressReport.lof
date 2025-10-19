@@ -1,13 +1,15 @@
 \acswitchoff 
-\contentsline {figure}{\numberline {1}{\ignorespaces Examples of graphical models}}{12}{}%
-\contentsline {figure}{\numberline {2}{\ignorespaces Conversion of \acl {bn} to \acl {mn}}}{14}{}%
-\contentsline {figure}{\numberline {3}{\ignorespaces Example of a \acl {clg} network showing discrete \acs {rv} $X$ and continuous \acs {rv}s $Y$ and $Z$}}{17}{}%
-\contentsline {figure}{\numberline {4}{\ignorespaces Overview of the model design}}{20}{}%
-\contentsline {figure}{\numberline {5}{\ignorespaces Flow diagram showing the flow of logic each of the \acs {ipa} will follow}}{23}{}%
-\contentsline {figure}{\numberline {6}{\ignorespaces Relationship between $Pos_{x,y}$, $Alg_n$ and $a_n$ for single algorithm and time step}}{29}{}%
-\contentsline {figure}{\numberline {7}{\ignorespaces \acl {bn} showing the relationships between $Pos_{x,y}$ and the various algorithms used}}{29}{}%
-\contentsline {figure}{\numberline {8}{\ignorespaces \acl {bn} showing the relationships between $Pos_{x,y}$, the various \acs {ipa} used and the discrete Outlier Indicators at the different time steps}}{30}{}%
-\contentsline {figure}{\numberline {9}{\ignorespaces Flow diagram showing the flow of logic the \acs {pgm} will follow}}{32}{}%
-\contentsline {figure}{\numberline {10}{\ignorespaces Example of output from the \acs {pgm} overlayed with the original video footage}}{40}{}%
-\contentsline {figure}{\numberline {11}{\ignorespaces Example snippet of the video footage used in the project}}{41}{}%
-\contentsline {figure}{\numberline {12}{\ignorespaces Graph showing the $\beta $ value vs Accuracy (\%) for all three videos}}{46}{}%
+\contentsline {figure}{\numberline {1}{\ignorespaces Examples of graphical models}}{11}{}%
+\contentsline {figure}{\numberline {2}{\ignorespaces Conversion of \acl {bn} to \acl {mn}}}{13}{}%
+\contentsline {figure}{\numberline {3}{\ignorespaces Example of a \acl {clg} network showing discrete \acs {rv} $X$ and continuous \acs {rv}s $Y$ and $Z$}}{16}{}%
+\contentsline {figure}{\numberline {4}{\ignorespaces Overview of the model design}}{18}{}%
+\contentsline {figure}{\numberline {5}{\ignorespaces Flow diagram showing the flow of logic each of the \acs {ipa} will follow}}{21}{}%
+\contentsline {figure}{\numberline {6}{\ignorespaces Relationship between $Pos_{x,y}$, $Alg_n$ and $a_n$ for single algorithm and time step}}{26}{}%
+\contentsline {figure}{\numberline {7}{\ignorespaces \acl {bn} showing the relationships between $Pos_{x,y}$ and the various algorithms used}}{26}{}%
+\contentsline {figure}{\numberline {8}{\ignorespaces \acl {bn} showing the relationships between $Pos_{x,y}$, the various \acs {ipa} used and the discrete Outlier Indicators at the different time steps}}{26}{}%
+\contentsline {figure}{\numberline {9}{\ignorespaces Flow diagram showing the flow of logic the \acs {pgm} will follow}}{29}{}%
+\contentsline {figure}{\numberline {10}{\ignorespaces Example of output from the \acs {pgm} overlayed with the original video footage}}{37}{}%
+\contentsline {figure}{\numberline {11}{\ignorespaces Example snippet of the video footage used in the project}}{38}{}%
+\contentsline {figure}{\numberline {12}{\ignorespaces Graph showing the $\beta $ value vs Accuracy (\%) for all three videos}}{43}{}%
+\contentsline {figure}{\numberline {13}{\ignorespaces Gantt Chart showing the final Gantt chart and completed timeline of the project}}{52}{}%
+\contentsline {figure}{\numberline {14}{\ignorespaces Comparison of Proposed Budget vs Estimated Final Cost}}{54}{}%
