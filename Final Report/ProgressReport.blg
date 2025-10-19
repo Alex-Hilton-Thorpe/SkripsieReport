@@ -1,20 +1,20 @@
 [0] Config.pm:307> INFO - This is Biber 2.19
-[0] Config.pm:310> INFO - Logfile is 'ProgressReport.blg'
-[56] biber:340> INFO - === Wed Oct 15, 2025, 13:20:41
-[68] Biber.pm:419> INFO - Reading 'ProgressReport.bcf'
-[117] Biber.pm:979> INFO - Found 57 citekeys in bib section 0
-[125] Biber.pm:4419> INFO - Processing section 0
-[133] Biber.pm:4610> INFO - Looking for bibtex file 'bibliography.bib' for section 0
-[135] bibtex.pm:1713> INFO - LaTeX decoding ...
-[161] bibtex.pm:1519> INFO - Found BibTeX data source 'bibliography.bib'
-[394] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'normalization = NFD' with 'normalization = prenormalized'
-[394] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'variable = shifted' with 'variable = non-ignorable'
-[394] Biber.pm:4239> INFO - Sorting list 'nyt/global//global/global' of type 'entry' with template 'nyt' and locale 'en-US'
-[394] Biber.pm:4245> INFO - No sort tailoring available for locale 'en-US'
-[431] bbl.pm:660> INFO - Writing 'ProgressReport.bbl' with encoding 'UTF-8'
-[458] bbl.pm:763> INFO - Output to ProgressReport.bbl
-[459] Biber.pm:131> WARN - ISBN '9780521192475' in entry 'challa2011fundamentals' is invalid - run biber with '--validate_datamodel' for details.
-[459] Biber.pm:131> WARN - legacy month field 'August' in entry 'tennisnerd2024hawk-eye' is not an integer - this will probably not sort properly.
-[460] Biber.pm:131> WARN - legacy month field 'April' in entry 'wiebe2013mls' is not an integer - this will probably not sort properly.
-[461] Biber.pm:131> WARN - ISBN '978-0471377391' in entry 'pitas2000' is invalid - run biber with '--validate_datamodel' for details.
-[461] Biber.pm:133> INFO - WARNINGS: 4
+[1] Config.pm:310> INFO - Logfile is 'ProgressReport.blg'
+[74] biber:340> INFO - === Sun Oct 19, 2025, 16:34:06
+[89] Biber.pm:419> INFO - Reading 'ProgressReport.bcf'
+[131] Biber.pm:979> INFO - Found 57 citekeys in bib section 0
+[138] Biber.pm:4419> INFO - Processing section 0
+[156] Biber.pm:4610> INFO - Looking for bibtex file 'bibliography.bib' for section 0
+[161] bibtex.pm:1713> INFO - LaTeX decoding ...
+[204] bibtex.pm:1519> INFO - Found BibTeX data source 'bibliography.bib'
+[574] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'variable = shifted' with 'variable = non-ignorable'
+[574] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'normalization = NFD' with 'normalization = prenormalized'
+[575] Biber.pm:4239> INFO - Sorting list 'nyt/global//global/global' of type 'entry' with template 'nyt' and locale 'en-US'
+[575] Biber.pm:4245> INFO - No sort tailoring available for locale 'en-US'
+[608] bbl.pm:660> INFO - Writing 'ProgressReport.bbl' with encoding 'UTF-8'
+[625] bbl.pm:763> INFO - Output to ProgressReport.bbl
+[626] Biber.pm:131> WARN - ISBN '9780521192475' in entry 'challa2011fundamentals' is invalid - run biber with '--validate_datamodel' for details.
+[626] Biber.pm:131> WARN - legacy month field 'August' in entry 'tennisnerd2024hawk-eye' is not an integer - this will probably not sort properly.
+[626] Biber.pm:131> WARN - legacy month field 'April' in entry 'wiebe2013mls' is not an integer - this will probably not sort properly.
+[626] Biber.pm:131> WARN - ISBN '978-0471377391' in entry 'pitas2000' is invalid - run biber with '--validate_datamodel' for details.
+[626] Biber.pm:133> INFO - WARNINGS: 4

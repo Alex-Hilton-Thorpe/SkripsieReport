@@ -26,6 +26,7 @@
 \usepackage{booktabs}
 \usepackage{algorithm}
 \usepackage{algpseudocode}
+\usepackage{appendix}
 \ifxetex
 \usepackage[math-style=TeX, bold-style=TeX, ]{unicode-math}
 \setmainfont{Times New Roman}
@@ -1235,14 +1236,14 @@ To incorporate temporal information into the tracking framework, a constant velo
 v^{t-1} = \text{Pos}_{x,y}^{t-1} - \text{Pos}_{x,y}^{t-2}
 \end{equation}
 
-The prior mean for frame $t$ is then predicted by adding the previous position and the estimated velocity:
+The prior mean for frame $t$ is then predicted by extrapolating the previous position using the estimated velocity scaled by a damping factor $\beta$:
 \begin{equation}
-\mu_{\text{prior}}^t = \text{Pos}_{x,y}^{t-1} + v^{t-1}
+\mu_{\text{prior}}^t = \text{Pos}_{x,y}^{t-1} + \beta v^{t-1}
 \end{equation}
 
-The model predicts that the ball will continue along its current trajectory unless new measurement evidence suggests otherwise. The uncertainty in this motion prediction is captured by the process noise covariance matrix $\Sigma_{\text{prior}}^t = \sigma_p I$, where $\sigma_p$ represents the variance in position due to unmodeled dynamics such as acceleration, deceleration, or changes in direction. This process noise allows the tracker to remain responsive to actual changes in the ball's motion while still benefiting from the smoothing effect of the velocity-based prediction.
+where $\beta \in [0,1]$ controls the trust placed in the velocity prediction, with $\beta = 0$ representing a position-only model and $\beta = 1$ representing full constant velocity. The optimal value of $\beta$ will be determined in Chapter 5 through evaluation on test sequences. The uncertainty in this motion prediction is captured by the process noise covariance $\Sigma_{\text{prior}}^t = \sigma_p^2 I$, where $\sigma_p^2$ represents the variance in position due to unmodeled dynamics such as acceleration, deceleration, or changes in direction. This process noise allows the tracker to remain responsive to actual changes in the ball's motion while still benefiting from the smoothing effect of the velocity-based prediction.
 
-For the first frame ($t=1$), no velocity information is available, so an uninformative prior centered at the image center with high uncertainty is used instead.
+For the first frame ($t=0$), no velocity information is available, so an uninformative prior centered at the image center with high uncertainty is used instead.
 
 \subsubsection{Implementation Summary}
 The implementation meets the designed \acs{pgm} requirements through a combination of canonical form representation, \acs{ep} message passing, and mixture-based outlier modeling. The canonical form reduces computational cost by eliminating redundant matrix inversions, while the mixture model provides outlier rejection without manual threshold tuning. The complete system processes algorithm outputs frame-by-frame, producing posterior position estimates with associated uncertainty quantification suitable for downstream analysis and visualization.
@@ -1253,21 +1254,21 @@ The system is configured as a pipeline that sequentially processes all IPAs, exe
 
 \begin{figure}[H]
 	\centering
-	\includegraphics[width=\textwidth]{ZvsDOut.jpg}
+	\includegraphics[width=0.85\textwidth]{ZvsDOut.jpg}
 	\caption{Example of output from the \acs{pgm} overlayed with the original video footage}
 	\label{fig:output}
 \end{figure}
 
 \newpage
 \section{Evaluation}
-This chapter outlines the experimental setup for evaluating the performance of the ball tracking system, focusing predominantly on accuracy and computational efficiency. The chapter begins by describing the datasets and the various inputs required for the system to run, including the video footage and the ground truth data used for evaluation and to ensure reliable benchmarking. This is followed by a discussion of the evaluation metrics used to assess the system's performance, including the accuracy and success rate of the \acs{ipa}, the accuracy of the \acs{pgm} in keeping estimates within a standard deviation of the ground truth, and the overall computational efficiency measured by runtime. The experimental setup is then discussed, detailing the software environment used. The chapter then tunes the parameters of the system to ensure optimal performance. Finally, it concludes with the results and analysis of the system's performance based on the evaluation metrics discussed.
+This chapter outlines the experimental setup for evaluating the performance of the ball tracking system, focusing predominantly on accuracy and computational efficiency. The chapter begins by describing the datasets and the various inputs required for the system to run, including the video footage and the ground truth data used for evaluation and to ensure reliable benchmarking. This is followed by a discussion of the evaluation metrics used to assess the system's performance, including the accuracy and success rate of the \acs{ipa}, the accuracy of the \acs{pgm} in keeping estimates within a standard deviation of the ground truth, and the overall computational efficiency measured by runtime. The experimental setup is then discussed, detailing the software environment used. This goes onto final experimentation and evaluation of the entire system, this is done to judge the systems robust nature and ability to handle different video footage. Finally, it concludes with the results and analysis of the system's performance based on the evaluation metrics discussed.
 
 \subsection{Datasets and Inputs}
 This section covers the video footage that is used as an input as well as how the ground truth data is generated for evaluation.
 
 \textbf{Video Footage}
 
-The video footage used in this project as described in Section 3.1 is sourced from a YouTube video \parencite{youtube_ZverevDjokovic}, the video is a practice match between Novak Djokovic and Alexander Zverev. The footage is 1080p resolution at 30~\acs{fps} and are cut down to about 15 to 20 seconds long. The frame is 1080x1920 pixels and the camera is static throughout the footage. An example snippet of the footage is shown in Figure~\ref{fig:footage}.
+The video footage used in this project as described in Section 3.1 is sourced from a YouTube video \parencite{youtube_ZverevDjokovic}, the video is a practice match between Novak Djokovic and Alexander Zverev. The footage is 1080p resolution at 30~\acs{fps} and are cut down to about 10 to 20 seconds long. The frame is 1080x1920 pixels and the camera is static throughout the footage. An example snippet of the footage is shown in Figure~\ref{fig:footage}.
 
 \begin{figure}[H]
 	\centering
@@ -1288,7 +1289,7 @@ The ground truth data for the video footage is generated through manual annotati
 The performance of all the various systems in the pipeline is discussed in this section. The metrics per system used are discussed in its subsection, that being the \acs{ipa} and the \acs{pgm}.
 
 \subsubsection{\acs{ipa} Evaluation Metrics}
-The \acs{ipa} performance is evaluated and selected using two main metrics: Mean Error and Success Rate. This section also details how the Covariance Matrix, and the outlier weights $w_{\pi,a}^{(n)}$ for each \acs{ipa} will be determined for the \acs{pgm}.
+The \acs{ipa} performance is evaluated and selected using three main metrics: Mean Error, Success Rate, and Processing Time. This section also details how the Covariance Matrix, and the outlier weights $w_{\pi,a}^{(n)}$ for each \acs{ipa} will be determined for the \acs{pgm}.
 
 \textbf{Mean Error}
 
@@ -1313,6 +1314,10 @@ The success rate of each of the \acs{ipa} is calculated as the percentage of fra
 \text{Success Rate} = \frac{\text{Number of Successful Detections}}{N} \times 100\%
 \end{equation}
 
+\textbf{Process Time}
+
+The processing time for each algorithm is measured as the total time taken to process an entire video footage. This metric is important to ensure that the algorithms can operate in real-time or near real-time conditions. The processing time is measured in seconds and is done entirely in code. This will be done by measuring the time taken to process Video 1 which is 17 seconds long.
+
 \textbf{Covariance Matrix and Weights Determination}
 
 The ground truths data will be compared with the outputs of each algorithm to determine an objective measure for determining the Covariance Matrix which will be used in the \acs{pgm}. This will be done by calculating the standard deviation in the $x$ and $y$ positions and then taking the standard deviation, getting the variances using ($sd^2 = \sigma$) and using it to construct the covariance matrix, where $\sigma_{xx}$ and $\sigma_{yy}$ are the variances of the $x$ and $y$ positions, respectively. The covariance matrix $\Sigma_n$ for algorithm $n$ is defined in Equation 36. This will all be done on a Python script.
@@ -1324,10 +1329,10 @@ The ground truths data will be compared with the outputs of each algorithm to de
 \end{bmatrix}
 \end{equation}
 
-The weights will be calculated based on the success rate of each \acs{ipa}. The weight for the inlier component $w_{\pi,inlier}^{(n)}$ will be set to the success rate of algorithm $n$, while the weight for the outlier component $w_{\pi,outlier}^{(n)}$ will be set to $1 - w_{\pi,inlier}^{(n)}$. This ensures that algorithms with higher success rates have a greater influence on the final position estimate, while those with lower success rates are more likely to be treated as outliers.
+The weights will be calculated based on the success rate of each \acs{ipa}. The weight for the inlier component $w_{\pi,inlier}^{(n)}$ will be set to the amount of algorithm outputs within a 0.1 threshold of the ground truth position and that will be divided by the number of valid outputs the algorithm had. The weight for the outlier component $w_{\pi,outlier}^{(n)}$ will be set to $1 - w_{\pi,inlier}^{(n)}$. This ensures that algorithms with higher success rates have a greater influence on the final position estimate, while those with lower success rates are more likely to be treated as outliers.
 
 \subsubsection{\acs{pgm} Evaluation Metrics}
-The \acs{pgm} performance is evaluated using two main metrics: Standard Deviation Accuracy and Computational Efficiency. This subsection also highlights the parameter tuning process used to optimize the \acs{pgm} performance.
+The \acs{pgm} performance is evaluated using two main metrics: Standard Deviation Accuracy and Computational Efficiency. This subsection also highlights the parameter tuning process used to optimize the \acs{pgm} performance, including the velocity damper $\beta$.
 
 \textbf{Standard Deviation Accuracy}
 
@@ -1341,16 +1346,239 @@ The Standard Deviation accuracy metric evaluates how well the \acs{pgm} maintain
 
 The computational efficiency of the entire system is measured by the runtime of the system after everything has been processed. This is done by measuring the time taken from start to end and is done entirely in code. The runtime is measured in seconds and the aim is to get the runtime to be as close to the actual length of the video footage as possible.
 
-\subsection{Experimental Setup}
-The experimental setup for Evaluating the system is done using Ubuntu 24.04.2 LTS on a computer with a 12th Gen Intel Core i5-12450H and 32Gb of RAM. 
+\subsection{Experimental Setup and Results}
+The experimental setup for evaluating the system is conducted on Ubuntu 24.04.2 LTS using a computer equipped with a 12th Gen Intel Core i5-12450H processor and 32 GB of RAM. Python code is executed with Python 3.12.3, while C++ components are compiled using g++ 13.3.0. OpenCV library version 4.12.0 handles all computer vision tasks, and the EMDW framework supports \acs{pgm} implementation as detailed in Section 4.2.1. 
 
-\subsubsection{\acs{ipa} Experimental Setup}
-In order to evaluate the performance of each \acs{ipa}, each algorithm is run independently with the 1st video footage. This is done to judge the Mean Error and Success Rate of each of the algorithms.
+\subsubsection{\acs{ipa} Experimental Results}
+In order to evaluate the performance of each \acs{ipa}, each algorithm has been run independently with three different video footage with lengths between 10 and 20 seconds long (Video 1 = 17~$s$, Video 2 = 17~$s$, Video 3 = 16~$s$). This is done to judge the Mean Error and Success Rate of each of the algorithms and get an average which can be used for tuning of the various parameters. The averages are presented in Table~\ref{tab:ipaExp} and the full results are presented in Appendix C.
+
+\begin{table}[H]
+\centering
+\caption{IPA Performance Metrics}
+\label{tab:ipaExp}
+\begin{tabular}{p{2cm} p{1.5cm} p{1.7cm} p{1.75cm} p{1.75cm} p{1.2cm} p{1.2cm}}
+\toprule
+\acs{ipa} & Mean Error & Success Rate (\%) & Variance x & Variance y & Inlier weight & Process Time ($s$)\\
+\midrule
+HSV Colour Thresholding & 0.0423 & 73.89 & 0.0144 & 0.0107 & 0.8893 & 10.57 \\
+Motion Tracker & 0.0164 & 80.21 & 0.0121 & 0.0141 & 0.9619 & 9.47\\
+Background Subtraction Tracker & 0.0462 & 72.79 & 0.0146 & 0.0045 & 0.8849 & 17.1\\
+Canny Edge and Hough Circles & 0.2094 & 95.52 & 0.0503 & 0.0395 & 0.5383 & 28.56\\
+Lucas-Kanade Optical Flow & 0.1830 & 91.67 & 0.0318 & 0.0713 & 0.5004 & 18.24\\
+Template Matching & 0.128 & 95.43 & 0.0261 & 0.0184 & 0.6506 & 22.04\\
+\bottomrule
+\end{tabular}
+\end{table}
+
+Looking at the results in Table~\ref{tab:ipaExp}, the Motion Tracker has the lowest Mean Error with a moderate Success rate, however of those successes there is a high volume of inliers, meaning when the algorithm does detect the ball it is usually accurate. It also processed for the shortest amount of time making it the most computationally efficient. The next best performer was \acs{hsv} Colour Thresholding, which had a slightly higher Mean Error but similar success rate and inlier rate. The processing time was also fairly similar to the Motion Tracker. The other \acs{ipa} worth mentioning is Background Subtraction Tracker, because it had a similar Mean Error, Success Rate and Inlier Weight to \acs{hsv} Colour Thresholding, however the processing time was significantly higher. The other three algorithms preformed very poorly, having high Mean Errors, and low inlier Weights. They did have a high number of successful detections, however judging by the Inlier weight most of these detections were inaccurate. The processing time for these three \acs{ipa} are also significntly higher than what is desired. Judging by the tables in Appendix C, these \acs{ipa} seem to fail in scenarios where there is more noise in the footage, this is because the first video has the least amount of noise and the last with the most.
+
+Based on these results \acs{hsv} Colour Thresholding, Motion Tracker and Background Subtraction Trackers have been selected to be used with the \acs{pgm} as they have the best balance between accuracy, computational efficiency and inlier weights.
+
+\subsubsection{\acs{pgm} Experimental Results}
+The \acs{pgm}s have been evaluated using the same three videos as the \acs{ipa} have been evaluated on. The metrics used for evaluation are the $\beta$, Accuracy (\%) and the Efficiency. The $\beta$ value have been evaluated in Table~\ref{tab:pgmBeta} in Appendix C and a graph in Figure~\ref{fig:betaVsAccuracy} where the $\beta$ value is changed from 0 to 1 in increments of 0.1 and the results are presented for each of the videos. Looking at the results, it is clear that a $\beta$ value of 0.0 gives the best results across all three videos, with an average accuracy of 91.7~$\%$. 
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=0.6\textwidth]{lineGraphBeta.jpg}
+	\caption{Graph showing the $\beta$ value vs Accuracy (\%) for all three videos}
+	\label{fig:betaVsAccuracy}
+\end{figure}
+
+\subsubsection{Final Experimentation of the Complete System}
+To validate the complete tracking pipeline with optimized parameters ($\beta=0.0$, selected IPAs, and tuned covariance matrices), the system has been evaluated on 7 video clips, each between 10 and 20 seconds long. These clips feature diverse tracking scenarios including fast serves, slow rallies, and partial occlusions. The evaluation metrics include accuracy (\%), mean error, and computational efficiency (runtime). Results averaged across all test clips demonstrate the system's robustness and are presented in Table~\ref{tab:finalExp}.
+
+\begin{table}[H]
+\centering
+\caption{Final System Performance Metrics}
+\label{tab:finalExp}
+\begin{tabular}{p{2.5cm} p{2.5cm} p{2.5cm} p{2cm} p{2cm}}
+\toprule
+Video number & Accuracy (\%) & Mean Error & Video Length (s) & Runtime (s) \\
+1 & 91.5 & 0.1605 & 17 & 18.4 \\
+2 & 87.8 & 0.0972 & 17 & 18.9 \\
+3 & 95.8 & 0.0718 & 16 & 20 \\
+4 & 77.1 & 0.3287 & 13 & 16.8 \\
+5 & 90.4 & 0.1952 & 12 & 13.9 \\
+6 & 90.7 & 0.17 & 17 & 19.5 \\
+7 & 95.9 & 0.0531 & 19 & 22.5 \\
+\bottomrule
+Average & 89.89 & 0.154 & 15.86 & 18.57 \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+The results in Table~\ref{tab:finalExp} indicate that the complete system achieves high accuracy across diverse scenarios, with an average accuracy of 89.89\% and a mean error of 0.154. The runtime is relatively close to the video lengths, demonstrating near real-time performance, although this could be slightly improved with a better laptop. Notably, videos with higher occlusions show increased mean error and decreased accuracy, highlighting areas for potential improvement. The videos that performed the best overall had minimal occlusions and consistent lighting conditions. Overall, the system effectively integrates multiple tracking algorithms through the \acs{pgm}, providing robust ball tracking in tennis footage.
+
+\subsection{Discussion of Results}
+This section provides an in-depth analysis of the experimental results obtained from evaluating the ball tracking system. It discusses the performance of individual \acs{ipa}, the effect of parameter tuning on the \acs{pgm}, and the overall system performance in various scenarios. Finally, it reflects on the limitations of the current approach and suggests potential avenues for future improvements.
+
+\subsubsection{Individual \acs{ipa} Performance}
+Rounding out what has been  discussed in Section 5.3.1 the Motion Tracker emerged as the most effective individual \acs{ipa}, achieving the lowest mean error and a high inlier weight. This indicates that the Motion Tracker is adept at maintaining accurate ball position estimates. It had the best processing time and there go best computational efficiency. The other \acs{ipa} performed consideriably worse than Motion Tracker, with higher mean errors and lower inlier weights. However \acs{hsv} Colour Thresholding and Background Subtraction Tracker also had decent performances and out performed the other three \acs{ipa} (Canny Edge and Hough Circles, Lucas-Kanade Optical Flow and Template Matching) by a significant margin. The poor performances of these three \acs{ipa} can be attributed to their higher sensitivity to noise and occlusions in the video footagem which led to inaccurate detections. Even though these three \acs{ipa} had high success rates, their high Mean Error and Inlier Weights indicate that most of these detections were inaccurate.
+
+\subsubsection{\acs{pgm} Parameter Tuning Impact}
+The parameter tuning process for the \acs{pgm}, being the tuning of the velocity damper $\beta$, had a significant impact on the system's performance. The results indicated that a $\beta$ value of 0.0 yielded the best accuracy across all test videos. This suggests that relying solely on the current position estimates from the \acs{ipa}, without incorporating velocity predictions, is more effective for ball tracking in this context. The likely reason for this is that tennis ball trajectories can be highly dynamic, with rapid changes in speed and direction that a constant velocity model may not accurately capture. By setting $\beta$ to 0.0, the \acs{pgm} effectively prioritizes the most recent observations from the \acs{ipa}, allowing it to adapt quickly to sudden movements of the ball.
+
+\subsubsection{Overall System Performance}
+The complete ball tracking system demonstrated robust performance across a variety of scenarios. It achieves an average accuracy of 89.89\% and a mean error of 0.154, this indicates that the system is effective at integrating multiple \acs{ipa} outputs into the \acs{pgm}. The performance was close to real-time, with the runtimes being above the video lengths with an average difference of 2.71 seconds. This means that the system is efficient enough for applications where the videos can be pre processed but not quite good enough for live tracking. The system performed particularly well in videos with minimal occlusions and consistent lighting conditions. However in scenarios with occlusions, the accuracy decreased and the mean error increased. This highlights the challenges posed by occlusions in ball tracking and suggests that further enhancements are needed to improve robustness in such conditions.
+
+\subsubsection{Limitations and Future Work}
+While the ball tracking system demonstrates strong performance with an average accuracy of 89.89\%, several limitations present opportunities for future improvement.
+
+\textbf{Static Camera Assumption:} The system requires static camera footage, limiting applicability where cameras follow the action. Extending to dynamic cameras would require camera motion compensation using feature-based tracking to stabilize frames before tracking.
+
+\textbf{Occlusion Handling:} Performance drops significantly when the ball is blocked, with Video 4 achieving only 77.1\% accuracy compared to 95.9\% in Video 7 where the ball remained visible. The current \acs{pgm} relies on direct \acs{ipa} measurements which fail when the ball is hidden. While the system includes basic motion prediction, future work should incorporate more sophisticated trajectory models to better maintain tracking continuity during extended occlusions.
+
+\textbf{Real-Time Performance:} Operating at 1.17× real-time speed (18.57s runtime for 15.86s videos) is insufficient for live video integration. While acceptable for post-processing, true real-time performance requires algorithmic optimization and GPU acceleration. The efficient Motion Tracker (9.47s) and \acs{hsv} Colour Thresholding (10.57s) suggest reducing reliance on the slower Background Subtraction Tracker (17.1s) or implementing parallel processing.
+
+\textbf{Single Sport Limitation:} Developed and tested exclusively on tennis footage with yellow balls on blue courts, the system requires adaptation of HSV color bounds and size constraints for other sports. Future work should explore generalization across sports with varying ball colors, sizes, and environments.
 
 \newpage
 \section{Conclusion}
-This chapter summarizes the key findings from the project, reflecting on the effectiveness of the proposed ball tracking system. It discusses the strengths and limitations of the approach, as well as potential areas for future work and improvements. The conclusion aims to encapsulate the overall contributions of the project to the field of sports analytics and computer vision. (this still needs to be completed, will emphasize more on what was said in the opening paragraph).
+Ball tracking systems are an essential tool in modern sports analytics, officiating, and player performance evaluation. However, commercial systems such as Hawk-Eye and TRACAB remain inaccessible to most amateur clubs due to prohibitive costs and infrastructure requirements. This project investigated a cost-effective ball tracking approach that combines multiple \acl{ipa} through a \acl{pgm} to achieve robust tracking on consumer-grade hardware. The project performance is discussed in a techno-economic analysis in Appendix A.
+
+The objectives set at the start of the project have been successfully achieved. The first objective was to develop and implement multiple \acs{ipa} to estimate the ball's position from video footage. This was completed with six candidate algorithms evaluated, resulting in three being selected for the final system: \acs{hsv} Colour Thresholding, Motion Tracker, and Background Subtraction Tracker. The second objective was to design a \acs{pgm}-based fusion model to combine the outputs of individual algorithms, improving tracking accuracy and reducing errors from isolated failures. This was accomplished using \acl{ep} inference, which achieved an average accuracy of 89.89\% and a mean error of 0.154 across seven diverse test videos. The third objective was to evaluate and optimize the system to use the minimal number of algorithms required while maintaining acceptable performance. This was achieved by systematically comparing all six \acs{ipa} and selecting only the three most effective ones. Finally, the fourth objective was to compare the model's performance against individual \acs{ipa}. The results clearly demonstrate that the \acs{pgm}-based fusion approach outperforms any single algorithm, with the combined system achieving superior accuracy and robustness, particularly in challenging scenarios with occlusions or varying lighting conditions.
+
+In conclusion, this project was largely a success, achieving close to everything set out at the start. The system operates at 1.17× real-time speed on consumer-grade hardware, demonstrating practical feasibility for post-processing applications. While the system successfully demonstrates accurate ball tracking on consumer hardware, several areas require further development. Future work should focus on enhancing occlusion handling,	 achieving true real-time performance, and generalizing the system across different sports and camera setups, including dynamic camera footage. With these improvements, the proposed approach has the potential to democratize ball tracking technology, making it accessible to a wider range of sports organizations and enthusiasts.
 
 \newpage
 \printbibliography
+
+\newpage
+\appendix
+\section{Project Budget and Time}
+
+\newpage
+\section{\acs{ipa} and \acs{pgm} Pseudocode}
+
+\newpage
+\section{Experimental Results}
+
+\begin{table}[H]
+\centering
+\caption{\acs{hsv} Colour Thresholding Performance Metrics}
+\begin{tabular}{p{2cm} p{2cm} p{1.7cm} p{1.75cm} p{1.75cm} p{1.75cm}}
+\toprule
+Video number & Mean Error & Success Rate (\%) & Variance x & Variance y & Inlier weight \\
+1 & 0.02 & 68.94 & 0.0069 & 0.0126 & 1 \\
+2 & 0.09 & 79.01 & 0.0275 & 0.008 & 0.7 \\
+3 & 0.0169 & 73.71 & 0.0089 & 0.0115 & 0.9681 \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\begin{table}[H]
+\centering
+\caption{Motion Tracker Performance Metrics}
+\begin{tabular}{p{2cm} p{2cm} p{1.7cm} p{1.75cm} p{1.75cm} p{1.75cm}}
+\toprule
+Video number & Mean Error & Success Rate (\%) & Variance x & Variance y & Inlier weight \\
+1 & 0.0072 & 75.00 & 0.0138 & 0.0216 & 0.9931 \\
+2 & 0.0362 & 81.37 & 0.0118 & 0.0048 & 0.9094 \\
+3 & 0.0059 & 84.26 & 0.0108 & 0.0158 & 0.9831 \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\begin{table}[H]
+\centering
+\caption{Background Subtraction Tracker Performance Metrics}
+\begin{tabular}{p{2cm} p{2cm} p{1.7cm} p{1.75cm} p{1.75cm} p{1.75cm}}
+\toprule
+Video number & Mean Error & Success Rate (\%) & Variance x & Variance y & Inlier weight \\
+1 & 0.0136 & 65.71 & 0.0071 & 0.0216 & 1 \\
+2 & 0.0922 & 77.68 & 0.0239 & 0.0066 & 0.7162 \\
+3 & 0.0328 & 74.98 & 0.0129 & 0.0120 & 0.9385 \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\begin{table}[H]
+\centering
+\caption{Canny Edge and Hough Circles Performance Metrics}
+\begin{tabular}{p{2cm} p{2cm} p{1.7cm} p{1.75cm} p{1.75cm} p{1.75cm}}
+\toprule
+Video number & Mean Error & Success Rate (\%) & Variance x & Variance y & Inlier weight \\
+1 & 0.1294 & 90.87 & 0.013 & 0.012 & 0.85 \\
+2 & 0.1513 & 96.98 & 0.1 & 0.08 & 0.456 \\
+3 & 0.3476 & 98.71 & 0.038 & 0.0265 & 0.3089 \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\begin{table}[H]
+\centering
+\caption{Lucas-Kanade Optical Flow Performance Metrics}
+\begin{tabular}{p{2cm} p{2cm} p{1.7cm} p{1.75cm} p{1.75cm} p{1.75cm}}
+\toprule
+Video number & Mean Error & Success Rate (\%) & Variance x & Variance y & Inlier weight \\
+1 & 0.0829 & 78.83 & 0.0142 & 0.0685 & 0.9068 \\
+2 & 0.1617 & 98.16 & 0.0112 & 0.0011 & 0.3133 \\
+3 & 0.3045 & 98.01 & 0.0064 & 0.0017 & 0.2811 \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\begin{table}[H]
+\centering
+\caption{Template Matching Performance Metrics}
+\begin{tabular}{p{2cm} p{2cm} p{1.7cm} p{1.75cm} p{1.75cm} p{1.75cm}}
+\toprule
+Video number & Mean Error & Success Rate (\%) & Variance x & Variance y & Inlier weight \\
+1 & 0.0095 & 89.23 & 0.0136 & 0.0239 & 0.9745 \\
+2 & 0.2371 & 98.36 & 0.0307 & 0.0111 & 0.4271 \\
+3 & 0.1375 & 98.71 & 0.0341 & 0.0205 & 0.5501 \\
+\bottomrule
+\end{tabular}
+\end{table}
+\newpage
+\begin{longtable}{p{3cm} p{3cm} p{3cm} p{3cm}}
+\caption{\acs{pgm} and $\beta$ Performance Metrics}
+\label{tab:pgmBeta} \\
+\toprule
+Video & $\beta$ & Accuracy (\%) & Efficiency (s)\\
+\midrule
+\endfirsthead
+\toprule
+Video & $\beta$ & Accuracy (\%) & Efficiency (s)\\
+\midrule
+\endhead
+\bottomrule
+\endfoot
+\bottomrule
+\endlastfoot
+1 & 0.0 & 91.5 & 25.7\\
+1 & 0.1 & 90 & 27.9\\
+1 & 0.2 & 86.7 & 28.1\\
+1 & 0.3 & 84.2 & 27\\
+1 & 0.4 & 81.7 & 27.3\\
+1 & 0.5 & 78.8 & 29.4\\
+1 & 0.6 & 75.8 & 27.2\\
+1 & 0.7 & 72.5 & 27.7\\
+1 & 0.8 & 69.8 & 27\\
+1 & 0.9 & 67.1 & 27.2\\
+1 & 1.0 & 64.8 & 27.2\\
+2 & 0.0 & 87.8 & 25.7\\
+2 & 0.1 & 87.8 & 26.1\\
+2 & 0.2 & 88 & 25.6\\
+2 & 0.3 & 86.1 & 26.7\\
+2 & 0.4 & 84 & 26.3\\
+2 & 0.5 & 84 & 26\\
+2 & 0.6 & 77.8 & 26.4\\
+2 & 0.7 & 74.3 & 26.1\\
+2 & 0.8 & 72.4 & 26\\
+2 & 0.9 & 70.8 & 26.1\\
+2 & 1.0 & 69.5 & 26.3\\
+3 & 0.0 & 95.8 & 26\\
+3 & 0.1 & 95.6 & 26.3\\
+3 & 0.2 & 95 & 26\\
+3 & 0.3 & 94.2 & 25.9\\
+3 & 0.4 & 91.6 & 26.9\\
+3 & 0.5 & 88.8 & 26.1\\
+3 & 0.6 & 85.9 & 26.1\\
+3 & 0.7 & 83.1 & 25.5\\
+3 & 0.8 & 80.9 & 29.3\\
+3 & 0.9 & 79.5 & 28.8\\
+3 & 1.0 & 76.9 & 27.3\\
+\end{longtable}
+
 \end{document}
